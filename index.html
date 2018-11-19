@@ -3,7 +3,7 @@
   <head>
     <title>XPDA - Cross Platform Desktop App Development</title>
     <style>
-      body { 
+      body {
         font-family: sans-serif;
       }
     </style>
@@ -17,47 +17,34 @@
     <hr />
     <h3>Tools</h3>
     <ul id="app">
-      <li v-for="(tool, toolIndex) in tools" :key="'tool' + toolIndex">
+      <li
+        v-for="(tool, toolIndex) in tools"
+        :key="'tool' + toolIndex"
+        :class="tool.deprecated ? 'deprecated' : ''"
+      >
         <a v-if="tool.url" :href="tool.url" target="_blank" rel="noopener noreferrer">{{ tool.title }}</a>
         <span v-else>{{ tool.title }}</span>
+        <div v-if="tool.pros.length || tool.includeGlobalPros">
+          <strong>Pros:</strong>
+          <ul>
+            <li v-for="(pro, proIndex) in tool.pros" :key="'tool' + toolIndex + 'pro' + proIndex">
+              {{ pro }}
+            </li>
+            <li v-for="(globalPro, globalProIndex) in globalPros" :key="'tool' + toolIndex + 'globalPro' + globalProIndex">
+              {{ globalPro }}
+            </li>
+          </ul>
+        </div>
+        <div v-if="tool.cons.length">
+          <strong>Cons:</strong>
+          <ul>
+            <li v-for="(con, conIndex) in tool.cons" :key="'tool' + toolIndex + 'con' + conIndex">
+              {{ con }}
+            </li>
+          </ul>
+        </div>
       </li>
     </ul>
-    <script>
-      const app = new Vue({
-        el: '#app',
-        data: {
-          tools: [
-            {
-              title: 'NW.js',
-              url: 'https://nwjs.io'
-            },
-            {
-              title: 'Electron',
-              url: 'https://electronjs.org'
-            },
-            {
-              title: 'Xamarin',
-              url: 'https://visualstudio.microsoft.com/xamarin'
-            },
-            {
-              title: 'LibUI-Node',
-              url: 'https://github.com/parro-it/libui-node'
-            },
-            {
-              title: 'Sciter',
-              url: 'https://sciter.com'
-            },
-            {
-              title: 'Carlo',
-              url: 'https://github.com/GoogleChromeLabs/carlo'
-            },
-            {
-              title: 'Lorca',
-              url: 'https://github.com/zserge/lorca'
-            }
-          ]
-        }
-      });
-    </script>
+    <script src="app.js" type="text/javascript"></script>
   </body>
 </html>
