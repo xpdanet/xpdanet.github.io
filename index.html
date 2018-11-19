@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>XPDA - Cross Platform Desktop App Development</title>
+    <style>
+      body { 
+        font-family: sans-serif;
+      }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+  </head>
+  <body>
+    <h1>XPDA.net</h1>
+    <h2>Cross-Platform Desktop Apps</h2>
+    <hr />
+    <a href="https://github.com/xpdanet/xpdanet.github.io">Edit this page on GitHub.</a>
+    <hr />
+    <h3>Tools</h3>
+    <ul id="app">
+      <li v-for="(tool, toolIndex) in tools" :key="'tool' + toolIndex">
+        <a v-if="tool.url" :href="tool.url" target="_blank" rel="noopener noreferrer">{{ tool.title }}</a>
+        <span v-else>{{ tool.title }}</span>
+      </li>
+    </ul>
+    <script>
+      const app = new Vue({
+        el: '#app',
+        data: {
+          tools: [
+            {
+              title: 'NW.js',
+              url: 'https://nwjs.io'
+            },
+            {
+              title: 'Electron',
+              url: 'https://electronjs.org'
+            },
+            {
+              title: 'Xamarin',
+              url: 'https://visualstudio.microsoft.com/xamarin'
+            },
+            {
+              title: 'LibUI-Node',
+              url: 'https://github.com/parro-it/libui-node'
+            },
+            {
+              title: 'Sciter',
+              url: 'https://sciter.com'
+            },
+            {
+              title: 'Carlo',
+              url: 'https://github.com/GoogleChromeLabs/carlo'
+            },
+            {
+              title: 'Lorca',
+              url: 'https://github.com/zserge/lorca'
+            }
+          ]
+        }
+      });
+    </script>
+  </body>
+</html>
