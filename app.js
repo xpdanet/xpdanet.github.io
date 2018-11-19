@@ -1,0 +1,149 @@
+const app = new Vue({
+  el: '#app',
+  data: {
+    globalPros: [
+      'Can use node_modules',
+      'Has Vue, React, Etc. boilerplates available',
+      'Plays nicely with Gulp and Webpack',
+      'Ability to share code across Mobile/Web/Desktop'
+    ],
+    tools: [
+      {
+        title: 'NW.js',
+        url: 'https://nwjs.io',
+        languages: [
+          'HTML',
+          'CSS',
+          'JS',
+          'Node.js'
+        ],
+        inlcudeGlobalPros: true,
+        pros: [
+          'Supports twice as many OS\'s including back to OSX 10.6 and XP',
+          'Actually cares about proper Linux support',
+          'Allows for protected source code',
+          'Backed by Intel',
+          'Updated within 24 hours of a Chromium or Node release',
+          'Still a resource hog, but uses less RAM and disk space than Electron',
+          'Smaller distribution sizes (~25MB windows Installer)',
+          'Been around 5 years longer/used by thousands of projects',
+          'Assumes you want to create a desktop app, and not a node script with an optional UI.',
+          'Super easy to get started with and a no-nonsense API'
+        ],
+        cons: [
+          'Terrible Name/Branding/Marketing',
+          'Small-Medium ecosystem',
+          'Basically one person behind most of the code',
+          'Everything you need from the documentation is available, but the site is clunky'
+        ]
+      },
+      {
+        title: 'Electron',
+        url: 'https://electronjs.org',
+        languages: [
+          'HTML',
+          'CSS',
+          'JS',
+          'Node.js'
+        ],
+        inlcudeGlobalPros: true,
+        pros: [
+          'Great name/marketing/branding',
+          'Big ecosystem',
+          'Good documentation',
+          'Used by a few big name projects',
+          'Backed by GitHub'
+        ],
+        cons: [
+          'Basically one person behind most of the code',
+          'Doesn\'t take Linux support seriously',
+          'Does not support any legacy OS\'s',
+          'Resource Hog',
+          'No way to protect your source code',
+          'Perpetually out of date, releases typically ship with versions of Node/Chromium from 3-6 months ago'
+        ]
+      },
+      {
+        title: 'Xamarin',
+        url: 'https://visualstudio.microsoft.com/xamarin',
+        languages: [
+        ],
+        pros: [
+        ],
+        cons: [
+        ]
+      },
+      {
+        title: 'LibUI-Node',
+        url: 'https://github.com/parro-it/libui-node',
+        languages: [
+          'JS',
+          'Node.js'
+        ],
+        inlcudeGlobalPros: true,
+        pros: [
+          'Uses minimal amounts of resources, much less than NW.js and Electron',
+          'Built package can be as small as ~20MB (compared to ~70MB (NW) and ~120MB (Electron))',
+          'Distribution sizes can be as low as 10MB (packaged installer)'
+        ],
+        cons: [
+          'Limited-to-no styling options, all apps look like vanilla form fields',
+          'Very new, not out of beta',
+          'Not great OS support, or build tools yet',
+          'Builds tools aren\'t very robust yet',
+          'Dev tooling is pretty non-existent',
+          'Lots of unknowns'
+        ]
+      },
+      {
+        title: 'Sciter',
+        url: 'https://sciter.com',
+        languages: [
+        ],
+        pros: [
+        ],
+        cons: [
+        ]
+      },
+      {
+        title: 'Carlo',
+        url: 'https://github.com/GoogleChromeLabs/carlo',
+        languages: [
+          'HTML',
+          'CSS',
+          'JS',
+          'Node.js'
+        ],
+        pros: [
+        ],
+        cons: [
+        ]
+      },
+      {
+        title: 'Lorca',
+        url: 'https://github.com/zserge/lorca',
+        languages: [
+        ],
+        pros: [
+        ],
+        cons: [
+        ]
+      },
+      {
+        title: 'Tint2',
+        url: 'https://github.com/trueinteractions/tint2',
+        languages: [
+          'HTML',
+          'CSS',
+          'JS',
+          'Node.js'
+        ],
+        deprecated: true,
+        pros: [],
+        cons: [
+          'Project is deprecated. Last release was in 2016.'
+        ]
+      }
+    ]
+  }
+});
