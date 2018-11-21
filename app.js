@@ -1,12 +1,6 @@
 const app = new Vue({
   el: '#app',
   data: {
-    globalPros: [
-      'Can use node_modules',
-      'Has Vue, React, Etc. boilerplates available',
-      'Plays nicely with Gulp and Webpack',
-      'Ability to share code across Mobile/Web/Desktop'
-    ],
     tools: [
       {
         title: 'NW.js',
@@ -17,7 +11,11 @@ const app = new Vue({
           'JS',
           'Node.js'
         ],
-        inlcudeGlobalPros: true,
+        platforms: [
+          'Windows',
+          'Linux',
+          'OSX'
+        ],
         pros: [
           'Supports twice as many OS\'s including back to OSX 10.6 and XP',
           'Actually cares about proper Linux support',
@@ -28,7 +26,11 @@ const app = new Vue({
           'Smaller distribution sizes (~25MB windows Installer)',
           'Been around 5 years longer/used by thousands of projects',
           'Assumes you want to create a desktop app, and not a node script with an optional UI.',
-          'Super easy to get started with and a no-nonsense API'
+          'Super easy to get started with and a no-nonsense API',
+          'Can use node_modules',
+          'Has Vue, React, Etc. boilerplates available',
+          'Plays nicely with Gulp, Webpack, etc.',
+          'Ability to share code across Mobile/Web/Desktop if project setup correctly'
         ],
         cons: [
           'Terrible Name/Branding/Marketing',
@@ -46,13 +48,21 @@ const app = new Vue({
           'JS',
           'Node.js'
         ],
-        inlcudeGlobalPros: true,
+        platforms: [
+          'Windows',
+          'Linux',
+          'OSX'
+        ],
         pros: [
           'Great name/marketing/branding',
           'Big ecosystem',
           'Good documentation',
           'Used by a few big name projects',
-          'Backed by GitHub'
+          'Backed by GitHub',
+          'Can use node_modules',
+          'Has Vue, React, Etc. boilerplates available',
+          'Plays nicely with Gulp, Webpack, etc.',
+          'Ability to share code across Mobile/Web/Desktop if project setup correctly'
         ],
         cons: [
           'Basically one person behind most of the code',
@@ -68,6 +78,7 @@ const app = new Vue({
         url: 'https://visualstudio.microsoft.com/xamarin',
         languages: [
         ],
+        platforms: [],
         pros: [
         ],
         cons: [
@@ -80,11 +91,15 @@ const app = new Vue({
           'JS',
           'Node.js'
         ],
-        inlcudeGlobalPros: true,
+        platforms: [],
         pros: [
           'Uses minimal amounts of resources, much less than NW.js and Electron',
           'Built package can be as small as ~20MB (compared to ~70MB (NW) and ~120MB (Electron))',
           'Distribution sizes can be as low as 10MB (packaged installer)'
+          'Can use node_modules',
+          'Has Vue, React, Etc. boilerplates available',
+          'Plays nicely with Gulp, Webpack, etc.',
+          'Ability to share code across Mobile/Web/Desktop if project setup correctly'
         ],
         cons: [
           'Limited-to-no styling options, all apps look like vanilla form fields',
@@ -93,6 +108,17 @@ const app = new Vue({
           'Builds tools aren\'t very robust yet',
           'Dev tooling is pretty non-existent',
           'Lots of unknowns'
+        ],
+        frameworks: [
+          {
+            framework: 'React',
+            title: 'Proton-Native',
+            url: 'https://proton-native.js.org'
+          },
+          {
+            framework: 'Vue.js',
+            title: 'Vuido',
+            url: 'https://vuido.mimec.org'
         ]
       },
       {
@@ -100,6 +126,7 @@ const app = new Vue({
         url: 'https://sciter.com',
         languages: [
         ],
+        platforms: [],
         pros: [
         ],
         cons: [
@@ -114,20 +141,39 @@ const app = new Vue({
           'JS',
           'Node.js'
         ],
+        platforms: [],
         pros: [
         ],
         cons: [
         ]
       },
       {
-        title: 'Lorca',
-        url: 'https://github.com/zserge/lorca',
+        title: 'PyQt',
+        url: 'https://www.riverbankcomputing.com/software/pyqt',
         languages: [
+          'Python'
+        ],
+        platforms: [
+          'Windows',
+          'Linux',
+          'OSX',
+          'iOS',
+          'Android'
         ],
         pros: [
+          'Qt is built with C++ which can be cumbersome, the Python bindings simplify interacting with it'
         ],
         cons: [
+          'If your project is not licensed under GPLV2, GPLV3, or LGPL3 then Qt costs $459/developer/month.'
         ]
+      },
+      {
+        title: 'Lorca',
+        url: 'https://github.com/zserge/lorca',
+        languages: [],
+        platforms: [],
+        pros: [],
+        cons: []
       },
       {
         title: 'Tint2',
@@ -138,6 +184,7 @@ const app = new Vue({
           'JS',
           'Node.js'
         ],
+        platforms: [],
         deprecated: true,
         pros: [],
         cons: [
