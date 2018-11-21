@@ -116,6 +116,7 @@ const app = new Vue({
             framework: 'Vue.js',
             title: 'Vuido',
             url: 'https://vuido.mimec.org'
+          }
         ]
       },
       {
