@@ -76,13 +76,10 @@ const app = new Vue({
       {
         title: 'Xamarin',
         url: 'https://visualstudio.microsoft.com/xamarin',
-        languages: [
-        ],
+        languages: [],
         platforms: [],
-        pros: [
-        ],
-        cons: [
-        ]
+        pros: [],
+        cons: []
       },
       {
         title: 'LibUI-Node',
@@ -95,7 +92,7 @@ const app = new Vue({
         pros: [
           'Uses minimal amounts of resources, much less than NW.js and Electron',
           'Built package can be as small as ~20MB (compared to ~70MB (NW) and ~120MB (Electron))',
-          'Distribution sizes can be as low as 10MB (packaged installer)'
+          'Distribution sizes can be as low as 10MB (packaged installer)',
           'Can use node_modules',
           'Has Vue, React, Etc. boilerplates available',
           'Plays nicely with Gulp, Webpack, etc.',
@@ -124,13 +121,10 @@ const app = new Vue({
       {
         title: 'Sciter',
         url: 'https://sciter.com',
-        languages: [
-        ],
+        languages: [],
         platforms: [],
-        pros: [
-        ],
-        cons: [
-        ]
+        pros: [],
+        cons: []
       },
       {
         title: 'Carlo',
@@ -142,10 +136,8 @@ const app = new Vue({
           'Node.js'
         ],
         platforms: [],
-        pros: [
-        ],
-        cons: [
-        ]
+        pros: [],
+        cons: []
       },
       {
         title: 'PyQt',
