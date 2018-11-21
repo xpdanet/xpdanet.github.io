@@ -24,10 +24,10 @@
       >
         <a v-if="tool.url" :href="tool.url" target="_blank" rel="noopener noreferrer">{{ tool.title }}</a>
         <span v-else>{{ tool.title }}</span>
-        <div v-if="tool.languages">
+        <div v-if="tool.languages.length">
           <strong>Languages:</strong> {{ tool.languages.join(', ') }}
         </div>
-        <div v-if="tool.platforms">
+        <div v-if="tool.platforms.length">
           <strong>Supported platforms:</strong> {{ tool.platforms.join(', ') }}
         </div>
         <div v-if="tool.pros.length">
@@ -46,7 +46,7 @@
             </li>
           </ul>
         </div>
-        <div v-if="tool.frameworks">
+        <div v-if="tool.frameworks.length">
           <strong>Frameworks:</strong>
           <ul>
             <li
