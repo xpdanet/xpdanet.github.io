@@ -24,14 +24,17 @@
       >
         <a v-if="tool.url" :href="tool.url" target="_blank" rel="noopener noreferrer">{{ tool.title }}</a>
         <span v-else>{{ tool.title }}</span>
-        <div v-if="tool.pros.length || tool.includeGlobalPros">
+        <div>
+          <strong>Languages:</strong> {{ tool.languages.join(', ') }}
+        </div>
+        <div>
+          <strong>Supported platforms:</strong> {{ tool.platforms.join(', ') }}
+        </div>
+        <div v-if="tool.pros.length">
           <strong>Pros:</strong>
           <ul>
             <li v-for="(pro, proIndex) in tool.pros" :key="'tool' + toolIndex + 'pro' + proIndex">
               {{ pro }}
-            </li>
-            <li v-for="(globalPro, globalProIndex) in globalPros" :key="'tool' + toolIndex + 'globalPro' + globalProIndex">
-              {{ globalPro }}
             </li>
           </ul>
         </div>
@@ -40,6 +43,19 @@
           <ul>
             <li v-for="(con, conIndex) in tool.cons" :key="'tool' + toolIndex + 'con' + conIndex">
               {{ con }}
+            </li>
+          </ul>
+        </div>
+        <div>
+          <strong>Frameworks:</strong>
+          <ul>
+            <li
+              v-for="(framework, frameworkIndex) in tool.frameworks"
+              :key="'tool' + toolIndex + 'framework' + frameworkIndex"
+            >
+              {{ framework.framework }} -
+              <a v-if="framework.url" :href="framework.url" target="_blank" rel="noopener noreferrer">{{ framework.title }}</a>
+              <span v-else>{{ framework.title }}</span>
             </li>
           </ul>
         </div>
