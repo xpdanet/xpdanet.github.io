@@ -27,10 +27,10 @@
         <div v-if="tool.languages.length">
           <strong>Languages:</strong> {{ tool.languages.join(', ') }}
         </div>
-        <div v-if="tool.platforms.length">
+        <div v-if="tool.platforms && tool.platforms.length">
           <strong>Supported platforms:</strong> {{ tool.platforms.join(', ') }}
         </div>
-        <div v-if="tool.pros.length">
+        <div v-if="tool.pros && tool.pros.length">
           <strong>Pros:</strong>
           <ul>
             <li v-for="(pro, proIndex) in tool.pros" :key="'tool' + toolIndex + 'pro' + proIndex">
@@ -38,7 +38,7 @@
             </li>
           </ul>
         </div>
-        <div v-if="tool.cons.length">
+        <div v-if="tool.cons && tool.cons.length">
           <strong>Cons:</strong>
           <ul>
             <li v-for="(con, conIndex) in tool.cons" :key="'tool' + toolIndex + 'con' + conIndex">
@@ -46,7 +46,7 @@
             </li>
           </ul>
         </div>
-        <div v-if="tool.frameworks.length">
+        <div v-if="tool.frameworks && tool.frameworks.length">
           <strong>Frameworks:</strong>
           <ul>
             <li
