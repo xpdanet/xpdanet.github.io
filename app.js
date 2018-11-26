@@ -17,9 +17,9 @@ const app = new Vue({
           'OSX'
         ],
         pros: [
-          'Supports twice as many OS\'s including back to OSX 10.6 and XP',
+          'Supports twice as many OS\'s as Electron including legacy support to OSX 10.6 and XP (via NW.js 0.14.7 LTS)',
           'Actually cares about proper Linux support',
-          'Allows for protected source code',
+          'Allows for protected source code (important for proprietary/closed source code)',
           'Backed by Intel',
           'Updated within 24 hours of a Chromium or Node release',
           'Still a resource hog, but uses less RAM and disk space than Electron',
@@ -30,7 +30,7 @@ const app = new Vue({
           'Can use node_modules',
           'Has Vue, React, Etc. boilerplates available',
           'Plays nicely with Gulp, Webpack, etc.',
-          'Ability to share code across Mobile/Web/Desktop if project setup correctly'
+          'Ability to share code across Mobile/Web/Desktop if project is setup correctly'
         ],
         cons: [
           'Terrible Name/Branding/Marketing',
