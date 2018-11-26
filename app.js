@@ -158,6 +158,13 @@ const app = new Vue({
         ],
         cons: [
           'If your project is not licensed under GPLV2, GPLV3, or LGPL3 then Qt costs $459/developer/month.'
+        ],
+        tools: [
+          {
+            type: 'Build System',
+            title: 'fman',
+            url: 'https://build-system.fman.io'
+          }
         ]
       },
       {
