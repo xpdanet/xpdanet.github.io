@@ -3,11 +3,24 @@
   <head>
     <title>XPDA - Cross Platform Desktop App Development</title>
     <style>
+      *,
+      *:before,
+      *:after {
+        box-sizing: border-box;
+      }
       body {
+        background: #7B68EE;
         font-family: sans-serif;
       }
+      .container {
+        width: 1450px;
+        background: #FFF;
+        border-radius: 9px;
+        margin: 10px auto;
+        padding: 10px;
+      }
       .card {
-        width: 350px;
+        width: 700px;
         border: 1px solid #000;
         margin: 10px;
       }
@@ -25,85 +38,88 @@
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
   </head>
   <body>
-    <h1>XPDA.net</h1>
-    <h2>Cross-Platform Desktop Apps</h2>
-    <hr />
-    <a href="https://github.com/xpdanet/xpdanet.github.io">Edit this page on GitHub.</a>
-    <hr />
-    <h3>Tools</h3>
-    <di id="app">
-      <div
-        v-for="(tool, toolIndex) in tools"
-        :key="'tool' + toolIndex"
-        :class="tool.deprecated ? 'deprecated' : ''"
-        class="card"
-      >
-        <div class="card-header">
-          <a v-if="tool.url" :href="tool.url" target="_blank" rel="noopener noreferrer">{{ tool.title }}</a>
-          <span v-else>{{ tool.title }}</span>
-        </div>
-
-        <div class="card-body">
-          <div v-if="tool.languages.length">
-            <strong>Languages:</strong> {{ tool.languages.join(', ') }}
+    <div class="container">
+      <h1>XPDA.net</h1>
+      <h2>Cross-Platform Desktop Apps</h2>
+      <hr />
+      <a href="https://github.com/xpdanet/xpdanet.github.io">Edit this page on GitHub.</a>
+      <hr />
+      <h3>Tools</h3>
+      <div id="app">
+        <div
+          v-for="(tool, toolIndex) in tools"
+          :key="'tool' + toolIndex"
+          :class="tool.deprecated ? 'deprecated' : ''"
+          class="card"
+        >
+          <div class="card-header">
+            <a v-if="tool.url" :href="tool.url" target="_blank" rel="noopener noreferrer">{{ tool.title }}</a>
+            <span v-else>{{ tool.title }}</span>
           </div>
 
-          <!-- Platforms/OS's -->
-          <div v-if="tool.platforms && tool.platforms.length">
-            <strong>Supported platforms:</strong> {{ tool.platforms.join(', ') }}
-          </div>
+          <div class="card-body">
+            <div v-if="tool.languages.length">
+              <strong>Languages:</strong> {{ tool.languages.join(', ') }}
+            </div>
 
-          <!-- Pros and Cons -->
-          <div v-if="tool.pros && tool.pros.length">
-            <strong>Pros:</strong>
-            <ul>
-              <li v-for="(pro, proIndex) in tool.pros" :key="'tool' + toolIndex + 'pro' + proIndex">
-                {{ pro }}
-              </li>
-            </ul>
-          </div>
-          <div v-if="tool.cons && tool.cons.length">
-            <strong>Cons:</strong>
-            <ul>
-              <li v-for="(con, conIndex) in tool.cons" :key="'tool' + toolIndex + 'con' + conIndex">
-                {{ con }}
-              </li>
-            </ul>
-          </div>
+            <!-- Platforms/OS's -->
+            <div v-if="tool.platforms && tool.platforms.length">
+              <strong>Supported platforms:</strong> {{ tool.platforms.join(', ') }}
+            </div>
 
-          <!-- Frameworks and boilerplates -->
-          <div v-if="tool.frameworks && tool.frameworks.length">
-            <strong>Frameworks:</strong>
-            <ul>
-              <li
-                v-for="(framework, frameworkIndex) in tool.frameworks"
-                :key="'tool' + toolIndex + 'framework' + frameworkIndex"
-              >
-                {{ framework.framework }} -
-                <a v-if="framework.url" :href="framework.url" target="_blank" rel="noopener noreferrer">{{ framework.title }}</a>
-                <span v-else>{{ framework.title }}</span>
-              </li>
-            </ul>
-          </div>
+            <!-- Pros and Cons -->
+            <div v-if="tool.pros && tool.pros.length">
+              <strong>Pros:</strong>
+              <ul>
+                <li v-for="(pro, proIndex) in tool.pros" :key="'tool' + toolIndex + 'pro' + proIndex">
+                  {{ pro }}
+                </li>
+              </ul>
+            </div>
+            <div v-if="tool.cons && tool.cons.length">
+              <strong>Cons:</strong>
+              <ul>
+                <li v-for="(con, conIndex) in tool.cons" :key="'tool' + toolIndex + 'con' + conIndex">
+                  {{ con }}
+                </li>
+              </ul>
+            </div>
 
-          <!-- Tools,  build systems -->
-          <div v-if="tool.tools && tool.tools.length">
-            <strong>Tools:</strong>
-            <ul>
-              <li
-                v-for="(subTool, subToolIndex) in tool.tools"
-                :key="'tool' + toolIndex + 'subTool' + subToolIndex"
-              >
-                {{ subTool.type }} -
-                <a v-if="subTool.url" :href="subTool.url" target="_blank" rel="noopener noreferrer">{{ subTool.title }}</a>
-                <span v-else>{{ subTool.title }}</span>
-              </li>
-            </ul>
-          </div>
+            <!-- Frameworks and boilerplates -->
+            <div v-if="tool.frameworks && tool.frameworks.length">
+              <strong>Frameworks:</strong>
+              <ul>
+                <li
+                  v-for="(framework, frameworkIndex) in tool.frameworks"
+                  :key="'tool' + toolIndex + 'framework' + frameworkIndex"
+                >
+                  {{ framework.framework }} -
+                  <a v-if="framework.url" :href="framework.url" target="_blank" rel="noopener noreferrer">{{ framework.title }}</a>
+                  <span v-else>{{ framework.title }}</span>
+                </li>
+              </ul>
+            </div>
 
-        </div> <!-- end .card-body -->
-      </div> <!-- end .card -->
-    </div> <!-- end #app -->
+            <!-- Tools,  build systems -->
+            <div v-if="tool.tools && tool.tools.length">
+              <strong>Tools:</strong>
+              <ul>
+                <li
+                  v-for="(subTool, subToolIndex) in tool.tools"
+                  :key="'tool' + toolIndex + 'subTool' + subToolIndex"
+                >
+                  {{ subTool.type }} -
+                  <a v-if="subTool.url" :href="subTool.url" target="_blank" rel="noopener noreferrer">{{ subTool.title }}</a>
+                  <span v-else>{{ subTool.title }}</span>
+                </li>
+              </ul>
+            </div>
+
+          </div> <!-- end .card-body -->
+        </div> <!-- end .card -->
+      </div> <!-- end #app -->
+
+    </div> <!-- end .container -->
     <script src="app.js" type="text/javascript"></script>
   </body>
 </html>
