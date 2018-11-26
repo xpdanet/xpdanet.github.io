@@ -186,7 +186,9 @@ const app = new Vue({
         ],
         platforms: [],
         deprecated: true,
-        pros: [],
+        pros: [
+          'Similar approach to that of NW.js or Electron'
+        ],
         cons: [
           'Project is deprecated. Last release was in 2016.'
         ]
