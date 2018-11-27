@@ -5,6 +5,7 @@ const app = new Vue({
       {
         title: 'NW.js',
         url: 'https://nwjs.io',
+        deprecated: false,
         languages: [
           'HTML',
           'CSS',
@@ -37,11 +38,14 @@ const app = new Vue({
           'Small-Medium ecosystem',
           'Basically one person behind most of the code',
           'Everything you need from the documentation is available, but the site is clunky'
-        ]
+        ],
+        frameworks: [],
+        tools: []
       },
       {
         title: 'Electron',
         url: 'https://electronjs.org',
+        deprecated: false,
         languages: [
           'HTML',
           'CSS',
@@ -71,19 +75,57 @@ const app = new Vue({
           'Resource Hog',
           'No way to protect your source code',
           'Perpetually out of date, releases typically ship with versions of Node/Chromium from 3-6 months ago'
-        ]
+        ],
+        frameworks: [],
+        tools: []
       },
       {
         title: 'Xamarin',
         url: 'https://visualstudio.microsoft.com/xamarin',
+        deprecated: false,
         languages: [],
         platforms: [],
         pros: [],
         cons: []
       },
       {
+        title: 'Ultralight',
+        url: 'https://ultralig.ht',
+        deprecated: false,
+        languages: [
+          'C++',
+          'HTML',
+          'CSS'
+        ],
+        platforms: [
+          'Windows',
+          'OSX',
+          'Linux'
+        ],
+        pros: [
+          'Distribution sizes are as low as ~8MB',
+          'Low memory usage',
+          'GPU-Accelerated, drivers for Direct3D, Metal, and OpenGL (optimized for games)'
+          'Ultralight is designed for C++ developers, however it plans to add bindings for C, C#, .NET, Node.js, and Python',
+          'Free for non-commercial use, educational use, and commercial use by indie devs making less than US$100,000 a year'
+        ],
+        cons: [
+          'Currently in beta and missing many features',
+          'Not free for all commercial use',
+          'Mostly closed source',
+          'Basically one person behind most of the code',
+          'Currently requires the end user have a GPU',
+          'Lacking full support for CSS3, especially around SVG, filters, and dropshadows',
+          'Limited JavaScript interaction through C++',
+          'Internal Webkit is based off of Safari with many features disabled, notably WebWorkers, WebAudio and Video'
+        ],
+        frameworks: [],
+        tools: []
+      },
+      {
         title: 'LibUI-Node',
         url: 'https://github.com/parro-it/libui-node',
+        deprecated: false,
         languages: [
           'JS',
           'Node.js'
@@ -117,19 +159,24 @@ const app = new Vue({
             title: 'Vuido',
             url: 'https://vuido.mimec.org'
           }
-        ]
+        ],
+        tools: []
       },
       {
         title: 'Sciter',
         url: 'https://sciter.com',
+        deprecated: false,
         languages: [],
         platforms: [],
         pros: [],
-        cons: []
+        cons: [],
+        frameworks: [],
+        tools: []
       },
       {
         title: 'Carlo',
         url: 'https://github.com/GoogleChromeLabs/carlo',
+        deprecated: false,
         languages: [
           'HTML',
           'CSS',
@@ -138,11 +185,14 @@ const app = new Vue({
         ],
         platforms: [],
         pros: [],
-        cons: []
+        cons: [],
+        frameworks: [],
+        tools: []
       },
       {
         title: 'PyQt',
         url: 'https://www.riverbankcomputing.com/software/pyqt',
+        deprecated: false,
         languages: [
           'Python'
         ],
@@ -159,6 +209,7 @@ const app = new Vue({
         cons: [
           'If your project is not licensed under GPLV2, GPLV3, or LGPL3 then Qt costs $459/developer/month.'
         ],
+        frameworks: [],
         tools: [
           {
             type: 'Build System',
@@ -170,14 +221,18 @@ const app = new Vue({
       {
         title: 'Lorca',
         url: 'https://github.com/zserge/lorca',
+        deprecated: false,
         languages: [],
         platforms: [],
         pros: [],
-        cons: []
+        cons: [],
+        frameworks: [],
+        tools: []
       },
       {
         title: 'Tint2',
         url: 'https://github.com/trueinteractions/tint2',
+        deprecated: true,
         languages: [
           'HTML',
           'CSS',
@@ -185,13 +240,35 @@ const app = new Vue({
           'Node.js'
         ],
         platforms: [],
-        deprecated: true,
         pros: [
           'Similar approach to that of NW.js or Electron'
         ],
         cons: [
           'Project is deprecated. Last release was in 2016.'
-        ]
+        ],
+        frameworks: [],
+        tools: []
+      },
+      {
+        title: 'AppJS',
+        url: 'http://appjs.com',
+        deprecated: true,
+        languages: [
+          'HTML',
+          'CSS',
+          'JS'
+        ],
+        platforms: [
+          'Windows',
+          'Linux',
+          'OSX'
+        ],
+        pros: [],
+        cons: [
+          'Project has been deprecated for many years'
+        ],
+        frameworks: [],
+        tools: []
       }
     ]
   }
