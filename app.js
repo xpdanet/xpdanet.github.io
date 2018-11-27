@@ -230,6 +230,31 @@ const app = new Vue({
         tools: []
       },
       {
+        title: 'Brackets-Shell',
+        url: 'https://github.com/adobe/brackets-shell',
+        deprecated: false,
+        languages: [
+          'HTML',
+          'CSS',
+          'JS'
+        ],
+        platforms: [
+          'Windows',
+          'Linux',
+          'OSX'
+        ],
+        pros: [
+          'Maintained by Adobe'
+        ],
+        cons: [
+          'No documentation',
+          'Only designed for Brackets text editor, not for general purpose use',
+          'They recommend using NW.js or Electron instead'
+        ],
+        frameworks: [],
+        tools: []
+      },
+      {
         title: 'Tint2',
         url: 'https://github.com/trueinteractions/tint2',
         deprecated: true,
