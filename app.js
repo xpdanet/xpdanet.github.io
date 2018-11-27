@@ -105,7 +105,7 @@ const app = new Vue({
         pros: [
           'Distribution sizes are as low as ~8MB',
           'Low memory usage',
-          'GPU-Accelerated, drivers for Direct3D, Metal, and OpenGL (optimized for games)'
+          'GPU-Accelerated, drivers for Direct3D, Metal, and OpenGL (optimized for games)',
           'Ultralight is designed for C++ developers, however it plans to add bindings for C, C#, .NET, Node.js, and Python',
           'Free for non-commercial use, educational use, and commercial use by indie devs making less than US$100,000 a year'
         ],
