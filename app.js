@@ -123,6 +123,33 @@ const app = new Vue({
         tools: []
       },
       {
+        title: 'Adobe AIR',
+        url: 'http://www.adobe.com/products/air.html',
+        deprecated: false,
+        languages: [
+          'HTML',
+          'JS',
+          'ActionScript'
+        ],
+        platforms: [
+          'iOS',
+          'Android',
+          'Windows',
+          'OSX'
+        ],
+        pros: [
+          'Backed by Adobe',
+          'Simple development environment'
+        ],
+        cons: [
+          'Poor Linux support',
+          'Requires end users to install Adobe Air runtime separately',
+          'Limited documentation around desktop app development'
+        ],
+        frameworks: [],
+        tools: []
+      },
+      {
         title: 'LibUI-Node',
         url: 'https://github.com/parro-it/libui-node',
         deprecated: false,
