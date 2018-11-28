@@ -25,7 +25,7 @@ const app = new Vue({
           'Backed by Intel',
           'Updated within 24 hours of a Chromium or Node release',
           'Still a resource hog, but uses less RAM and disk space than Electron',
-          'Smaller distribution sizes (~25MB windows Installer)',
+          'Distribution sizes can be as small as 25MB (Windows Installer)',
           'Been around 5 years longer/used by thousands of projects',
           'Assumes you want to create a desktop app, and not a node script with an optional UI.',
           'Super easy to get started with and a no-nonsense API',
