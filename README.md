@@ -7,6 +7,7 @@ Website for XPDA.net (Cross-Platform Desktop Apps)
 
 * Flesh out content. Add tools to the list, fill out their details
    * Languages, Platforms, deprecation, pros/cons, frameworks, tools
+* Add live filters (filter on OS support, languages, etc)
 
 ### Phase 2
 
