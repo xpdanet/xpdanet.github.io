@@ -18,7 +18,8 @@ const app = new Vue({
           'OSX'
         ],
         pros: [
-          'Supports twice as many OS\'s as Electron including legacy support to OSX 10.6 and XP (via NW.js 0.14.7 LTS)',
+          'Very wide OS support (about twice as many OS\'s as Electron).
+          'Legacy OS support to OSX 10.6 and XP (via NW.js 0.14.7 LTS)',
           'Actually cares about proper Linux support',
           'Allows for protected source code (important for proprietary/closed source code)',
           'Backed by Intel',
