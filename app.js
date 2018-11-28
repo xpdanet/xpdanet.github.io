@@ -257,6 +257,79 @@ const app = new Vue({
         tools: []
       },
       {
+        title: 'Chromium Embedded Framework (CEF)',
+        url: 'https://bitbucket.org/chromiumembedded/cef',
+        deprecated: false,
+        languages: [
+          'C',
+          'C++',
+          'Java'
+        ],
+        platforms: [
+          'Windows',
+          'Linux',
+          'OSX'
+        ],
+        pros: [
+          'High amount of control',
+          'Good if you need to add in a browser view to an existing application',
+          'Relied on by a ton of projects/tools, making it likely to be around a long time',
+          'Has been ported to different languages for those that prefer .Net, Go, Delphi, or Python'
+        ],
+        cons: [
+          'Considerably more complex than other options on this list',
+          'This is as barebones as it gets, many other projects listed on this site are built on top of CEF to simplify it and make development faster/easier'
+        ],
+        frameworks: [],
+        tools: [
+          {
+            type: 'Port',
+            title: '.Net CEF#',
+            url: 'https://github.com/cefsharp/CefSharp'
+          },
+          {
+            type: 'Port',
+            title: '.Net/Mono CEF Glue',
+            url: 'https://bitbucket.org/xilium/xilium.cefglue'
+          },
+          {
+            type: 'Port',
+            title: '.Net CEF ChromiumFX',
+            url: 'https://bitbucket.org/chromiumfx/chromiumfx'
+          },
+          {
+            type: 'Port',
+            title: 'Delphi CEF',
+            url: 'https://github.com/hgourvest/dcef3'
+          },
+          {
+            type: 'Port',
+            title: 'CEF4Delphi',
+            url: 'https://github.com/salvadordf/CEF4Delphi'
+          },
+          {
+            type: 'Port',
+            title: 'Go CEF',
+            url: 'https://github.com/CzarekTomczak/cef2go'
+          },
+          {
+            type: 'Port',
+            title: 'Official Java CEF port',
+            url: 'https://bitbucket.org/chromiumembedded/java-cef'
+          },
+          {
+            type: 'Port',
+            title: 'JavaCEF',
+            url: 'http://code.google.com/p/javacef'
+          },
+          {
+            type: 'Port',
+            title: 'Python CEF',
+            url: 'http://code.google.com/p/cefpython'
+          }
+        ]
+      },
+      {
         title: 'Brackets-Shell',
         url: 'https://github.com/adobe/brackets-shell',
         deprecated: false,
