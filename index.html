@@ -8,6 +8,9 @@
       *:after {
         box-sizing: border-box;
       }
+      [v-cloak] {
+        display: none;
+      }
       body {
         background: #03A9F4;
         font-family: 'Roboto', sans-serif;
@@ -63,7 +66,7 @@
       <a href="https://github.com/xpdanet/xpdanet.github.io">Edit this page on GitHub.</a>
       <hr />
       <h3>Tools</h3>
-      <div id="app">
+      <div id="app" v-cloak>
         <div
           v-for="(tool, toolIndex) in tools"
           :key="'tool' + toolIndex"
