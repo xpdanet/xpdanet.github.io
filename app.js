@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 const app = new Vue({
   el: '#app',
   data: {
@@ -218,14 +219,14 @@ const app = new Vue({
         ],
         pros: [
           'Made by Google',
-          'Uses the user\'s installed copy of Chrome so you don\'t need to package and ship the browser in your distrubtion making dist sizes fairly small.'
+          'Uses the user\'s installed copy of Chrome so you don\'t need to package and ship the browser in your distrubtion making dist sizes fairly small',
           'Uses the Puppeteer API for communicating between Node and browser'
         ],
         cons: [
           'Though made by Google, it is part of their Chrome Lab experiments, which often become abandoned',
           'Requires the end user has Chrome 70+ installed on their system (released 2018-10-16)',
           'You do not control the browser version, meaning usage of some new browser features in your app will require fallbacks to what Chrome 70 supported',
-          'The packaging for general distribution pipeline does not exist. You are told to use pkg and to manually handle customizing your app icon, etc.'
+          'The packaging for general distribution pipeline does not exist. You are told to use pkg and to manually handle customizing your app icon, etc.',
           'No established paths for setting up auto updates'
         ],
         frameworks: [],
@@ -249,7 +250,7 @@ const app = new Vue({
           'Qt is built with C++ which can be cumbersome, the Python bindings simplify interacting with it'
         ],
         cons: [
-          'If your project is not licensed under GPLV2, GPLV3, or LGPL3 then Qt costs $459/developer/month.'
+          'If your project is not licensed under GPLV2, GPLV3, or LGPL3 then Qt costs $459/developer/month'
         ],
         frameworks: [],
         tools: [
@@ -384,7 +385,7 @@ const app = new Vue({
           'Similar approach to that of NW.js or Electron'
         ],
         cons: [
-          'Project is deprecated. Last release was in 2016.'
+          'Project is deprecated (last release was in 2016)'
         ],
         frameworks: [],
         tools: []
