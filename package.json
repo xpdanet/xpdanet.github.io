@@ -1,0 +1,26 @@
+{
+  "name": "xpda.net",
+  "version": "1.0.0",
+  "homepage": "http://XPDA.net",
+  "description": "Website for XPDA.net (Cross-Platform Desktop Apps)",
+  "main": "index.html",
+  "scripts": {
+    "start": "node node_modules/npm-free-server/dist/server.js",
+    "lint": "eslint app.js"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^5.9.0",
+    "eslint-plugin-vue": "^4.7.1",
+    "npm-free-server": "^1.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xpdanet/xpdanet.github.io.git"
+  },
+  "author": "The Jared Wilcurt",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xpdanet/xpdanet.github.io/issues"
+  }
+}
