@@ -2,6 +2,8 @@
 
 Website for XPDA.net (Cross-Platform Desktop Apps)
 
+[![Build Status](https://travis-ci.org/xpdanet/xpdanet.github.io.svg?branch=master)](https://travis-ci.org/xpdanet/xpdanet.github.io)
+
 * * *
 
 ## Plan
