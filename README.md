@@ -2,6 +2,9 @@
 
 Website for XPDA.net (Cross-Platform Desktop Apps)
 
+* * *
+
+## Plan
 
 ### Phase 1
 
@@ -13,6 +16,7 @@ Website for XPDA.net (Cross-Platform Desktop Apps)
 
 * Improve design of page
 * Obtain, optimize, and place logo's for projects
+* Create logo and favicon
 
 ### Phase 3
 
@@ -23,3 +27,13 @@ Website for XPDA.net (Cross-Platform Desktop Apps)
 
 * Continue improving content
    * Notable projects made with the tool, tutorials
+
+* * *
+
+### Technology Colophon
+
+* git :grimacing:
+* GitHub Pages :notebook:
+* Vue.js :heart_eyes:
+* ESLint :relieved:
+* Travis-CI :rainbow:
