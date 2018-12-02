@@ -56,6 +56,34 @@
       .deprecated .card-header a:visited {
         color: #666;
       }
+      .btn {
+        background: #CCC;
+        border: 1px solid #000;
+        border-width: 1px 0px;
+        margin: 4px 0px;
+        padding: 8px;
+        cursor: pointer;
+      }
+      .btn:hover,
+      .btn:focus {
+        background: #DDD;
+        border-color: #BBB;
+        outline: none;
+      }
+      .btn:first-of-type {
+        border-left-width: 1px;
+      }
+      .btn:last-of-type {
+        border-right-width: 1px;
+      }
+      .btn.active {
+        background: #03A9F4;
+      }
+      .btn.active:hover,
+      .btn.active:focus {
+        background: #B3E5FC;
+        border-color: #03A9F4;
+      }
     </style>
     <script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"></script>
   </head>
@@ -67,10 +95,33 @@
       <hr />
       <a href="https://github.com/xpdanet/xpdanet.github.io">Edit this page on GitHub.</a>
       <hr />
-      <h3>Tools</h3>
       <div id="app" v-cloak>
+        <h3>Filter Controls:</h3>
+        <div>
+          <button
+            v-for="(languageValue, languageKey) in languages"
+            :key="'language' + languageKey"
+            :class="languageValue.enabled ? 'active' : ''"
+            class="btn"
+            @click="toggleActive(languageValue)"
+          >
+            {{ languageKey }}
+          </button>
+        </div>
+        <div>
+          <button
+            v-for="(platformValue, platformKey) in platforms"
+            :key="'platform' + platformKey"
+            :class="platformValue.enabled ? 'active' : ''"
+            class="btn"
+            @click="toggleActive(platformValue)"
+          >
+            {{ platformKey }}
+          </button>
+        </div>
+        <h3>Tools ({{ filteredTools.length }})</h3>
         <div
-          v-for="(tool, toolIndex) in tools"
+          v-for="(tool, toolIndex) in filteredTools"
           :key="'tool' + toolIndex"
           :class="tool.deprecated ? 'deprecated' : ''"
           class="card"

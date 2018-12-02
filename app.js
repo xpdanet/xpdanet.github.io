@@ -2,6 +2,8 @@
 const app = new Vue({
   el: '#app',
   data: {
+    languages: {},
+    platforms: {},
     tools: [
       {
         title: 'NW.js',
@@ -471,5 +473,100 @@ const app = new Vue({
         tools: []
       }
     ]
+  },
+  methods: {
+    toggleActive: function (item) {
+      item.enabled = !item.enabled;
+    },
+    setLanguages: function () {
+      let languages = {};
+      this.tools.forEach(function (tool) {
+        tool.languages.forEach(function (language) {
+          if (languages[language]) {
+            languages[language].amount++;
+          } else {
+            languages[language] = {
+              amount: 1,
+              enabled: true
+            };
+          }
+        });
+      });
+      this.languages = languages;
+    },
+    setPlatforms: function () {
+      let platforms = {};
+      this.tools.forEach(function (tool) {
+        tool.platforms.forEach(function (platform) {
+          if (platforms[platform]) {
+            platforms[platform].amount++;
+          } else {
+            platforms[platform] = {
+              amount: 1,
+              enabled: true
+            };
+          }
+        });
+      });
+      this.platforms = platforms;
+    }
+  },
+  computed: {
+    enabledLanguages: function () {
+      let enabledLanguages = [];
+      for (let language in this.languages) {
+        if (this.languages[language].enabled) {
+          enabledLanguages.push(language);
+        }
+      }
+      return enabledLanguages;
+    },
+    enabledPlatforms: function () {
+      let enabledPlatforms = [];
+      for (let platform in this.platforms) {
+        if (this.platforms[platform].enabled) {
+          enabledPlatforms.push(platform);
+        }
+      }
+      return enabledPlatforms;
+    },
+    toolsFilteredByPlatform: function () {
+      let filteredTools = [];
+
+      this.tools.forEach((tool) => {
+        let toolContainsEnabledPlatform = tool.platforms.some((platform) => {
+          return this.enabledPlatforms.includes(platform);
+        });
+        if (toolContainsEnabledPlatform) {
+          filteredTools.push(tool);
+        }
+      });
+
+      return filteredTools;
+    },
+    toolsFilteredByPlatformAndLanguage: function () {
+      let filteredTools = [];
+
+      this.toolsFilteredByPlatform.forEach((tool) => {
+        let toolContainsEnabledLanguage = tool.languages.some((language) => {
+          return this.enabledLanguages.includes(language);
+        });
+        if (toolContainsEnabledLanguage) {
+          filteredTools.push(tool);
+        }
+      });
+
+      return filteredTools;
+    },
+    filteredTools: function () {
+      return this.toolsFilteredByPlatformAndLanguage;
+    }
+  },
+  created: function () {
+    this.setPlatforms();
+    this.setLanguages();
   }
 });
+
+
+
