@@ -258,7 +258,7 @@ const app = new Vue({
         ],
         pros: [
           'Made by Google',
-          'Uses the user\'s installed copy of Chrome so you don\'t need to package and ship the browser in your distrubtion making dist sizes fairly small',
+          'Uses the user\'s installed copy of Chrome so you don\'t need to package and ship the browser in your distrubtion making dist sizes very small',
           'Uses the Puppeteer API for communicating between Node and browser'
         ],
         cons: [
@@ -304,10 +304,30 @@ const app = new Vue({
         title: 'Lorca',
         url: 'https://github.com/zserge/lorca',
         deprecated: false,
-        languages: [],
-        platforms: [],
-        pros: [],
-        cons: [],
+        languages: [
+          'HTML',
+          'CSS',
+          'JS',
+          'Go'
+        ],
+        platforms: [
+          'Windows',
+          'Linux',
+          'OSX'
+        ],
+        pros: [
+          'Inspired by Carlo, but for Go instead of Node.js',
+          'Unlike Carlo, Lorca can build executable for most any platform via the go build command',
+          'Uses the user\'s installed copy of Chrome so you don\'t need to package and ship the browser in your distrubtion making dist sizes very small',
+          'Distribution sizes of 5-10MB'
+        ],
+        cons: [
+          'Very new project, basically one person behind it',
+          'Requires the end user has Chrome 70+ installed on their system (released 2018-10-16)',
+          'You do not control the browser version, meaning usage of some new browser features in your app will require fallbacks to what Chrome 70 supported',
+          'Though building a native executable is availbe, you will still need to manually edit it to embed app icon, etc. and use tools for creating installers',
+          'No established paths for setting up auto updates'
+        ],
         frameworks: [],
         tools: []
       },
