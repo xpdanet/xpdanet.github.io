@@ -85,10 +85,31 @@ const app = new Vue({
         title: 'Xamarin',
         url: 'https://visualstudio.microsoft.com/xamarin',
         deprecated: false,
-        languages: [],
-        platforms: [],
-        pros: [],
-        cons: []
+        languages: [
+          'C#',
+          '.NET',
+          'F#'
+        ],
+        platforms: [
+          'iOS',
+          'Android',
+          'Windows Phone',
+          'Windows',
+          'OSX'
+        ],
+        pros: [
+          'Currently supports OSX 10.7+ (though the upcoming versions will only support 10.9+)',
+          'Code can be shared across Desktop and Mobile apps',
+          'OSX apps can use XCode\'s interface builder, or create UI\'s with C#',
+          'Apps are written in C#/F#/.NET and can consume libraries written in VB and razor templates'
+        ],
+        cons: [
+          'Very little abstraction is handled for you between the different OS\'s, versus something like NW.js where you write code to its API and it converts it for each OS',
+          'No Linux support',
+          'Windows support is limited to UWP (Microsoft Store) format, meaning it only support Windows 8+',
+          'Developing for OSX apps requires a lot of knowledge of developing traditional native OSX desktop apps that talk directly to the OS API',
+          'You are mostly limited to using Visual Studio for development'
+        ]
       },
       {
         title: 'Ultralight',
@@ -308,7 +329,7 @@ const app = new Vue({
           'High amount of control',
           'Good if you need to add in a browser view to an existing application',
           'Relied on by a ton of projects/tools, making it likely to be around a long time',
-          'Has been ported to different languages for those that prefer .Net, Go, Delphi, or Python'
+          'Has been ported to different languages for those that prefer .NET, Go, Delphi, or Python'
         ],
         cons: [
           'Considerably more complex than other options on this list',
@@ -318,17 +339,17 @@ const app = new Vue({
         tools: [
           {
             type: 'Port',
-            title: '.Net CEF#',
+            title: '.NET CEF#',
             url: 'https://github.com/cefsharp/CefSharp'
           },
           {
             type: 'Port',
-            title: '.Net/Mono CEF Glue',
+            title: '.NET/Mono CEF Glue',
             url: 'https://bitbucket.org/xilium/xilium.cefglue'
           },
           {
             type: 'Port',
-            title: '.Net CEF ChromiumFX',
+            title: '.NET CEF ChromiumFX',
             url: 'https://bitbucket.org/chromiumfx/chromiumfx'
           },
           {
