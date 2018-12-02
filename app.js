@@ -195,10 +195,28 @@ const app = new Vue({
         title: 'Sciter',
         url: 'https://sciter.com',
         deprecated: false,
-        languages: [],
-        platforms: [],
-        pros: [],
-        cons: [],
+        languages: [
+          'HTML',
+          'CSS',
+          'TIScript'
+        ],
+        platforms: [
+          'Windows',
+          'Linux',
+          'OSX'
+        ],
+        pros: [
+          'Supports Windows XP+ and OSX 10.7+',
+          'Distribution can be as small as 4MB for an installer',
+          'Uses very little resources to give similar UI experience as that of a browser',
+          'Source code is customizable for those wanting to tweak the build (at a cost)'
+        ],
+        cons: [
+          'Has a limited free version, can become expensive in some scenarios',
+          'Does not support all of CSS3 features',
+          'Uses a proprietary scripting language that is based off of the 1996-2011 version of JavaScript (v1.x))',
+          'Documentation is very lacking'
+        ],
         frameworks: [],
         tools: []
       },
