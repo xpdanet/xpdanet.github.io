@@ -242,6 +242,35 @@ const app = new Vue({
         tools: []
       },
       {
+        title: 'PyQt',
+        url: 'https://www.riverbankcomputing.com/software/pyqt',
+        deprecated: false,
+        languages: [
+          'Python'
+        ],
+        platforms: [
+          'Windows',
+          'Linux',
+          'OSX',
+          'iOS',
+          'Android'
+        ],
+        pros: [
+          'Qt is built with C++ which can be cumbersome, the Python bindings simplify interacting with it'
+        ],
+        cons: [
+          'If your project is not licensed under GPLV2, GPLV3, or LGPL3 then Qt costs $459/developer/month'
+        ],
+        frameworks: [],
+        tools: [
+          {
+            type: 'Build System',
+            title: 'fman',
+            url: 'https://build-system.fman.io'
+          }
+        ]
+      },
+      {
         title: 'Carlo',
         url: 'https://github.com/GoogleChromeLabs/carlo',
         deprecated: false,
@@ -270,35 +299,6 @@ const app = new Vue({
         ],
         frameworks: [],
         tools: []
-      },
-      {
-        title: 'PyQt',
-        url: 'https://www.riverbankcomputing.com/software/pyqt',
-        deprecated: false,
-        languages: [
-          'Python'
-        ],
-        platforms: [
-          'Windows',
-          'Linux',
-          'OSX',
-          'iOS',
-          'Android'
-        ],
-        pros: [
-          'Qt is built with C++ which can be cumbersome, the Python bindings simplify interacting with it'
-        ],
-        cons: [
-          'If your project is not licensed under GPLV2, GPLV3, or LGPL3 then Qt costs $459/developer/month'
-        ],
-        frameworks: [],
-        tools: [
-          {
-            type: 'Build System',
-            title: 'fman',
-            url: 'https://build-system.fman.io'
-          }
-        ]
       },
       {
         title: 'Lorca',
