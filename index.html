@@ -19,10 +19,12 @@
       <div id="app" v-cloak>
         <h3>Filter Controls:</h3>
         <div>
+          <p>Supports at least one of these languages:</p>
           <button
             v-for="(languageValue, languageKey) in languages"
             :key="'language' + languageKey"
             :class="languageValue.enabled ? 'active' : ''"
+            :title="'Used by ' + languageValue.amount + ' tools'"
             class="btn"
             @click="toggleActive(languageValue)"
           >
@@ -30,10 +32,12 @@
           </button>
         </div>
         <div>
+          <p>Supports at least one of these platforms:</p>
           <button
             v-for="(platformValue, platformKey) in platforms"
             :key="'platform' + platformKey"
             :class="platformValue.enabled ? 'active' : ''"
+            :title="'Used by ' + platformValue.amount + ' tools'"
             class="btn"
             @click="toggleActive(platformValue)"
           >
@@ -53,6 +57,20 @@
           </div>
 
           <div class="card-body">
+            <a
+              v-if="tool.logo && tool.url"
+              :href="tool.url" target="_blank" rel="noopener noreferrer"
+            ><img
+              :src="'_imgs/logos/' + tool.logo"
+              :alt="tool.title + ' logo'"
+              class="logo"
+            /></a>
+            <img
+              v-else-if="tool.logo"
+              :src="'_imgs/logos/' + tool.logo"
+              :alt="tool.title + ' logo'"
+              class="logo"
+            />
             <div v-if="tool.languages.length">
               <strong>Languages:</strong> {{ tool.languages.join(', ') }}
             </div>

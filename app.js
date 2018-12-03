@@ -8,6 +8,7 @@ const app = new Vue({
       {
         title: 'NW.js',
         url: 'https://nwjs.io',
+        logo: 'nw.png',
         deprecated: false,
         languages: [
           'HTML',
