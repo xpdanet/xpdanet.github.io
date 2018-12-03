@@ -6,7 +6,7 @@
   "main": "index.html",
   "scripts": {
     "start": "node node_modules/npm-free-server/dist/server.js",
-    "lint": "eslint app.js"
+    "lint": "eslint _scripts/**/*.js"
   },
   "dependencies": {},
   "devDependencies": {
