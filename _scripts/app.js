@@ -348,6 +348,7 @@ const app = new Vue({
       {
         title: 'Chromium Embedded Framework (CEF)',
         url: 'https://bitbucket.org/chromiumembedded/cef',
+        logo: 'cef.png',
         deprecated: false,
         languages: [
           'C',
@@ -421,6 +422,7 @@ const app = new Vue({
       {
         title: 'Brackets-Shell',
         url: 'https://github.com/adobe/brackets-shell',
+        logo: 'brackets.svg',
         deprecated: false,
         languages: [
           'HTML',
@@ -470,6 +472,7 @@ const app = new Vue({
       {
         title: 'AppJS',
         url: 'http://appjs.com',
+        logo: 'appjs.png',
         deprecated: true,
         languages: [
           'HTML',
