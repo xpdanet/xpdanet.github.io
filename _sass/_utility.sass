@@ -1,0 +1,23 @@
+.btn
+    background: $grayEA
+    border: 1px solid $black
+    border-width: 1px 0px
+    margin: 4px 0px
+    padding: 8px
+    font-size: 14px
+    cursor: pointer
+    &:hover,
+    &:focus
+        background: $white
+        border-color: $grayBD
+        outline: none
+    &:first-of-type
+        border-left-width: 1px
+    &:last-of-type
+        border-right-width: 1px
+    &.active
+        background: $defaultColor
+        &:hover,
+        &:focus
+            background: $defaultHover
+            border-color: $defaultColor
