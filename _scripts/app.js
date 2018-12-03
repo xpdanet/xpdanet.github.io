@@ -151,6 +151,7 @@ const app = new Vue({
       {
         title: 'Adobe AIR',
         url: 'http://www.adobe.com/products/air.html',
+        logo: 'air.png',
         deprecated: false,
         languages: [
           'HTML',
