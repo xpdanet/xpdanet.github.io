@@ -2,6 +2,7 @@
 const app = new Vue({
   el: '#app',
   data: {
+    filterType: 'subtractive',
     languages: {},
     platforms: {},
     tools: [
@@ -537,6 +538,14 @@ const app = new Vue({
         });
       });
       this.platforms = platforms;
+    },
+    setAllFiltersOnOff: function (bool) {
+      for (let language in this.languages) {
+        this.languages[language].enabled = bool;
+      }
+      for (let platform in this.platforms) {
+        this.platforms[platform].enabled = bool;
+      }
     }
   },
   computed: {
@@ -558,7 +567,7 @@ const app = new Vue({
       }
       return enabledPlatforms;
     },
-    toolsFilteredByPlatform: function () {
+    subtractiveFilteredByPlatform: function () {
       let filteredTools = [];
 
       this.tools.forEach((tool) => {
@@ -572,10 +581,10 @@ const app = new Vue({
 
       return filteredTools;
     },
-    toolsFilteredByPlatformAndLanguage: function () {
+    subtractiveFilteredByPlatformAndLanguage: function () {
       let filteredTools = [];
 
-      this.toolsFilteredByPlatform.forEach((tool) => {
+      this.subtractiveFilteredByPlatform.forEach((tool) => {
         let toolContainsEnabledLanguage = tool.languages.some((language) => {
           return this.enabledLanguages.includes(language);
         });
@@ -586,8 +595,50 @@ const app = new Vue({
 
       return filteredTools;
     },
+    additiveFilteredByPlatform: function () {
+      let filteredTools = [];
+      this.tools.forEach((tool) => {
+        let hasAllSelectedPlatforms = true;
+        this.enabledPlatforms.forEach((platform) => {
+          if (!tool.platforms.includes(platform)) {
+            hasAllSelectedPlatforms = false;
+          }
+        });
+        if (hasAllSelectedPlatforms) {
+          filteredTools.push(tool);
+        }
+      });
+      return filteredTools;
+    },
+    additiveFilteredByPlatformAndLanguage: function () {
+      let filteredTools = [];
+      this.additiveFilteredByPlatform.forEach((tool) => {
+        let hasAllSelectedLanguages = true;
+        this.enabledLanguages.forEach((language) => {
+          if (!tool.languages.includes(language)) {
+            hasAllSelectedLanguages = false;
+          }
+        });
+        if (hasAllSelectedLanguages) {
+          filteredTools.push(tool);
+        }
+      });
+      return filteredTools;
+    },
     filteredTools: function () {
-      return this.toolsFilteredByPlatformAndLanguage;
+      if (this.filterType === 'subtractive') {
+        return this.subtractiveFilteredByPlatformAndLanguage;
+      }
+      return this.additiveFilteredByPlatformAndLanguage;
+    }
+  },
+  watch: {
+    filterType: function (type) {
+      if (type === 'additive') {
+        this.setAllFiltersOnOff(false);
+      } else if (type === 'subtractive') {
+        this.setAllFiltersOnOff(true);
+      }
     }
   },
   created: function () {

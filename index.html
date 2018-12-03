@@ -19,7 +19,11 @@
       <div id="app" v-cloak>
         <h3>Filter Controls:</h3>
         <div>
-          <p>Supports at least one of these languages:</p>
+          <select v-model="filterType">
+            <option value="subtractive">Supports at least one of these:</option>
+            <option value="additive">Must support each selected:</option>
+          </select>
+          <p>Languages</p>
           <button
             v-for="(languageValue, languageKey) in languages"
             :key="'language' + languageKey"
@@ -32,7 +36,7 @@
           </button>
         </div>
         <div>
-          <p>Supports at least one of these platforms:</p>
+          <p>Platforms</p>
           <button
             v-for="(platformValue, platformKey) in platforms"
             :key="'platform' + platformKey"
