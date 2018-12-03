@@ -87,6 +87,7 @@ const app = new Vue({
       {
         title: 'Xamarin',
         url: 'https://visualstudio.microsoft.com/xamarin',
+        logo: 'xamarin.png',
         deprecated: false,
         languages: [
           'C#',
@@ -117,6 +118,7 @@ const app = new Vue({
       {
         title: 'Ultralight',
         url: 'https://ultralig.ht',
+        logo: 'ultralight.png',
         deprecated: false,
         languages: [
           'C++',
@@ -255,6 +257,7 @@ const app = new Vue({
       {
         title: 'PyQt',
         url: 'https://www.riverbankcomputing.com/software/pyqt',
+        logo: 'qt.png',
         deprecated: false,
         languages: [
           'Python'
