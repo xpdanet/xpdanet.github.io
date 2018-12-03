@@ -46,7 +46,21 @@ const app = new Vue({
           'Everything you need from the documentation is available, but the site is clunky'
         ],
         frameworks: [],
-        tools: []
+        tools: [],
+        tutorials: [
+          {
+            title: 'NW.js, Vue, Vuetify',
+            author: 'Ackzell',
+            url: 'https://www.youtube.com/playlist?list=PLmJs3lfUmCdT9MyG60Oo6HM7xAn79vwZ0',
+            site: 'YouTube'
+          },
+          {
+            title: 'Making a desktop app: For complete beginners',
+            author: 'The Jared Wilcurt',
+            url: 'https://gitlab.com/TheJaredWilcurt/battery-app-workshop',
+            site: 'GitLab'
+          }
+        ]
       },
       {
         title: 'Electron',
@@ -84,7 +98,15 @@ const app = new Vue({
           'Perpetually out of date, releases typically ship with versions of Node/Chromium from 3-6 months ago'
         ],
         frameworks: [],
-        tools: []
+        tools: [],
+        tutorials: [
+          {
+            title: 'Building a Desktop App with Vue: Electron',
+            author: 'Natalia Tepluhina',
+            url: 'https://dev.to/vuevixens/building-a-desktop-app-with-vue-electron-3pl'
+            site: 'dev.to'
+          }
+        ]
       },
       {
         title: 'Xamarin',
@@ -224,7 +246,15 @@ const app = new Vue({
             url: 'https://vuido.mimec.org'
           }
         ],
-        tools: []
+        tools: [],
+        tutorials: [
+          {
+            title: 'Building a Desktop App with Vue: Vuido',
+            author: 'Natalia Tepluhina',
+            url: 'https://dev.to/vuevixens/building-a-desktop-app-with-vue-vuido-490n',
+            site: 'dev.to'
+          }
+        ]
       },
       {
         title: 'Sciter',
@@ -500,6 +530,21 @@ const app = new Vue({
         ],
         frameworks: [],
         tools: []
+      }
+    ],
+    articles: [
+      {
+        title: 'Why I prefer NW.js over Electron? (2018 comparison)',
+        author: 'Osama Abbas',
+        url: 'https://medium.com/@pw.osama/e60b7289752',
+        site: 'Medium',
+        tags: [
+          'NW.js',
+          'Electron'
+        ]
+      },
+      {
+        
       }
     ]
   },
