@@ -6,16 +6,23 @@
   "main": "index.html",
   "scripts": {
     "start": "node node_modules/npm-free-server/dist/server.js",
-    "lint": "eslint _scripts/**/*.js"
+    "lint": "eslint _scripts/**/*.js",
+    "fix": "npm run lint -- --fix",
+    "sasslint": "sass-lint -c .sass-lint.yml -v -f table",
+    "sassfix": "sass-lint-auto-fix -c .sass-lint.yml"
   },
   "dependencies": {},
   "devDependencies": {
     "eslint": "^5.9.0",
     "eslint-plugin-vue": "^4.7.1",
     "meyer-sass": "^2.0.1",
+    "node-sass": "^4.10.0",
     "normalize.css": "^8.0.1",
     "npm-free-server": "^1.1.0",
-    "sass-material-colors": "0.0.5"
+    "sass-lint": "^1.12.1",
+    "sass-lint-auto-fix": "^0.15.0",
+    "sass-material-colors": "0.0.5",
+    "tjw-sasslint-rules": "^1.1.0"
   },
   "repository": {
     "type": "git",
