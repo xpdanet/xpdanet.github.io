@@ -50,6 +50,7 @@ const app = new Vue({
       {
         title: 'Electron',
         url: 'https://electronjs.org',
+        logo: 'electrom.jpg',
         deprecated: false,
         languages: [
           'HTML',
@@ -317,6 +318,7 @@ const app = new Vue({
       {
         title: 'Lorca',
         url: 'https://github.com/zserge/lorca',
+        logo: 'lorca.png',
         deprecated: false,
         languages: [
           'HTML',
@@ -448,6 +450,7 @@ const app = new Vue({
       {
         title: 'Tint2',
         url: 'https://github.com/trueinteractions/tint2',
+        logo: 'tint2.png',
         deprecated: true,
         languages: [
           'HTML',
