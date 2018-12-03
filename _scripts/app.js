@@ -224,6 +224,7 @@ const app = new Vue({
       {
         title: 'Sciter',
         url: 'https://sciter.com',
+        logo: 'sciter.png',
         deprecated: false,
         languages: [
           'HTML',
