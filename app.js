@@ -182,7 +182,11 @@ const app = new Vue({
           'JS',
           'Node.js'
         ],
-        platforms: [],
+        platforms: [
+          'Windows',
+          'Linux',
+          'OSX'
+        ],
         pros: [
           'Uses minimal amounts of resources, much less than NW.js and Electron',
           'Built package can be as small as ~20MB (compared to ~70MB (NW) and ~120MB (Electron))',
@@ -190,9 +194,11 @@ const app = new Vue({
           'Can use node_modules',
           'Has Vue, React, Etc. boilerplates available',
           'Plays nicely with Gulp, Webpack, etc.',
-          'Ability to share code across Mobile/Web/Desktop if project setup correctly'
+          'Ability to share code across Mobile/Web/Desktop if project setup correctly',
+          'Supports Windows Vista SP1+ and OSX 10.8+'
         ],
         cons: [
+          'Requires native build tools and to do builds on each target platform',
           'Limited-to-no styling options, all apps look like vanilla form fields',
           'Very new, not out of beta',
           'Not great OS support, or build tools yet',
@@ -441,7 +447,11 @@ const app = new Vue({
           'JS',
           'Node.js'
         ],
-        platforms: [],
+        platforms: [
+          'Windows',
+          'OSX',
+          'Linux'
+        ],
         pros: [
           'Similar approach to that of NW.js or Electron'
         ],
@@ -458,16 +468,22 @@ const app = new Vue({
         languages: [
           'HTML',
           'CSS',
-          'JS'
+          'JS',
+          'Node.js'
         ],
         platforms: [
           'Windows',
           'Linux',
           'OSX'
         ],
-        pros: [],
+        pros: [
+          'Built on top of Chromium and Node',
+          'Distribution sizes around 20MB'
+        ],
         cons: [
-          'Project has been deprecated for many years'
+          'Project is deprecated (last release was in 2014)',
+          'No developer tools',
+          'Uses very old versions of Chromium and Node'
         ],
         frameworks: [],
         tools: []
@@ -567,6 +583,3 @@ const app = new Vue({
     this.setLanguages();
   }
 });
-
-
-
