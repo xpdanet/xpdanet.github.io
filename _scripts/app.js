@@ -137,7 +137,10 @@ const app = new Vue({
           'Windows support is limited to UWP (Microsoft Store) format, meaning it only support Windows 8+',
           'Developing for OSX apps requires a lot of knowledge of developing traditional native OSX desktop apps that talk directly to the OS API',
           'You are mostly limited to using Visual Studio for development'
-        ]
+        ],
+        frameworks: [],
+        tools: [],
+        tutorials: []
       },
       {
         title: 'Ultralight',
@@ -172,7 +175,8 @@ const app = new Vue({
           'Internal Webkit is based off of Safari with many features disabled, notably WebWorkers, WebAudio and Video'
         ],
         frameworks: [],
-        tools: []
+        tools: [],
+        tutorials: []
       },
       {
         title: 'Adobe AIR',
@@ -200,7 +204,8 @@ const app = new Vue({
           'Limited documentation around desktop app development'
         ],
         frameworks: [],
-        tools: []
+        tools: [],
+        tutorials: []
       },
       {
         title: 'LibUI-Node',
@@ -284,7 +289,8 @@ const app = new Vue({
           'Documentation is very lacking'
         ],
         frameworks: [],
-        tools: []
+        tools: [],
+        tutorials: []
       },
       {
         title: 'PyQt',
@@ -314,7 +320,8 @@ const app = new Vue({
             title: 'fman',
             url: 'https://build-system.fman.io'
           }
-        ]
+        ],
+        tutorials: []
       },
       {
         title: 'Carlo',
@@ -344,7 +351,8 @@ const app = new Vue({
           'No established paths for setting up auto updates'
         ],
         frameworks: [],
-        tools: []
+        tools: [],
+        tutorials: []
       },
       {
         title: 'Lorca',
@@ -376,7 +384,8 @@ const app = new Vue({
           'No established paths for setting up auto updates'
         ],
         frameworks: [],
-        tools: []
+        tools: [],
+        tutorials: []
       },
       {
         title: 'Chromium Embedded Framework (CEF)',
@@ -450,7 +459,8 @@ const app = new Vue({
             title: 'Python CEF',
             url: 'http://code.google.com/p/cefpython'
           }
-        ]
+        ],
+        tutorials: []
       },
       {
         title: 'Brackets-Shell',
@@ -476,7 +486,8 @@ const app = new Vue({
           'They recommend using NW.js or Electron instead'
         ],
         frameworks: [],
-        tools: []
+        tools: [],
+        tutorials: []
       },
       {
         title: 'Tint2',
@@ -501,7 +512,8 @@ const app = new Vue({
           'Project is deprecated (last release was in 2016)'
         ],
         frameworks: [],
-        tools: []
+        tools: [],
+        tutorials: []
       },
       {
         title: 'AppJS',
@@ -529,7 +541,8 @@ const app = new Vue({
           'Uses very old versions of Chromium and Node'
         ],
         frameworks: [],
-        tools: []
+        tools: [],
+        tutorials: []
       }
     ],
     articles: [
