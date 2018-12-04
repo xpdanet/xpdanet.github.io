@@ -102,6 +102,25 @@
               </ul>
             </div>
 
+            <!-- Notable Projects -->
+            <div v-if="tool.notableProjects && tool.notableProjects.length">
+              <strong>Notable Projects made with {{ tool.title }}:</strong>
+              <ul>
+                <li
+                  v-for="(notableProject, notableProjectIndex) in tool.notableProjects"
+                  :key="'tool' + toolIndex + 'notableProject' + notableProjectIndex"
+                >
+                  <template v-if="notableProject.url">
+                    <a :href="notableProject.url" target="_blank" rel="noopener noreferrer">{{ notableProject.title }}</a> -
+                  </template>
+                  <template v-else>
+                    {{ notableProject.title }} -
+                  </template>
+                  {{ notableProject.description }}
+                </li>
+              </ul>
+            </div>
+
             <!-- Frameworks and boilerplates -->
             <div v-if="tool.frameworks && tool.frameworks.length">
               <strong>Frameworks:</strong>
@@ -142,6 +161,7 @@
                 >
                   <strong>{{ tutorial.site }}</strong> -
                   <a v-if="tutorial.url" :href="tutorial.url" target="_blank" rel="noopener noreferrer">{{ tutorial.title }}</a>
+                  <span v-else>{{ tutorial.title }}</span>
                   <em v-if="tutorial.author">by {{ tutorial.author }}</em>
                 </li>
               </ul>
