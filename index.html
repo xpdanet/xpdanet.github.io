@@ -48,6 +48,7 @@
             {{ platformKey }}
           </button>
         </div>
+
         <h3>Tools ({{ filteredTools.length }})</h3>
         <div
           v-for="(tool, toolIndex) in filteredTools"
@@ -75,17 +76,18 @@
               :alt="tool.title + ' logo'"
               class="logo"
             />
-            <div v-if="tool.languages.length">
+
+            <div v-if="tool.languages.length" class="section">
               <strong>Languages:</strong> {{ tool.languages.join(', ') }}
             </div>
 
             <!-- Platforms/OS's -->
-            <div v-if="tool.platforms && tool.platforms.length">
+            <div v-if="tool.platforms && tool.platforms.length" class="section">
               <strong>Supported platforms:</strong> {{ tool.platforms.join(', ') }}
             </div>
 
             <!-- Pros and Cons -->
-            <div v-if="tool.pros && tool.pros.length">
+            <div v-if="tool.pros && tool.pros.length" class="section">
               <strong>Pros:</strong>
               <ul>
                 <li v-for="(pro, proIndex) in tool.pros" :key="'tool' + toolIndex + 'pro' + proIndex">
@@ -93,7 +95,7 @@
                 </li>
               </ul>
             </div>
-            <div v-if="tool.cons && tool.cons.length">
+            <div v-if="tool.cons && tool.cons.length" class="section">
               <strong>Cons:</strong>
               <ul>
                 <li v-for="(con, conIndex) in tool.cons" :key="'tool' + toolIndex + 'con' + conIndex">
@@ -103,7 +105,7 @@
             </div>
 
             <!-- Frameworks and boilerplates -->
-            <div v-if="tool.frameworks && tool.frameworks.length">
+            <div v-if="tool.frameworks && tool.frameworks.length" class="section">
               <strong>Frameworks:</strong>
               <ul>
                 <li
@@ -118,7 +120,7 @@
             </div>
 
             <!-- Tools,  build systems -->
-            <div v-if="tool.tools && tool.tools.length">
+            <div v-if="tool.tools && tool.tools.length" class="section">
               <strong>Tools:</strong>
               <ul>
                 <li
@@ -133,7 +135,7 @@
             </div>
 
             <!-- Tutorials -->
-            <div v-if="tool.tutorials && tool.tutorials.length">
+            <div v-if="tool.tutorials && tool.tutorials.length" class="section">
               <strong>Tutorials:</strong>
               <ul>
                 <li
