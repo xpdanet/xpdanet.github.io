@@ -132,6 +132,21 @@
               </ul>
             </div>
 
+            <!-- Tutorials -->
+            <div v-if="tool.tutorials && tool.tutorials.length">
+              <strong>Tutorials:</strong>
+              <ul>
+                <li
+                  v-for="(tutorial, tutorialIndex) in tool.tutorials"
+                  :key="'tool' + toolIndex + 'tutorial' + tutorialIndex"
+                >
+                  <strong>{{ tutorial.site }}</strong> -
+                  <a v-if="tutorial.url" :href="tutorial.url" target="_blank" rel="noopener noreferrer">{{ tutorial.title }}</a>
+                  <em v-if="tutorial.author">by {{ tutorial.author }}</em>
+                </li>
+              </ul>
+            </div>
+
           </div> <!-- end .card-body -->
         </div> <!-- end .card -->
       </div> <!-- end #app -->
