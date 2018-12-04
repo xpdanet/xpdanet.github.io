@@ -60,6 +60,48 @@ const app = new Vue({
             url: 'https://gitlab.com/TheJaredWilcurt/battery-app-workshop',
             site: 'GitLab'
           }
+        ],
+        notableProjects: [
+          {
+            title: 'Construct',
+            url: 'https://www.construct.net',
+            description: 'Used under the hood for tens of thousands of games created using the Construct game dev toolkit.'
+          },
+          {
+            title: 'WeChat Mini Program SDK',
+            url: 'https://open.wechat.com',
+            description: 'WeChat Mini Program SDK is built with NW.js. Over 1 million mini programs have been created. These are basically Chinese focused mobile apps and there are about half as many of them as apps in Apple\'s AppStore. WeChat itself has over 1 Billion monthly active users.'
+          },
+          {
+            title: 'Gitter',
+            url: 'https://gitter.im',
+            description: 'Gitter is a chat platform for open source projects that directly integrates with GitHub. The native Windows desktop app for it uses NW.js.'
+          },
+          {
+            title: 'Game Dev Tycoon',
+            url: 'https://www.greenheartgames.com/app/game-dev-tycoon',
+            description: 'A popular business simulation game where you replay the history of the gaming industry by starting your own video game development company in the 80s. The game runs inside NW.js.'
+          },
+          {
+            title: 'YubiKey',
+            url: 'https://www.yubico.com',
+            description: 'YubiKey is a hardware authentication device manufactured by Yubico. Primarily used in corporate/enterprise settings, the desktop app used to install and configure the hardware device is built in NW.js.'
+          },
+          {
+            title: 'Scout-App',
+            url: 'http://scout-app.io',
+            description: 'Open source, beginner-friendly, desktop app for web developers and designers to process Sass/Scss files to CSS.'
+          },
+          {
+            title: 'AlternativeTo: List of apps made with NW.js',
+            url: 'https://alternativeto.net/list/3300/apps-made-with-nw-js',
+            description: 'List of apps on the AlternativeTo.net website that are made with NW.js'
+          },
+          {
+            title: 'List of apps added to NW.js wiki',
+            url: 'https://github.com/nwjs/nw.js/wiki/List-of-apps-and-companies-using-nw.js',
+            description: 'User submited list of apps made with NW.js'
+          }
         ]
       },
       {
@@ -106,6 +148,28 @@ const app = new Vue({
             url: 'https://dev.to/vuevixens/building-a-desktop-app-with-vue-electron-3pl',
             site: 'dev.to'
           }
+        ],
+        notableProjects: [
+          {
+            title: 'Discord',
+            url: 'https://discord.gg',
+            description: 'Chat application aimed primarily at gamers'
+          },
+          {
+            title: 'VSCode',
+            url: 'https://code.visualstudio.com',
+            description: 'Open source text edior from Microsoft aimed at web developers'
+          },
+          {
+            title: 'Slack',
+            url: 'https://slack.com',
+            description: 'Slack is a chat application primarily aimed at inter-office and work-team communication.'
+          },
+          {
+            title: 'List of apps submited to the Electron Website',
+            url: 'https://electronjs.org/apps',
+            description: 'User submited apps made with Electron'
+          }
         ]
       },
       {
@@ -140,7 +204,8 @@ const app = new Vue({
         ],
         frameworks: [],
         tools: [],
-        tutorials: []
+        tutorials: [],
+        notableProjects: []
       },
       {
         title: 'Ultralight',
@@ -176,7 +241,8 @@ const app = new Vue({
         ],
         frameworks: [],
         tools: [],
-        tutorials: []
+        tutorials: [],
+        notableProjects: []
       },
       {
         title: 'Adobe AIR',
@@ -205,7 +271,8 @@ const app = new Vue({
         ],
         frameworks: [],
         tools: [],
-        tutorials: []
+        tutorials: [],
+        notableProjects: []
       },
       {
         title: 'LibUI-Node',
@@ -259,7 +326,8 @@ const app = new Vue({
             url: 'https://dev.to/vuevixens/building-a-desktop-app-with-vue-vuido-490n',
             site: 'dev.to'
           }
-        ]
+        ],
+        notableProjects: []
       },
       {
         title: 'Sciter',
@@ -290,7 +358,8 @@ const app = new Vue({
         ],
         frameworks: [],
         tools: [],
-        tutorials: []
+        tutorials: [],
+        notableProjects: []
       },
       {
         title: 'PyQt',
@@ -321,7 +390,8 @@ const app = new Vue({
             url: 'https://build-system.fman.io'
           }
         ],
-        tutorials: []
+        tutorials: [],
+        notableProjects: []
       },
       {
         title: 'Carlo',
@@ -352,7 +422,8 @@ const app = new Vue({
         ],
         frameworks: [],
         tools: [],
-        tutorials: []
+        tutorials: [],
+        notableProjects: []
       },
       {
         title: 'Lorca',
@@ -385,7 +456,8 @@ const app = new Vue({
         ],
         frameworks: [],
         tools: [],
-        tutorials: []
+        tutorials: [],
+        notableProjects: []
       },
       {
         title: 'Chromium Embedded Framework (CEF)',
@@ -460,7 +532,14 @@ const app = new Vue({
             url: 'http://code.google.com/p/cefpython'
           }
         ],
-        tutorials: []
+        tutorials: [],
+        notableProjects: [
+          {
+            title: 'Spotify',
+            url: 'https://www.spotify.com',
+            description: 'Spotify is a streaming music platform. It\'s built with C++, JS, Handlebars, and Less and uses CEF under the hood.'
+          }
+        ]
       },
       {
         title: 'Brackets-Shell',
@@ -487,7 +566,14 @@ const app = new Vue({
         ],
         frameworks: [],
         tools: [],
-        tutorials: []
+        tutorials: [],
+        notableProjects: [
+          {
+            title: 'Brackets',
+            url: 'https://brackets.io',
+            description: 'Brackets is a user friendly, open-source, text editor from Adobe aimed at Web designers.'
+          }
+        ]
       },
       {
         title: 'Tint2',
@@ -513,7 +599,8 @@ const app = new Vue({
         ],
         frameworks: [],
         tools: [],
-        tutorials: []
+        tutorials: [],
+        notableProjects: []
       },
       {
         title: 'AppJS',
@@ -542,7 +629,8 @@ const app = new Vue({
         ],
         frameworks: [],
         tools: [],
-        tutorials: []
+        tutorials: [],
+        notableProjects: []
       }
     ],
     articles: [
