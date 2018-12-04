@@ -103,7 +103,7 @@ const app = new Vue({
           {
             title: 'Building a Desktop App with Vue: Electron',
             author: 'Natalia Tepluhina',
-            url: 'https://dev.to/vuevixens/building-a-desktop-app-with-vue-electron-3pl'
+            url: 'https://dev.to/vuevixens/building-a-desktop-app-with-vue-electron-3pl',
             site: 'dev.to'
           }
         ]
@@ -544,7 +544,7 @@ const app = new Vue({
         ]
       },
       {
-        
+
       }
     ]
   },
