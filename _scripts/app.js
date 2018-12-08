@@ -330,6 +330,51 @@ const app = new Vue({
         notableProjects: []
       },
       {
+        title: 'LibUI',
+        url: 'https://github.com/andlabs/libui#language-bindings',
+        deprecated: false,
+        languages: [
+          'C',
+          'C++',
+          'C#',
+          '.NET',
+          'Lisp',
+          'D',
+          'Haskell',
+          'Node.js',
+          'Kotlin',
+          'Lua',
+          'Perl',
+          'PHP',
+          'Python',
+          'Ruby',
+          'Rust',
+          'Scala',
+          'Swift'
+        ],
+        platforms: [
+          'Windows',
+          'Linux',
+          'OSX'
+        ],
+        pros: [
+          'Uses the native OS UI, allowing for fairly small applications',
+          'Wide support of bindings for other languages',
+          'Uses very few resources'
+        ],
+        cons: [
+          'Quality and level of completion of bindings varies quite a bit',
+          'You are limited to very basic form-like UI\'s',
+          'Most bindings require native build tools and doing builds on each target OS',
+          'Dev, build, and distrubtion tools are weak or completly lacking',
+          'Documentation is mostly limited to README files'
+        ],
+        frameworks: [],
+        tools: [],
+        tutorials: [],
+        notableProjects: []
+      },
+      {
         title: 'Sciter',
         url: 'https://sciter.com',
         logo: 'sciter.png',
