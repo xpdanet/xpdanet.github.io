@@ -103,18 +103,79 @@
           </div>
 
           <div>
-            <label>frameworks:</label>
-            <input v-model="tool.frameworks" type="text">
+            <label>Frameworks:</label>
+            <div v-if="tool.frameworks">
+              <ul>
+                <li
+                  v-for="(framework, frameworkIndex) in tool.frameworks"
+                  :key="'framework' + frameworkIndex"
+                >
+                  <div>
+                    <label>Framework</label>
+                    <input v-model="tool.frameworks[frameworkIndex].framework" type="text">
+                  </div>
+                  <div>
+                    <label>Title</label>
+                    <input v-model="tool.frameworks[frameworkIndex].title" type="text">
+                  </div>
+                  <div>
+                    <label>URL</label>
+                    <input v-model="tool.frameworks[frameworkIndex].url" type="text">
+                  </div>
+                </li>
+            </div>
           </div>
 
           <div>
-            <label>tools:</label>
-            <input v-model="tool.tools" type="text">
+            <label>Tools:</label>
+            <div v-if="tool.tools">
+              <ul>
+                <li
+                  v-for="(tool, toolIndex) in tool.tools"
+                  :key="'tool' + toolIndex"
+                >
+                  <div>
+                    <label>Type</label>
+                    <input v-model="tool.tools[toolIndex].type" type="text">
+                  </div>
+                  <div>
+                    <label>Title</label>
+                    <input v-model="tool.tools[toolIndex].title" type="text">
+                  </div>
+                  <div>
+                    <label>URL</label>
+                    <input v-model="tool.tools[toolIndex].url" type="text">
+                  </div>
+                </li>
+            </div>
           </div>
 
           <div>
-            <label>tutorials:</label>
-            <input v-model="tool.tutorials" type="text">
+            <label>Tutorials:</label>
+            <div v-if="tool.tutorials">
+              <ul>
+                <li
+                  v-for="(tutorial, tutorialIndex) in tool.tutorials"
+                  :key="'tutorial' + tutorialIndex"
+                >
+                  <div>
+                    <label>Title</label>
+                    <input v-model="tool.tutorials[tutorialIndex].title" type="text">
+                  </div>
+                  <div>
+                    <label>Author</label>
+                    <input v-model="tool.tutorials[tutorialIndex].author" type="text">
+                  </div>
+                  <div>
+                    <label>URL</label>
+                    <input v-model="tool.tutorials[tutorialIndex].url" type="text">
+                  </div>
+                  <div>
+                    <label>Site</label>
+                    <input v-model="tool.tutorials[tutorialIndex].site" type="text">
+                  </div>
+                </li>
+            </div>
           </div>
 
           <div>
