@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Admin Panel</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="_styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="app">
+        <h1>Admin Panel:</h1>
+
+        <select v-model="selectedTool">
+          <option :value="null"></option>
+          <option
+            v-for="(tool, toolIndex) in tools"
+            :key="'tool' + toolIndex"
+            :value="tool.title"
+          >
+            {{ tool.title }}
+          </option>
+          <option :value="'new'">Create New</option>
+        </select>
+
+        <div v-if="tool" class="form">
+          <div>
+            <label>Title:</label>
+            <input v-model="tool.title" type="text">
+          </div>
+
+          <div>
+            <label>URL:</label>
+            <input v-model="tool.url" type="text">
+          </div>
+
+          <div>
+            <label>Logo:</label>
+            <input v-model="tool.logo" type="text">
+          </div>
+
+          <div>
+            <label>Deprecated:</label>
+            <input v-model="tool.deprecated" type="checkbox">
+          </div>
+
+          <div>
+            <label>Languages:</label>
+            <div v-if="tool.languages">
+              <ul>
+                <li
+                  v-for="(language, languageIndex) in tool.languages"
+                  :key="'language' + languageIndex"
+                >
+                  <input v-model="tool.languages[languageIndex]" type="text">
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <label>Platforms:</label>
+            <div v-if="tool.platforms">
+              <ul>
+                <li
+                  v-for="(platform, platformIndex) in tool.platforms"
+                  :key="'platform' + platformIndex"
+                >
+                  <input v-model="tool.platforms[platformIndex]" type="text">
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <label>Pros:</label>
+            <div v-if="tool.pros">
+              <ul>
+                <li
+                  v-for="(pro, proIndex) in tool.pros"
+                  :key="'pro' + proIndex"
+                >
+                  <input v-model="tool.pros[proIndex]" type="text">
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <label>Cons:</label>
+            <div v-if="tool.cons">
+              <ul>
+                <li
+                  v-for="(con, conIndex) in tool.cons"
+                  :key="'con' + conIndex"
+                >
+                  <input v-model="tool.cons[conIndex]" type="text">
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <label>frameworks:</label>
+            <input v-model="tool.frameworks" type="text">
+          </div>
+
+          <div>
+            <label>tools:</label>
+            <input v-model="tool.tools" type="text">
+          </div>
+
+          <div>
+            <label>tutorials:</label>
+            <input v-model="tool.tutorials" type="text">
+          </div>
+
+          <div>
+            <label>Notable Projects:</label>
+            <ul v-if="tool.notableProjects">
+              <li
+                v-for="(project, projectIndex) in tool.notableProjects"
+                :key="'project' + projectIndex"
+              >
+                <div>
+                  <label>Title:</label>
+                  <input v-model="tool.notableProjects[projectIndex].title" type="text">
+                </div>
+                <div>
+                  <label>URL:</label>
+                  <input v-model="tool.notableProjects[projectIndex].url" type="text">
+                </div>
+                <div>
+                  <label>Description:</lable>
+                  <textarea v-model="tool.notableProjects[projectIndex].description"></textarea>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div> <!-- .form -->
+
+        <textarea class="admin-preview">{{ JSON.stringify(tool, null, 2) }}</textarea>
+
+      </div> <!-- #app -->
+    </div> <!-- .container -->
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script type="text/javascript" src="_scripts/admin.js"></script>
+    <script type="text/javascript" src="_data/tools.js"></script>
+    <link rel="stylesheet" href="_styles/fonts.css" />
+  </body>
+</html>
