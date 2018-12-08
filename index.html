@@ -23,33 +23,35 @@
             <option value="subtractive">Supports at least one of these:</option>
             <option value="additive">Must support each selected:</option>
           </select>
+        </div>
+        <div>
           <p>Languages</p>
           <button
-            v-for="(languageValue, languageKey) in languages"
-            :key="'language' + languageKey"
-            :class="languageValue.enabled ? 'active' : ''"
-            :title="'Used by ' + languageValue.amount + ' tools'"
+            v-for="(language, languageIndex) in languages"
+            :key="'language' + languageIndex"
+            :class="language.enabled ? 'active' : ''"
+            :title="'Used by ' + language.amount + ' tools'"
             class="btn"
-            @click="toggleActive(languageValue)"
+            @click="toggleActive(language)"
           >
-            {{ languageKey }}
+            {{ language.title }}
           </button>
         </div>
         <div>
           <p>Platforms</p>
           <button
-            v-for="(platformValue, platformKey) in platforms"
-            :key="'platform' + platformKey"
-            :class="platformValue.enabled ? 'active' : ''"
-            :title="'Used by ' + platformValue.amount + ' tools'"
+            v-for="(platform, platformIndex) in platforms"
+            :key="'platform' + platformIndex"
+            :class="platform.enabled ? 'active' : ''"
+            :title="'Used by ' + platform.amount + ' tools'"
             class="btn"
-            @click="toggleActive(platformValue)"
+            @click="toggleActive(platform)"
           >
-            {{ platformKey }}
+            {{ platform.title }}
           </button>
         </div>
 
-        <h3>Tools ({{ filteredTools.length }})</h3>
+        <h3>Matching Tools ({{ filteredTools.length }}/{{ tools.length }})</h3>
         <div
           v-for="(tool, toolIndex) in filteredTools"
           :key="'tool' + toolIndex"
