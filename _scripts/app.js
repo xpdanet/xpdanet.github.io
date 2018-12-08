@@ -698,37 +698,41 @@ const app = new Vue({
     toggleActive: function (item) {
       item.enabled = !item.enabled;
     },
-    setLanguages: function () {
-      let languages = {};
+    /**
+     * Creates a sorted array of objects without duplicates containing
+     * a count of usage for platforms and languages.
+     * @param {string}  filterType  'platforms' or 'languages'
+     */
+    setFilterValues: function (filterType) {
+      let items = {};
+      // Eliminate duplicates, get a count of usage
       this.tools.forEach(function (tool) {
-        tool.languages.forEach(function (language) {
-          if (languages[language]) {
-            languages[language].amount++;
+        tool[filterType].forEach(function (item) {
+          if (items[item]) {
+            items[item].amount++;
           } else {
-            languages[language] = {
+            items[item] = {
               amount: 1,
               enabled: true
             };
           }
         });
       });
-      this.languages = languages;
-    },
-    setPlatforms: function () {
-      let platforms = {};
-      this.tools.forEach(function (tool) {
-        tool.platforms.forEach(function (platform) {
-          if (platforms[platform]) {
-            platforms[platform].amount++;
-          } else {
-            platforms[platform] = {
-              amount: 1,
-              enabled: true
-            };
-          }
-        });
+
+      // convert back to array
+      let itemsArray = [];
+      for (let item in items) {
+        let itemObject = items[item];
+        itemObject.title = item;
+        itemsArray.push(itemObject);
+      }
+
+      // sort by usage
+      itemsArray.sort(function (nextItem, currentItem) {
+        return currentItem.amount - nextItem.amount;
       });
-      this.platforms = platforms;
+
+      return itemsArray;
     },
     setAllFiltersOnOff: function (bool) {
       for (let language in this.languages) {
@@ -737,84 +741,70 @@ const app = new Vue({
       for (let platform in this.platforms) {
         this.platforms[platform].enabled = bool;
       }
+    },
+    enabledFilters: function (filterType) {
+      let enabledItems = filterType.filter((language) => {
+        return language.enabled;
+      });
+      return enabledItems;
+    },
+    /**
+     * Applies a subtractive filter
+     * @param  {array}  tools               The list of tools to filter
+     * @param  {array}  enabledFilterTypes  List of enabled platforms or languages
+     * @param  {string} filterType          'platforms' or 'languages'
+     * @return {array}                      The filtered array of tools
+     */
+    subtractiveFilter: function (tools, enabledFilterTypes, filterTypes) {
+      let filteredTools = tools.filter((tool) => {
+        let toolContainsEnabledFilterType = tool[filterTypes].some((toolFilterType) => {
+          let hasMatchingFilterTypeTitle = enabledFilterTypes.some((enabledFilterType) => {
+            return enabledFilterType.title === toolFilterType;
+          });
+
+          return hasMatchingFilterTypeTitle;
+        });
+
+        return toolContainsEnabledFilterType;
+      });
+
+      return filteredTools;
+    },
+    /**
+     * Applies an additive filter
+     * @param  {array}  tools               The list of tools to filter
+     * @param  {array}  enabledFilterTypes  List of enabled platforms or languages
+     * @param  {string} filterTypes         'platforms' or 'languages'
+     * @return {array}                      The filtered array of tools
+     */
+    additiveFilter: function (tools, enabledFilterTypes, filterTypes) {
+      let filteredTools = tools.filter((tool) => {
+        let hasAllSelectedFilterTypes = true;
+        enabledFilterTypes.forEach((filterType) => {
+          if (!tool[filterTypes].includes(filterType.title)) {
+            hasAllSelectedFilterTypes = false;
+          }
+        });
+
+        return hasAllSelectedFilterTypes;
+      });
+      return filteredTools;
     }
   },
   computed: {
     enabledLanguages: function () {
-      let enabledLanguages = [];
-      for (let language in this.languages) {
-        if (this.languages[language].enabled) {
-          enabledLanguages.push(language);
-        }
-      }
-      return enabledLanguages;
+      return this.enabledFilters(this.languages);
     },
     enabledPlatforms: function () {
-      let enabledPlatforms = [];
-      for (let platform in this.platforms) {
-        if (this.platforms[platform].enabled) {
-          enabledPlatforms.push(platform);
-        }
-      }
-      return enabledPlatforms;
-    },
-    subtractiveFilteredByPlatform: function () {
-      let filteredTools = [];
-
-      this.tools.forEach((tool) => {
-        let toolContainsEnabledPlatform = tool.platforms.some((platform) => {
-          return this.enabledPlatforms.includes(platform);
-        });
-        if (toolContainsEnabledPlatform) {
-          filteredTools.push(tool);
-        }
-      });
-
-      return filteredTools;
+      return this.enabledFilters(this.platforms);
     },
     subtractiveFilteredByPlatformAndLanguage: function () {
-      let filteredTools = [];
-
-      this.subtractiveFilteredByPlatform.forEach((tool) => {
-        let toolContainsEnabledLanguage = tool.languages.some((language) => {
-          return this.enabledLanguages.includes(language);
-        });
-        if (toolContainsEnabledLanguage) {
-          filteredTools.push(tool);
-        }
-      });
-
-      return filteredTools;
-    },
-    additiveFilteredByPlatform: function () {
-      let filteredTools = [];
-      this.tools.forEach((tool) => {
-        let hasAllSelectedPlatforms = true;
-        this.enabledPlatforms.forEach((platform) => {
-          if (!tool.platforms.includes(platform)) {
-            hasAllSelectedPlatforms = false;
-          }
-        });
-        if (hasAllSelectedPlatforms) {
-          filteredTools.push(tool);
-        }
-      });
-      return filteredTools;
+      let filteredByPlatform = this.subtractiveFilter(this.tools, this.enabledPlatforms, 'platforms');
+      return this.subtractiveFilter(filteredByPlatform, this.enabledLanguages, 'languages');
     },
     additiveFilteredByPlatformAndLanguage: function () {
-      let filteredTools = [];
-      this.additiveFilteredByPlatform.forEach((tool) => {
-        let hasAllSelectedLanguages = true;
-        this.enabledLanguages.forEach((language) => {
-          if (!tool.languages.includes(language)) {
-            hasAllSelectedLanguages = false;
-          }
-        });
-        if (hasAllSelectedLanguages) {
-          filteredTools.push(tool);
-        }
-      });
-      return filteredTools;
+      let filteredByPlatform = this.additiveFilter(this.tools, this.enabledPlatforms, 'platforms');
+      return this.additiveFilter(filteredByPlatform, this.enabledLanguages, 'languages');
     },
     filteredTools: function () {
       if (this.filterType === 'subtractive') {
@@ -833,7 +823,7 @@ const app = new Vue({
     }
   },
   created: function () {
-    this.setPlatforms();
-    this.setLanguages();
+    this.platforms = this.setFilterValues('platforms');
+    this.languages = this.setFilterValues('languages');
   }
 });
