@@ -141,12 +141,13 @@
           </div>
         </div> <!-- .form -->
 
-        <textarea class="admin-preview">{{ JSON.stringify(tool, null, 2) }}</textarea>
+        <textarea class="admin-preview">{{ tool | JSONstringify }}</textarea>
 
       </div> <!-- #app -->
     </div> <!-- .container -->
 
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script type="text/javascript" src="_scripts/beautify-json.js"></script>
     <script type="text/javascript" src="_scripts/admin.js"></script>
     <script type="text/javascript" src="_data/tools.js"></script>
     <link rel="stylesheet" href="_styles/fonts.css" />

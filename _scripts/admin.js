@@ -1,3 +1,4 @@
+// eslint-disable-next-line no-unused-vars
 let app = new Vue({
   el: '#app',
   data: {
@@ -8,6 +9,11 @@ let app = new Vue({
   methods: {
     clearForm: function () {
       console.log('clearForm');
+    }
+  },
+  filters: {
+    JSONstringify: function (val) {
+      return beautifyJSON(val);
     }
   },
   watch: {
@@ -25,7 +31,7 @@ let app = new Vue({
       }
     },
     tools: function (val) {
-      this.selectedTool = 'NW.js'
+      this.selectedTool = 'NW.js';
       this.tool = val[0];
     }
   }
