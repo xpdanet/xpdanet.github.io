@@ -6,7 +6,7 @@
 
 
 // ITCSS: TOOLS
-// @import "_mixins.sass";              // Sass Mixins - Does not effect page, but other Sass files reference this file.
+@import "_mixins.sass";              // Sass Mixins - Does not effect page, but other Sass files reference this file.
 // @import "_functions.sass";           // Sass Functions - Does not effect page, but other Sass files reference this file.
 
 
@@ -33,6 +33,7 @@
 
 // ITCSS: COMPONENTS - Component-specific styles
 @import "components/_tool.sass";     // Tool specifc styles inside a card
+@import "components/_admin.sass";    // Admin Panel
 
 
 // ITCSS: CONTAINERS

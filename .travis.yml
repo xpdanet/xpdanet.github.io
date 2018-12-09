@@ -6,5 +6,4 @@ node_js:
 install:
     - npm install
 script:
-    - npm run lint
-    - npm run sasslint
+    - npm run validate

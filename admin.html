@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Admin Panel</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <link rel="icon" href="favicon.ico">
+    <link rel="stylesheet" href="_styles/style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div id="app">
+        <h1>Admin Panel:</h1>
+
+        <select v-model="selectedTool">
+          <option :value="'new'">Create New</option>
+          <option
+            v-for="(tool, toolIndex) in tools"
+            :key="'tool' + toolIndex"
+            :value="tool.title"
+          >
+            {{ tool.title }}
+          </option>
+        </select>
+
+        <div v-if="tool" class="form">
+          <div>
+            <label>Title:</label>
+            <input v-model="tool.title" type="text">
+          </div>
+
+          <div>
+            <label>URL:</label>
+            <input v-model="tool.url" type="text">
+          </div>
+
+          <div>
+            <label>Logo:</label>
+            <input v-model="tool.logo" type="text">
+          </div>
+
+          <div>
+            <label>Deprecated:</label>
+            <input v-model="tool.deprecated" type="checkbox">
+          </div>
+
+          <div>
+            <label>Languages:</label>
+            <span @click="addNew('languages')" class="plus">+</span>
+            <div v-if="tool.languages">
+              <ul>
+                <li
+                  v-for="(language, languageIndex) in tool.languages"
+                  :key="'language' + languageIndex"
+                >
+                  <input v-model="tool.languages[languageIndex]" type="text">
+                  <minus :tool="tool" :index="languageIndex" name="languages">
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <label>Platforms:</label>
+            <span @click="addNew('platforms')" class="plus">+</span>
+            <div v-if="tool.platforms">
+              <ul>
+                <li
+                  v-for="(platform, platformIndex) in tool.platforms"
+                  :key="'platform' + platformIndex"
+                >
+                  <input v-model="tool.platforms[platformIndex]" type="text">
+                  <minus :tool="tool" :index="platformIndex" name="platforms">
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <label>Pros:</label>
+            <span @click="addNew('pros')" class="plus">+</span>
+            <div v-if="tool.pros">
+              <ul>
+                <li
+                  v-for="(pro, proIndex) in tool.pros"
+                  :key="'pro' + proIndex"
+                >
+                  <input v-model="tool.pros[proIndex]" type="text">
+                  <minus :tool="tool" :index="proIndex" name="pros">
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <label>Cons:</label>
+            <span @click="addNew('cons')" class="plus">+</span>
+            <div v-if="tool.cons">
+              <ul>
+                <li
+                  v-for="(con, conIndex) in tool.cons"
+                  :key="'con' + conIndex"
+                >
+                  <input v-model="tool.cons[conIndex]" type="text">
+                  <minus :tool="tool" :index="conIndex" name="cons">
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <div>
+            <label>Frameworks:</label>
+            <div v-if="tool.frameworks">
+              <ul>
+                <li
+                  v-for="(framework, frameworkIndex) in tool.frameworks"
+                  :key="'framework' + frameworkIndex"
+                >
+                  <div>
+                    <label>Framework</label>
+                    <input v-model="tool.frameworks[frameworkIndex].framework" type="text">
+                  </div>
+                  <div>
+                    <label>Title</label>
+                    <input v-model="tool.frameworks[frameworkIndex].title" type="text">
+                  </div>
+                  <div>
+                    <label>URL</label>
+                    <input v-model="tool.frameworks[frameworkIndex].url" type="text">
+                    <minus :tool="tool" :index="frameworkIndex" name="frameworks">
+                  </div>
+                </li>
+            </div>
+          </div>
+
+          <div>
+            <label>Tools:</label>
+            <div v-if="tool.tools">
+              <ul>
+                <li
+                  v-for="(tool, toolIndex) in tool.tools"
+                  :key="'tool' + toolIndex"
+                >
+                  <div>
+                    <label>Type</label>
+                    <input v-model="tool.tools[toolIndex].type" type="text">
+                  </div>
+                  <div>
+                    <label>Title</label>
+                    <input v-model="tool.tools[toolIndex].title" type="text">
+                  </div>
+                  <div>
+                    <label>URL</label>
+                    <input v-model="tool.tools[toolIndex].url" type="text">
+                  </div>
+                </li>
+            </div>
+          </div>
+
+          <div>
+            <label>Tutorials:</label>
+            <div v-if="tool.tutorials">
+              <ul>
+                <li
+                  v-for="(tutorial, tutorialIndex) in tool.tutorials"
+                  :key="'tutorial' + tutorialIndex"
+                >
+                  <div>
+                    <label>Title</label>
+                    <input v-model="tool.tutorials[tutorialIndex].title" type="text">
+                  </div>
+                  <div>
+                    <label>Author</label>
+                    <input v-model="tool.tutorials[tutorialIndex].author" type="text">
+                  </div>
+                  <div>
+                    <label>URL</label>
+                    <input v-model="tool.tutorials[tutorialIndex].url" type="text">
+                  </div>
+                  <div>
+                    <label>Site</label>
+                    <input v-model="tool.tutorials[tutorialIndex].site" type="text">
+                    <minus :tool="tool" :index="tutorialIndex" name="tutorials">
+                  </div>
+                </li>
+            </div>
+          </div>
+
+          <div>
+            <label>Notable Projects:</label>
+            <ul v-if="tool.notableProjects">
+              <li
+                v-for="(project, projectIndex) in tool.notableProjects"
+                :key="'project' + projectIndex"
+              >
+                <div>
+                  <label>Title:</label>
+                  <input v-model="tool.notableProjects[projectIndex].title" type="text">
+                </div>
+                <div>
+                  <label>URL:</label>
+                  <input v-model="tool.notableProjects[projectIndex].url" type="text">
+                </div>
+                <div>
+                  <label>Description:</lable><br />
+                  <textarea v-model="tool.notableProjects[projectIndex].description"></textarea>
+                  <minus :tool="tool" :index="projectIndex" name="notableProjects">
+                </div>
+              </li>
+            </ul>
+          </div>
+        </div> <!-- .form -->
+
+        <textarea class="admin-preview">{{ tool | JSONstringify }}</textarea>
+
+      </div> <!-- #app -->
+    </div> <!-- .container -->
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/http-vue-loader@1.3.5/src/httpVueLoader.js"></script>
+    <script type="text/javascript" src="_scripts/beautify-json.js"></script>
+    <script type="text/javascript" src="_scripts/admin.js"></script>
+    <script type="text/javascript" src="_data/tools.js"></script>
+    <link rel="stylesheet" href="_styles/fonts.css" />
+  </body>
+</html>
