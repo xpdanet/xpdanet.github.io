@@ -1,14 +1,36 @@
 // eslint-disable-next-line no-unused-vars
 let app = new Vue({
   el: '#app',
+  components: {
+    minus: httpVueLoader('_components/minus.vue')
+  },
   data: {
-    selectedTool: null,
+    selectedTool: 'new',
     tools: null,
     tool: null
   },
   methods: {
     clearForm: function () {
-      console.log('clearForm');
+      this.tool = {
+        title: '',
+        url: '',
+        logo: '',
+        deprecated: false,
+        languages: [],
+        platforms: [],
+        pros: [],
+        cons: [],
+        frameworks: [],
+        tools: [],
+        tutorials: [],
+        notableProjects: []
+      };
+    },
+    addNew: function (section, type) {
+      type = type || 'text';
+      if (type === 'text') {
+        this.tool[section].push('');
+      }
     }
   },
   filters: {
@@ -18,9 +40,7 @@ let app = new Vue({
   },
   watch: {
     selectedTool: function (title) {
-      if (!title) {
-        this.tool = null;
-      } else if (title === 'new') {
+      if (title === 'new') {
         this.clearForm();
       } else {
         this.tools.forEach((tool) => {
@@ -31,8 +51,7 @@ let app = new Vue({
       }
     },
     tools: function (val) {
-      this.selectedTool = 'NW.js';
-      this.tool = val[0];
+      this.clearForm();
     }
   }
 });
