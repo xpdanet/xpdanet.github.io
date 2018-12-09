@@ -50,7 +50,7 @@ let app = new Vue({
         });
       }
     },
-    tools: function (val) {
+    tools: function () {
       this.clearForm();
     }
   }
