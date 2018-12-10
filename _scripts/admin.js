@@ -6,8 +6,10 @@ let app = new Vue({
   },
   data: {
     selectedTool: 'new',
-    tools: null,
-    tool: null
+    tools: [],
+    tool: null,
+    platforms: [],
+    languages: []
   },
   methods: {
     clearForm: function () {
@@ -53,5 +55,17 @@ let app = new Vue({
     tools: function () {
       this.clearForm();
     }
+  },
+  created: function () {
+    axios.get('/_data/tools.json')
+      .then((response) => {
+        let tools = response.data;
+        this.tools = tools;
+        this.platforms = helpers.setFilterValues(tools, 'platforms');
+        this.languages = helpers.setFilterValues(tools, 'languages');
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 });
