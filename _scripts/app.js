@@ -3,9 +3,9 @@ const app = new Vue({
   el: '#app',
   data: {
     filterType: 'subtractive',
-    languages: {},
-    platforms: {},
-    tools: null,
+    languages: [],
+    platforms: [],
+    tools: [],
     articles: [
       {
         title: 'Why I prefer NW.js over Electron? (2018 comparison)',
@@ -26,49 +26,13 @@ const app = new Vue({
     toggleActive: function (item) {
       item.enabled = !item.enabled;
     },
-    /**
-     * Creates a sorted array of objects without duplicates containing
-     * a count of usage for platforms and languages.
-     * @param {string}  filterType  'platforms' or 'languages'
-     */
-    setFilterValues: function (filterType) {
-      let items = {};
-      // Eliminate duplicates, get a count of usage
-      this.tools.forEach(function (tool) {
-        tool[filterType].forEach(function (item) {
-          if (items[item]) {
-            items[item].amount++;
-          } else {
-            items[item] = {
-              amount: 1,
-              enabled: true
-            };
-          }
-        });
-      });
-
-      // convert back to array
-      let itemsArray = [];
-      for (let item in items) {
-        let itemObject = items[item];
-        itemObject.title = item;
-        itemsArray.push(itemObject);
-      }
-
-      // sort by usage
-      itemsArray.sort(function (nextItem, currentItem) {
-        return currentItem.amount - nextItem.amount;
-      });
-
-      return itemsArray;
-    },
     setAllFiltersOnOff: function (bool) {
-      for (let language in this.languages) {
-        this.languages[language].enabled = bool;
-      }
-      for (let platform in this.platforms) {
-        this.platforms[platform].enabled = bool;
-      }
+      this.languages.forEach(function (language) {
+        language.enabled = bool;
+      });
+      this.platforms.forEach(function (platform) {
+        platform.enabled = bool;
+      });
     },
     enabledFilters: function (filterType) {
       let enabledItems = filterType.filter((language) => {
@@ -151,7 +115,15 @@ const app = new Vue({
     }
   },
   created: function () {
-    this.platforms = this.setFilterValues('platforms');
-    this.languages = this.setFilterValues('languages');
+    axios.get('/_data/tools.json')
+      .then((response) => {
+        let tools = response.data;
+        this.tools = tools;
+        this.platforms = helpers.setFilterValues(tools, 'platforms');
+        this.languages = helpers.setFilterValues(tools, 'languages');
+      })
+      .catch((err) => {
+        console.log(err);
+      });
   }
 });

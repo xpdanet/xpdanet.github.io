@@ -51,7 +51,7 @@
           </button>
         </div>
 
-        <h3>Matching Tools ({{ filteredTools.length }}/{{ tools.length }})</h3>
+        <h3 v-if="tools && tools.length">Matching Tools ({{ filteredTools.length }}/{{ tools.length }})</h3>
         <div
           v-for="(tool, toolIndex) in filteredTools"
           :key="'tool' + toolIndex"
@@ -177,9 +177,11 @@
 
     </div> <!-- end .container -->
 
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.min.js"></script>
+    <script type="text/javascript" src="//cdn.polyfill.io/v2/polyfill.min.js?features=String.prototype.startsWith,Promise"></script>
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script type="text/javascript" src="_scripts/helpers.js"></script>
     <script type="text/javascript" src="_scripts/app.js"></script>
-    <script type="text/javascript" src="_data/tools.js"></script>
     <link rel="stylesheet" href="_styles/fonts.css" />
   </body>
 </html>
