@@ -55,7 +55,20 @@
                   :key="'language' + languageIndex"
                 >
                   <input v-model="tool.languages[languageIndex]" type="text">
-                  <minus :tool="tool" :index="languageIndex" name="languages">
+                  <minus :tool="tool" :index="languageIndex" name="languages"></minus>
+                </li>
+                <li>
+                  <select v-model="newLanguageChoice">
+                    <option :value="null"></option>
+                    <option
+                      v-for="(languageChoice, languageChoiceIndex) in languages"
+                      :key="'languageChoice' + languageChoiceIndex"
+                      :value="languageChoice.title"
+                    >
+                      {{ languageChoice.title }} ({{ languageChoice.amount }})
+                    </option>
+                  </select>
+                  <span @click="addNewLanguageChoice" class="plus">+</span>
                 </li>
               </ul>
             </div>
@@ -71,7 +84,20 @@
                   :key="'platform' + platformIndex"
                 >
                   <input v-model="tool.platforms[platformIndex]" type="text">
-                  <minus :tool="tool" :index="platformIndex" name="platforms">
+                  <minus :tool="tool" :index="platformIndex" name="platforms"></minus>
+                </li>
+                <li>
+                  <select v-model="newPlatformChoice">
+                    <option :value="null"></option>
+                    <option
+                      v-for="(platformChoice, platformChoiceIndex) in platforms"
+                      :key="'platformChoice' + platformChoiceIndex"
+                      :value="platformChoice.title"
+                    >
+                      {{ platformChoice.title }} ({{ platformChoice.amount }})
+                    </option>
+                  </select>
+                  <span @click="addNewPlatformChoice" class="plus">+</span>
                 </li>
               </ul>
             </div>
@@ -87,7 +113,7 @@
                   :key="'pro' + proIndex"
                 >
                   <input v-model="tool.pros[proIndex]" type="text">
-                  <minus :tool="tool" :index="proIndex" name="pros">
+                  <minus :tool="tool" :index="proIndex" name="pros"></minus>
                 </li>
               </ul>
             </div>
@@ -103,7 +129,7 @@
                   :key="'con' + conIndex"
                 >
                   <input v-model="tool.cons[conIndex]" type="text">
-                  <minus :tool="tool" :index="conIndex" name="cons">
+                  <minus :tool="tool" :index="conIndex" name="cons"></minus>
                 </li>
               </ul>
             </div>
@@ -111,6 +137,7 @@
 
           <div>
             <label>Frameworks:</label>
+            <span @click="addNewFramework" class="plus">+</span>
             <div v-if="tool.frameworks">
               <ul>
                 <li
@@ -128,7 +155,7 @@
                   <div>
                     <label>URL</label>
                     <input v-model="tool.frameworks[frameworkIndex].url" type="text">
-                    <minus :tool="tool" :index="frameworkIndex" name="frameworks">
+                    <minus :tool="tool" :index="frameworkIndex" name="frameworks"></minus>
                   </div>
                 </li>
             </div>
@@ -136,6 +163,7 @@
 
           <div>
             <label>Tools:</label>
+            <span @click="addNewToolTool" class="plus">+</span>
             <div v-if="tool.tools">
               <ul>
                 <li
@@ -153,6 +181,7 @@
                   <div>
                     <label>URL</label>
                     <input v-model="tool.tools[toolToolIndex].url" type="text">
+                    <minus :tool="tool" :index="toolToolIndex" name="tools"></minus>
                   </div>
                 </li>
             </div>
@@ -160,6 +189,7 @@
 
           <div>
             <label>Tutorials:</label>
+            <span @click="addNewTutorial" class="plus">+</span>
             <div v-if="tool.tutorials">
               <ul>
                 <li
@@ -180,8 +210,8 @@
                   </div>
                   <div>
                     <label>Site</label>
-                    <input v-model="tool.tutorials[tutorialIndex].site" type="text">
-                    <minus :tool="tool" :index="tutorialIndex" name="tutorials">
+                    <input v-model="tool.tutorials[tutorialIndex].site" :placeholder="joinedSites" type="text">
+                    <minus :tool="tool" :index="tutorialIndex" name="tutorials"></minus>
                   </div>
                 </li>
             </div>
@@ -189,6 +219,7 @@
 
           <div>
             <label>Notable Projects:</label>
+            <span @click="addNewNotableProject" class="plus">+</span>
             <ul v-if="tool.notableProjects">
               <li
                 v-for="(project, projectIndex) in tool.notableProjects"
@@ -205,7 +236,7 @@
                 <div>
                   <label>Description:</lable><br />
                   <textarea v-model="tool.notableProjects[projectIndex].description"></textarea>
-                  <minus :tool="tool" :index="projectIndex" name="notableProjects">
+                  <minus :tool="tool" :index="projectIndex" name="notableProjects"></minus>
                 </div>
               </li>
             </ul>

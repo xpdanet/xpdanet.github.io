@@ -36,5 +36,30 @@ let helpers = {
     });
 
     return itemsArray;
+  },
+  listAllSites: function (tools) {
+    let sites = {};
+    if (tools && tools.length) {
+      tools.forEach((tool) => {
+        if (tool.tutorials && tool.tutorials.length) {
+          tool.tutorials.forEach((tutorial) => {
+            if (!sites[tutorial.site]) {
+              sites[tutorial.site] = 1;
+            }
+            sites[tutorial.site] = sites[tutorial.site] + 1;
+          });
+        }
+      });
+    }
+
+    let sitesArray = [];
+    for (let site in sites) {
+      sitesArray.push({
+        title: site,
+        amount: sites[site]
+      });
+    }
+
+    return sitesArray;
   }
 };

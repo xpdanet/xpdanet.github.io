@@ -9,7 +9,10 @@ let app = new Vue({
     tools: [],
     tool: null,
     platforms: [],
-    languages: []
+    languages: [],
+    sites: [],
+    newLanguageChoice: null,
+    newPlatformChoice: null
   },
   methods: {
     clearForm: function () {
@@ -28,11 +31,55 @@ let app = new Vue({
         notableProjects: []
       };
     },
-    addNew: function (section, type) {
-      type = type || 'text';
-      if (type === 'text') {
-        this.tool[section].push('');
-      }
+    addNew: function (section) {
+      this.tool[section].push('');
+    },
+    addNewFramework: function () {
+      this.tool.frameworks.push({
+        framework: '',
+        title: '',
+        url: ''
+      });
+    },
+    addNewToolTool: function () {
+      this.tool.tools.push({
+        type: '',
+        title: '',
+        url: ''
+      });
+    },
+    addNewTutorial: function () {
+      this.tool.tutorials.push({
+        title: '',
+        author: '',
+        URL: '',
+        site: ''
+      });
+    },
+    addNewNotableProject: function () {
+      this.tool.notableProjects.push({
+        title: '',
+        url: '',
+        description: ''
+      });
+    },
+    addNewLanguageChoice: function () {
+      this.tool.languages.push(this.newLanguageChoice);
+    },
+    addNewPlatformChoice: function () {
+      this.tool.platforms.push(this.newPlatformChoice);
+    }
+  },
+  computed: {
+    joinedSites: function () {
+      let sites = [];
+
+      this.sites.forEach(function (site) {
+        sites.push(site.title);
+      });
+      sites = sites.join(', ');
+
+      return sites;
     }
   },
   filters: {
@@ -63,6 +110,7 @@ let app = new Vue({
         this.tools = tools;
         this.platforms = helpers.setFilterValues(tools, 'platforms');
         this.languages = helpers.setFilterValues(tools, 'languages');
+        this.sites = helpers.listAllSites(tools);
       })
       .catch((err) => {
         console.log(err);
