@@ -3,6 +3,7 @@ const app = new Vue({
   el: '#app',
   data: {
     filterType: 'subtractive',
+    networkError: false,
     languages: [],
     platforms: [],
     tools: [],
@@ -123,7 +124,9 @@ const app = new Vue({
         this.languages = helpers.setFilterValues(tools, 'languages');
       })
       .catch((err) => {
-        console.log(err);
+        if (err) {
+          this.networkError = true;
+        }
       });
   }
 });

@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
     <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="_styles/style.css" />
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
   </head>
   <body>
     <div class="container">
@@ -24,7 +25,7 @@
             <option value="additive">Must support each selected:</option>
           </select>
         </div>
-        <div>
+        <div v-if="languages && languages.length">
           <p>Languages</p>
           <button
             v-for="(language, languageIndex) in languages"
@@ -37,7 +38,7 @@
             {{ language.title }}
           </button>
         </div>
-        <div>
+        <div v-if="platforms && platforms.length">
           <p>Platforms</p>
           <button
             v-for="(platform, platformIndex) in platforms"
@@ -50,6 +51,10 @@
             {{ platform.title }}
           </button>
         </div>
+
+        <div v-if="networkError" class="center">There was an error loading the data, refresh the page to try again</div>
+
+        <div v-if="!tools || tools.length === 0" class="spinner"></div>
 
         <h3 v-if="tools && tools.length">Matching Tools ({{ filteredTools.length }}/{{ tools.length }})</h3>
         <div
@@ -179,7 +184,6 @@
 
     <script type="text/javascript" src="//cdn.polyfill.io/v2/polyfill.min.js?features=String.prototype.startsWith,Promise"></script>
     <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js"></script>
-    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
     <script type="text/javascript" src="_scripts/helpers.js"></script>
     <script type="text/javascript" src="_scripts/app.js"></script>
     <link rel="stylesheet" href="_styles/fonts.css" />

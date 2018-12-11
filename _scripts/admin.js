@@ -5,6 +5,7 @@ let app = new Vue({
     minus: httpVueLoader('_components/minus.vue')
   },
   data: {
+    networkError: false,
     selectedTool: 'new',
     tools: [],
     tool: null,
@@ -113,7 +114,9 @@ let app = new Vue({
         this.sites = helpers.listAllSites(tools);
       })
       .catch((err) => {
-        console.log(err);
+        if (err) {
+          this.networkError = true;
+        }
       });
   }
 });

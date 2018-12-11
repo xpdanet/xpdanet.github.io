@@ -24,6 +24,8 @@
           </option>
         </select>
 
+        <div v-if="networkError" class="center">There was a network error.</div>
+
         <div v-if="tool" class="form">
           <div>
             <label>Title:</label>
