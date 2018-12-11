@@ -112,7 +112,7 @@
             </div>
 
             <!-- Notable Projects -->
-            <div v-if="tool.notableProjects && tool.notableProjects.length">
+            <div>
               <strong>Notable Projects made with {{ tool.title }}:</strong>
               <ul>
                 <li
@@ -126,6 +126,15 @@
                     {{ notableProject.title }} -
                   </template>
                   {{ notableProject.description }}
+                </li>
+                <li>
+                  <a
+                    :href="'https://github.com/xpdanet/xpdanet.github.io/issues/new?title=Notable+project+made+with+' + encodeURI(tool.title) + '&body=*+**Name:**+%0A*+**URL:**+%0A*+**Description:**+'"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    Add a notable project made with this tool
+                  </a>
                 </li>
               </ul>
             </div>
