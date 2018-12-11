@@ -24,7 +24,7 @@
       "Updated within 24 hours of a Chromium or Node release",
       "Still a resource hog, but uses less RAM and disk space than Electron",
       "Distribution sizes can be as small as 25MB (Windows Installer)",
-      "Been around 5 years longer/used by thousands of projects",
+      "Been around 5 years longer than Electron/used by thousands of projects",
       "Assumes you want to create a desktop app, and not a node script with an optional UI.",
       "Super easy to get started with and a no-nonsense API",
       "Can use node_modules",
@@ -391,7 +391,7 @@
     "cons": [
       "Has a limited free version, can become expensive in some scenarios",
       "Does not support all of CSS3 features",
-      "Uses a proprietary scripting language that is based off of the 1996-2011 version of JavaScript (v1.x))",
+      "Uses a proprietary scripting language that is based off of the 1996-2011 version of JavaScript (v1.x)",
       "Documentation is very lacking"
     ],
     "frameworks": [],
