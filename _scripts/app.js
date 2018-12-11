@@ -1,6 +1,9 @@
 // eslint-disable-next-line no-unused-vars
 const app = new Vue({
   el: '#app',
+  components: {
+    'base-card': httpVueLoader('/_components/base-card.vue')
+  },
   data: {
     filterType: 'subtractive',
     networkError: false,
