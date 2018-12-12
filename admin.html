@@ -148,7 +148,7 @@
                 >
                   <div>
                     <label>Framework</label>
-                    <input v-model="tool.frameworks[frameworkIndex].framework" type="text">
+                    <input v-model="tool.frameworks[frameworkIndex].framework" :placeholder="joinedItems('frameworks')" type="text">
                   </div>
                   <div>
                     <label>Title</label>
@@ -212,7 +212,7 @@
                   </div>
                   <div>
                     <label>Site</label>
-                    <input v-model="tool.tutorials[tutorialIndex].site" :placeholder="joinedSites" type="text">
+                    <input v-model="tool.tutorials[tutorialIndex].site" :placeholder="joinedItems('sites')" type="text">
                     <minus :tool="tool" :index="tutorialIndex" name="tutorials"></minus>
                   </div>
                 </li>
@@ -245,7 +245,14 @@
           </div>
         </div> <!-- .form -->
 
-        <textarea class="admin-preview">{{ JSON.stringify(tool, null, 2) }}</textarea>
+        <hr />
+
+        <div class="half">
+          <textarea class="admin-preview">{{ JSON.stringify(tool, null, 2) }}</textarea>
+        </div>
+        <div class="half">
+          <base-card v-if="tool" :tool="tool"></base-card>
+        </div>
 
       </div> <!-- #app -->
     </div> <!-- .container -->
