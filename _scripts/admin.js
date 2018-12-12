@@ -12,6 +12,7 @@ let app = new Vue({
     platforms: [],
     languages: [],
     sites: [],
+    frameworks: [],
     newLanguageChoice: null,
     newPlatformChoice: null
   },
@@ -69,18 +70,15 @@ let app = new Vue({
     },
     addNewPlatformChoice: function () {
       this.tool.platforms.push(this.newPlatformChoice);
-    }
-  },
-  computed: {
-    joinedSites: function () {
-      let sites = [];
+    },
+    joinedItems: function (items) {
+      let itemsArray = [];
 
-      this.sites.forEach(function (site) {
-        sites.push(site.title);
+      this[items].forEach(function (item) {
+        itemsArray.push(item.title);
       });
-      sites = sites.join(', ');
 
-      return sites;
+      return itemsArray.join(', ');
     }
   },
   filters: {
@@ -112,6 +110,7 @@ let app = new Vue({
         this.platforms = helpers.setFilterValues(tools, 'platforms');
         this.languages = helpers.setFilterValues(tools, 'languages');
         this.sites = helpers.listAllSites(tools);
+        this.frameworks = helpers.listAllFrameworks(tools);
       })
       .catch((err) => {
         if (err) {

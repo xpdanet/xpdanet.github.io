@@ -45,8 +45,9 @@ let helpers = {
           tool.tutorials.forEach((tutorial) => {
             if (!sites[tutorial.site]) {
               sites[tutorial.site] = 1;
+            } else {
+              sites[tutorial.site] = sites[tutorial.site] + 1;
             }
-            sites[tutorial.site] = sites[tutorial.site] + 1;
           });
         }
       });
@@ -61,5 +62,31 @@ let helpers = {
     }
 
     return sitesArray;
+  },
+  listAllFrameworks: function (tools) {
+    let frameworks = {};
+    if (tools && tools.length) {
+      tools.forEach((tool) => {
+        if (tool.frameworks && tool.frameworks.length) {
+          tool.frameworks.forEach((framework) => {
+            if (!frameworks[framework.framework]) {
+              frameworks[framework.framework] = 1;
+            } else {
+              frameworks[framework.framework] = frameworks[framework.framework] + 1;
+            }
+          });
+        }
+      });
+    }
+
+    let frameworksArray = [];
+    for (let framework in frameworks) {
+      frameworksArray.push({
+        title: framework,
+        amount: frameworks[framework]
+      });
+    }
+
+    return frameworksArray;
   }
 };
