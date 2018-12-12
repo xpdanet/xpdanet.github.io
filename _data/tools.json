@@ -668,6 +668,12 @@
     "frameworks": [],
     "tools": [],
     "tutorials": [],
-    "notableProjects": []
+    "notableProjects": [
+      {
+        "title": "tIRC",
+        "url": "https://www.youtube.com/watch?v=Vc1hFIGAw28",
+        "description": "Simple IRC Chat client for OSX"
+      }
+    ]
   }
 ]
