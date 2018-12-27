@@ -1,5 +1,35 @@
 // eslint-disable-next-line no-unused-vars
 let helpers = {
+  getToolsData: function () {
+    return axios.get('/_data/tools.json')
+      .then((response) => {
+        let data = [];
+        let networkError = false;
+        try {
+          data = response.data.split('\n');
+          data = data.filter((line) => {
+            return !line.trim().startsWith('//');
+          }).join('\n');
+          data = JSON.parse(data);
+        } catch (err) {
+          if (err) {
+            networkError = true;
+          }
+        }
+        return {
+          tools: data,
+          networkError: networkError
+        };
+      })
+      .catch((err) => {
+        if (err) {
+          return {
+            tools: [],
+            networkError: true
+          };
+        }
+      });
+  },
   /**
    * Creates a sorted array of objects without duplicates containing
    * a count of usage for platforms and languages.

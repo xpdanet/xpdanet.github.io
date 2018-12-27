@@ -1,4 +1,5 @@
 [
+  // NW.js
   {
     "title": "NW.js",
     "url": "https://nwjs.io",
@@ -97,6 +98,7 @@
       }
     ]
   },
+  // Electron
   {
     "title": "Electron",
     "url": "https://electronjs.org",
@@ -165,6 +167,7 @@
       }
     ]
   },
+  // Xamarin
   {
     "title": "Xamarin",
     "url": "https://visualstudio.microsoft.com/xamarin",
@@ -200,6 +203,7 @@
     "tutorials": [],
     "notableProjects": []
   },
+  // Ultralight
   {
     "title": "Ultralight",
     "url": "https://ultralig.ht",
@@ -237,6 +241,7 @@
     "tutorials": [],
     "notableProjects": []
   },
+  // Adobe AIR
   {
     "title": "Adobe AIR",
     "url": "http://www.adobe.com/products/air.html",
@@ -267,6 +272,7 @@
     "tutorials": [],
     "notableProjects": []
   },
+  // Adobe Animate CC
   {
     "title": "Adobe Animate CC",
     "url": "https://www.adobe.com/products/animate.html",
@@ -320,6 +326,7 @@
       }
     ]
   },
+  // LibUI-Node
   {
     "title": "LibUI-Node",
     "url": "https://github.com/parro-it/libui-node",
@@ -375,6 +382,7 @@
     ],
     "notableProjects": []
   },
+  // LibUI
   {
     "title": "LibUI",
     "url": "https://github.com/andlabs/libui#language-bindings",
@@ -420,6 +428,7 @@
     "tutorials": [],
     "notableProjects": []
   },
+  // Sciter
   {
     "title": "Sciter",
     "url": "https://sciter.com",
@@ -452,6 +461,7 @@
     "tutorials": [],
     "notableProjects": []
   },
+  // PyQt
   {
     "title": "PyQt",
     "url": "https://www.riverbankcomputing.com/software/pyqt",
@@ -484,6 +494,7 @@
     "tutorials": [],
     "notableProjects": []
   },
+  // Carlo
   {
     "title": "Carlo",
     "url": "https://github.com/GoogleChromeLabs/carlo",
@@ -516,6 +527,7 @@
     "tutorials": [],
     "notableProjects": []
   },
+  // Lorca
   {
     "title": "Lorca",
     "url": "https://github.com/zserge/lorca",
@@ -550,6 +562,7 @@
     "tutorials": [],
     "notableProjects": []
   },
+  // Chromium Embedded Framework (CEF)
   {
     "title": "Chromium Embedded Framework (CEF)",
     "url": "https://bitbucket.org/chromiumembedded/cef",
@@ -632,6 +645,7 @@
       }
     ]
   },
+  // Brackets-Shell
   {
     "title": "Brackets-Shell",
     "url": "https://github.com/adobe/brackets-shell",
@@ -666,6 +680,7 @@
       }
     ]
   },
+  // Tint2
   {
     "title": "Tint2",
     "url": "https://github.com/trueinteractions/tint2",
@@ -693,6 +708,7 @@
     "tutorials": [],
     "notableProjects": []
   },
+  // AppJS
   {
     "title": "AppJS",
     "url": "http://appjs.com",
