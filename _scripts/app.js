@@ -20,13 +20,19 @@ const app = new Vue({
           'NW.js',
           'Electron'
         ]
-      },
-      {
-
       }
     ]
   },
   methods: {
+    getToolsData: function () {
+      helpers.getToolsData()
+        .then((response) => {
+          this.tools = response.tools;
+          this.platforms = helpers.setFilterValues(response.tools, 'platforms');
+          this.languages = helpers.setFilterValues(response.tools, 'languages');
+          this.networkError = response.networkError;
+        });
+    },
     toggleActive: function (item) {
       item.enabled = !item.enabled;
     },
@@ -119,17 +125,6 @@ const app = new Vue({
     }
   },
   created: function () {
-    axios.get('/_data/tools.json')
-      .then((response) => {
-        let tools = response.data;
-        this.tools = tools;
-        this.platforms = helpers.setFilterValues(tools, 'platforms');
-        this.languages = helpers.setFilterValues(tools, 'languages');
-      })
-      .catch((err) => {
-        if (err) {
-          this.networkError = true;
-        }
-      });
+    this.getToolsData();
   }
 });

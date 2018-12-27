@@ -18,6 +18,18 @@ let app = new Vue({
     newPlatformChoice: null
   },
   methods: {
+    getToolsData: function () {
+      helpers.getToolsData()
+        .then((response) => {
+          let tools = response.tools;
+          this.tools = tools;
+          this.platforms = helpers.setFilterValues(tools, 'platforms');
+          this.languages = helpers.setFilterValues(tools, 'languages');
+          this.sites = helpers.listAllSites(tools);
+          this.frameworks = helpers.listAllFrameworks(tools);
+          this.networkError = response.networkError;
+        });
+    },
     clearForm: function () {
       this.tool = {
         title: '',
@@ -104,19 +116,6 @@ let app = new Vue({
     }
   },
   created: function () {
-    axios.get('/_data/tools.json')
-      .then((response) => {
-        let tools = response.data;
-        this.tools = tools;
-        this.platforms = helpers.setFilterValues(tools, 'platforms');
-        this.languages = helpers.setFilterValues(tools, 'languages');
-        this.sites = helpers.listAllSites(tools);
-        this.frameworks = helpers.listAllFrameworks(tools);
-      })
-      .catch((err) => {
-        if (err) {
-          this.networkError = true;
-        }
-      });
+    this.getToolsData();
   }
 });
