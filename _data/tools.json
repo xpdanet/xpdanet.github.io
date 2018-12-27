@@ -268,6 +268,59 @@
     "notableProjects": []
   },
   {
+    "title": "Adobe Animate CC",
+    "url": "https://www.adobe.com/products/animate.html",
+    "logo": "animate.svg",
+    "deprecated": false,
+    "languages": [
+      "ActionScript"
+    ],
+    "platforms": [
+      "Windows",
+      "OSX",
+      "Android",
+      "iOS"
+    ],
+    "pros": [
+      "Adobe Animate (formerly Adobe Flash Professional) allows you to produce Flash files (.swf), HTML5 compatiable projects, and also export out to a self contained executable for Windows and OSX (so nothing additional needs to be installed to run it)",
+      "Versatile and powerful vector-based animation tools",
+      "Distribution sizes are small, typically around 6-20MB",
+      "Aimed primarily at animated short films, and 2D games",
+      "Can also export app for installation as a desktop app or mobile app ran inside Adobe Air"
+    ],
+    "cons": [
+      "Requires renting the software month-to-month. If you stop paying for a Creative Cloud subscription, you will no long be able to edit/modify your application. Alternatively you could buy Adobe Flash Pro CS6 (older version) to actually own instead of rent the software, however you would not get any updates or newer features",
+      "Lacks true Linux support. There is a separate download for a standalone Linux projector file that a SWF can be loaded in, but no way to build your app into it in the same way the Windows/OSX version can",
+      "Very limited library/framework/tooling support",
+      "Very limited access to file system, hardware, storage, or OS features"
+    ],
+    "frameworks": [],
+    "tools": [],
+    "tutorials": [
+      {
+        "title": "Publishing your Flash project to a projector",
+        "author": "Brian Kelly",
+        "URL": "",
+        "site": "YouTube",
+        "url": "https://www.youtube.com/watch?v=bm-28NOmsyc"
+      },
+      {
+        "title": "Publishing mobile and desktop applications",
+        "author": "Lynda.com",
+        "URL": "",
+        "site": "YouTube",
+        "url": "https://www.youtube.com/watch?v=-O1OcQltXyM"
+      }
+    ],
+    "notableProjects": [
+      {
+        "title": "Knights of the Stream",
+        "url": "https://www.knightsofthestream.com",
+        "description": "A desktop app for Twitch streams that allows viewers to level up a character by participating in chat, and for the streamers to reward participants with in-game rewards."
+      }
+    ]
+  },
+  {
     "title": "LibUI-Node",
     "url": "https://github.com/parro-it/libui-node",
     "deprecated": false,
