@@ -50,16 +50,16 @@ let app = new Vue({
     },
     setToolInUrl: function (title) {
       if (history.pushState) {
-          let newUrl = [
-            location.protocol,
-            '//',
-            location.host,
-            location.pathname,
-            '?tool=',
-            encodeURI(title)
-          ].join('');
+        let newUrl = [
+          location.protocol,
+          '//',
+          location.host,
+          location.pathname,
+          '?tool=',
+          encodeURI(title)
+        ].join('');
 
-          history.pushState({ path: newUrl }, '', newUrl);
+        history.pushState({ path: newUrl }, '', newUrl);
       }
     },
     clearForm: function () {
