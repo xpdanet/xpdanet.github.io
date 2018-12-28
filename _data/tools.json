@@ -568,6 +568,42 @@
     "tutorials": [],
     "notableProjects": []
   },
+  // Chromely
+  {
+    "title": "Chromely",
+    "url": "https://github.com/mattkol/Chromely",
+    "logo": "chromely.png",
+    "deprecated": false,
+    "languages": [
+      "HTML",
+      "CSS",
+      "JS",
+      ".NET",
+      "C#"
+    ],
+    "platforms": [
+      "Windows",
+      "Linux"
+    ],
+    "pros": [
+      "Simplifies interacting with Chromium Embedded Framework (CEF) for .NET and .NET Core developers",
+      "Based on CefSharp and CefGlue (though CefGlue is not fully implemented in all examples)",
+      "Has Vue, React, and Angular boilerplates",
+      "Uses Chromium dev tools",
+      "Use of Node/npm in your project is entirely optional and limited to development"
+    ],
+    "cons": [
+      "OSX support is on the roadmap, but currently has no support",
+      "Documentation is limited to a wiki that has many stubbed/empty pages",
+      "The abstraction from the OS layer is minimal compared to NW.js or Electron, some of this is to be resolved in future versions",
+      "Requires referencing documentation for of 3rd parties (WinApi, Xilium.CefGlue, CefSharp, and more) to build more advanced apps",
+      "Basically one person behind most of the code"
+    ],
+    "frameworks": [],
+    "tools": [],
+    "tutorials": [],
+    "notableProjects": []
+  },
   // Chromium Embedded Framework (CEF)
   {
     "title": "Chromium Embedded Framework (CEF)",
