@@ -645,6 +645,41 @@
       }
     ]
   },
+  // Muon
+  {
+    "title": "Muon",
+    "url": "https://github.com/brave/muon",
+    "logo": "muon.png",
+    "deprecated": false,
+    "languages": [
+      "HTML",
+      "CSS",
+      "JS",
+      "Node.js"
+    ],
+    "platforms": [
+      "Windows",
+      "OSX",
+      "Linux"
+    ],
+    "pros": [
+      "Fork of Electron with a less modified Chromium source, and goals to improve security and usage of Chrome extensions"
+    ],
+    "cons": [
+      "This is literally just Electron with some very minor changes, all of which are things that NW.js already does much better than they are aiming for. I can't see any reason to recommend Muon to anyone. Either you need these technical changes (and should use NW.js), or you need the large community size of Electron (and should use Electron then)",
+      "Documentation is limited and mostly just a copy/paste job from Electron"
+    ],
+    "frameworks": [],
+    "tools": [],
+    "tutorials": [],
+    "notableProjects": [
+      {
+        "title": "Brave Browser",
+        "url": "https://brave.com",
+        "description": "A desktop browser. They literally took Electron and used it to make a browser, very possibly the laziest thing that could be done with the technology."
+      }
+    ]
+  },
   // Brackets-Shell
   {
     "title": "Brackets-Shell",
