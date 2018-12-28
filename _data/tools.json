@@ -74,7 +74,7 @@
       {
         "title": "Game Dev Tycoon",
         "url": "https://www.greenheartgames.com/app/game-dev-tycoon",
-        "description": "A popular business simulation game where you replay the history of the gaming industry by starting your own video game development company in the 80s. The game runs inside NW.js."
+        "description": "A popular business simulation game where you replay the history of the gaming industry by starting your own video game development company in the 80's. The game runs inside NW.js."
       },
       {
         "title": "YubiKey",
@@ -153,7 +153,7 @@
       {
         "title": "VSCode",
         "url": "https://code.visualstudio.com",
-        "description": "Open source text edior from Microsoft aimed at web developers"
+        "description": "Open source text editor from Microsoft aimed at web developers"
       },
       {
         "title": "Slack",
@@ -161,9 +161,9 @@
         "description": "Slack is a chat application primarily aimed at inter-office and work-team communication."
       },
       {
-        "title": "List of apps submited to the Electron Website",
+        "title": "List of apps submitted to the Electron Website",
         "url": "https://electronjs.org/apps",
-        "description": "User submited apps made with Electron"
+        "description": "User submitted apps made with Electron"
       }
     ]
   },
@@ -234,7 +234,7 @@
       "Currently requires the end user have a GPU",
       "Lacking full support for CSS3, especially around SVG, filters, and dropshadows",
       "Limited JavaScript interaction through C++",
-      "Internal Webkit is based off of Safari with many features disabled, notably WebWorkers, WebAudio and Video"
+      "Internal WebKit is based off of Safari with many features disabled, notably WebWorkers, WebAudio and Video"
     ],
     "frameworks": [],
     "tools": [],
@@ -288,7 +288,7 @@
       "iOS"
     ],
     "pros": [
-      "Adobe Animate (formerly Adobe Flash Professional) allows you to produce Flash files (.swf), HTML5 compatiable projects, and also export out to a self contained executable for Windows and OSX (so nothing additional needs to be installed to run it)",
+      "Adobe Animate (formerly Adobe Flash Professional) allows you to produce Flash files (.swf), HTML5 compatible projects, and also export out to a self contained executable for Windows and OSX (so nothing additional needs to be installed to run it)",
       "Versatile and powerful vector-based animation tools",
       "Distribution sizes are small, typically around 6-20MB",
       "Aimed primarily at animated short films, and 2D games",
@@ -420,7 +420,7 @@
       "Quality and level of completion of bindings varies quite a bit",
       "You are limited to very basic form-like UI's",
       "Most bindings require native build tools and doing builds on each target OS",
-      "Dev, build, and distrubtion tools are weak or completly lacking",
+      "Dev, build, and distribution tools are weak or completely lacking",
       "Documentation is mostly limited to README files"
     ],
     "frameworks": [],
@@ -459,7 +459,13 @@
     "frameworks": [],
     "tools": [],
     "tutorials": [],
-    "notableProjects": []
+    "notableProjects": [
+      { "title": "Norton Internet Security" },
+      { "title": "eSet Smart Security" },
+      { "title": "Avast Free Antivirus" },
+      { "title": "Bitdefender" },
+      { "title": "Comodo Internet Security" }
+    ]
   },
   // PyQt
   {
@@ -512,7 +518,7 @@
     ],
     "pros": [
       "Made by Google",
-      "Uses the user's installed copy of Chrome so you don't need to package and ship the browser in your distrubtion making dist sizes very small",
+      "Uses the user's installed copy of Chrome so you don't need to package and ship the browser in your distribution making dist sizes very small",
       "Uses the Puppeteer API for communicating between Node and browser"
     ],
     "cons": [
@@ -547,14 +553,14 @@
     "pros": [
       "Inspired by Carlo, but for Go instead of Node.js",
       "Unlike Carlo, Lorca can build executable for most any platform via the go build command",
-      "Uses the user's installed copy of Chrome so you don't need to package and ship the browser in your distrubtion making dist sizes very small",
+      "Uses the user's installed copy of Chrome so you don't need to package and ship the browser in your distribution making dist sizes very small",
       "Distribution sizes of 5-10MB"
     ],
     "cons": [
       "Very new project, basically one person behind it",
       "Requires the end user has Chrome 70+ installed on their system (released 2018-10-16)",
       "You do not control the browser version, meaning usage of some new browser features in your app will require fallbacks to what Chrome 70 supported",
-      "Though building a native executable is availbe, you will still need to manually edit it to embed app icon, etc. and use tools for creating installers",
+      "Though building a native executable is available, you will still need to manually edit it to embed app icon, etc. and use tools for creating installers",
       "No established paths for setting up auto updates"
     ],
     "frameworks": [],
@@ -586,7 +592,7 @@
     ],
     "cons": [
       "Considerably more complex than other options on this list",
-      "This is as barebones as it gets, many other projects listed on this site are built on top of CEF to simplify it and make development faster/easier"
+      "This is as bare-bones as it gets, many other projects listed on this site are built on top of CEF to simplify it and make development faster/easier"
     ],
     "frameworks": [],
     "tools": [
@@ -642,6 +648,41 @@
         "title": "Spotify",
         "url": "https://www.spotify.com",
         "description": "Spotify is a streaming music platform. It's built with C++, JS, Handlebars, and Less and uses CEF under the hood."
+      }
+    ]
+  },
+  // Muon
+  {
+    "title": "Muon",
+    "url": "https://github.com/brave/muon",
+    "logo": "muon.png",
+    "deprecated": false,
+    "languages": [
+      "HTML",
+      "CSS",
+      "JS",
+      "Node.js"
+    ],
+    "platforms": [
+      "Windows",
+      "OSX",
+      "Linux"
+    ],
+    "pros": [
+      "Fork of Electron with a less modified Chromium source, and goals to improve security and usage of Chrome extensions"
+    ],
+    "cons": [
+      "This is literally just Electron with some very minor changes, all of which are things that NW.js already does much better than they are aiming for. I can't see any reason to recommend Muon to anyone. Either you need these technical changes (and should use NW.js), or you need the large community size of Electron (and should use Electron then)",
+      "Documentation is limited and mostly just a copy/paste job from Electron"
+    ],
+    "frameworks": [],
+    "tools": [],
+    "tutorials": [],
+    "notableProjects": [
+      {
+        "title": "Brave Browser",
+        "url": "https://brave.com",
+        "description": "A desktop browser. They literally took Electron and used it to make a browser, very possibly the laziest thing that could be done with the technology."
       }
     ]
   },

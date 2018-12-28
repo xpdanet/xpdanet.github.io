@@ -60,12 +60,14 @@
             :key="'notableProject' + notableProjectIndex"
           >
             <template v-if="notableProject.url">
-              <a :href="notableProject.url" target="_blank" rel="noopener noreferrer">{{ notableProject.title }}</a> -
+              <a :href="notableProject.url" target="_blank" rel="noopener noreferrer">{{ notableProject.title }}</a>
             </template>
             <template v-else>
-              {{ notableProject.title }} -
+              {{ notableProject.title }}
             </template>
-            {{ notableProject.description }}
+            <template v-if="notableProject.description">
+              - {{ notableProject.description }}
+            </template>
           </li>
           <li>
             <a
