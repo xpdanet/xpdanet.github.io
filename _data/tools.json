@@ -596,7 +596,7 @@
       "OSX support is on the roadmap, but currently has no support",
       "Documentation is limited to a wiki that has many stubbed/empty pages",
       "The abstraction from the OS layer is minimal compared to NW.js or Electron, some of this is to be resolved in future versions",
-      "Requires referencing documentation for of 3rd parties (WinApi, Xilium.CefGlue, CefSharp, and more) to build more advanced apps",
+      "Requires referencing documentation of 3rd parties (WinApi, Xilium.CefGlue, CefSharp, and more) to build more advanced apps",
       "Basically one person behind most of the code"
     ],
     "frameworks": [],
@@ -686,6 +686,38 @@
         "description": "Spotify is a streaming music platform. It's built with C++, JS, Handlebars, and Less and uses CEF under the hood."
       }
     ]
+  },
+  // NeutralinoJs
+  {
+    "title": "NeutralinoJs",
+    "url": "https://neutralino.js.org",
+    "logo": "neutralinojs.png",
+    "deprecated": false,
+    "languages": [
+      "HTML",
+      "CSS",
+      "JS"
+    ],
+    "platforms": [
+      "Windows",
+      "Linux"
+    ],
+    "pros": [
+      "Neutralino is a small executable that runs a static local http server to serve your application in the user's browser",
+      "Though it lacks in powerful features, its goal is to be small, lightweight, and easy to pick up, and it delivers on those goals very well",
+      "Has Vue, React, and Angular boilerplates"
+    ],
+    "cons": [
+      "No support for OSX",
+      "Lacks many OS level features like being able to make a tray icon, or custom window chrome",
+      "Very limited access to file system, hardware, and OS level features through a tiny API ",
+      "Your UI could run any browser the end user has, meaning that your app must be designed in a cross-browser friendly manner",
+      "Documentation is pretty light"
+    ],
+    "frameworks": [],
+    "tools": [],
+    "tutorials": [],
+    "notableProjects": []
   },
   // Muon
   {
