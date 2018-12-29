@@ -99,7 +99,7 @@ let app = new Vue({
       this.tool.tutorials.push({
         title: '',
         author: '',
-        URL: '',
+        url: '',
         site: ''
       });
     },

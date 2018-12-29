@@ -27,7 +27,7 @@ Website for XPDA.net (Cross-Platform Desktop Apps)
 
 ### Phase 4
 
-* [ ] Continue improving content
+* [ ] Continue improving/adding content
    * [ ] Notable projects made with the tool, tutorials
 
 * * *
@@ -37,5 +37,7 @@ Website for XPDA.net (Cross-Platform Desktop Apps)
 * git :grimacing:
 * GitHub Pages :notebook:
 * Vue.js :heart_eyes:
+* Sass :sunglasses:
 * ESLint :relieved:
+* Sasslint :seedling:
 * Travis-CI :rainbow:
