@@ -702,6 +702,41 @@
       }
     ]
   },
+  // Kivy
+  {
+    "title": "Kivy",
+    "url": "https://kivy.org",
+    "logo": "kivy.png",
+    "deprecated": false,
+    "languages": [
+      "Python"
+    ],
+    "platforms": [
+      "Windows",
+      "OSX",
+      "Linux",
+      "iOS",
+      "Android"
+    ],
+    "pros": [
+      "Uses a simplified custom UI markup language called \"Kv language\" to handle the layout across all platforms",
+      "Detailed and complete documentation, including guide, tutorials, and API"
+    ],
+    "cons": [
+      "Separate build processes for each target platform",
+      "The size of the API will be overwhelming to those starting out with Kivy"
+    ],
+    "frameworks": [],
+    "tools": [],
+    "tutorials": [],
+    "notableProjects": [
+      {
+        "title": "Kivy Projects Gallery",
+        "url": "https://kivy.org/#gallery",
+        "description": ""
+      }
+    ]
+  },
   // PyQt
   {
     "title": "PyQt",
