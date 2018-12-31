@@ -10,14 +10,14 @@
     <script type="text/javascript" src="//cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
   </head>
   <body>
-    <div class="container">
-      <h1>XPDA.net</h1>
+    <div v-cloak id="app" class="container">
+      <site-logo></site-logo>
       <h2>Cross-Platform Desktop Apps (XPDA)</h2>
       <h3>Write Once Run Anywhere (WORA) development for desktop operating systems.</h3>
       <hr />
       <a href="https://github.com/xpdanet/xpdanet.github.io">Edit this page on GitHub.</a>
       <hr />
-      <div id="app" v-cloak>
+      <div>
         <h3>Filter Controls:</h3>
         <div>
           <select v-model="filterType">
