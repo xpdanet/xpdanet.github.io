@@ -96,7 +96,8 @@
         "url": "https://github.com/nwjs/nw.js/wiki/List-of-apps-and-companies-using-nw.js",
         "description": "User submited list of apps made with NW.js"
       }
-    ]
+    ],
+    "notableTrailingLink": true
   },
   // Electron
   {
@@ -165,8 +166,10 @@
         "url": "https://electronjs.org/apps",
         "description": "User submitted apps made with Electron"
       }
-    ]
+    ],
+    "notableTrailingLink": false
   },
+
   // Xamarin
   {
     "title": "Xamarin",
@@ -201,7 +204,8 @@
     "frameworks": [],
     "tools": [],
     "tutorials": [],
-    "notableProjects": []
+    "notableProjects": [],
+    "notableTrailingLink": true
   },
   // Ultralight
   {
@@ -239,8 +243,10 @@
     "frameworks": [],
     "tools": [],
     "tutorials": [],
-    "notableProjects": []
+    "notableProjects": [],
+    "notableTrailingLink": true
   },
+
   // Adobe AIR
   {
     "title": "Adobe AIR",
@@ -270,7 +276,8 @@
     "frameworks": [],
     "tools": [],
     "tutorials": [],
-    "notableProjects": []
+    "notableProjects": [],
+    "notableTrailingLink": true
   },
   // Adobe Animate CC
   {
@@ -322,8 +329,10 @@
         "url": "https://www.knightsofthestream.com",
         "description": "A desktop app for Twitch streams that allows viewers to level up a character by participating in chat, and for the streamers to reward participants with in-game rewards."
       }
-    ]
+    ],
+    "notableTrailingLink": true
   },
+
   // LibUI-Node
   {
     "title": "LibUI-Node",
@@ -378,7 +387,8 @@
         "site": "dev.to"
       }
     ],
-    "notableProjects": []
+    "notableProjects": [],
+    "notableTrailingLink": true
   },
   // LibUI
   {
@@ -424,8 +434,10 @@
     "frameworks": [],
     "tools": [],
     "tutorials": [],
-    "notableProjects": []
+    "notableProjects": [],
+    "notableTrailingLink": true
   },
+
   // Sciter
   {
     "title": "Sciter",
@@ -463,7 +475,8 @@
       { "title": "Avast Free Antivirus" },
       { "title": "Bitdefender" },
       { "title": "Comodo Internet Security" }
-    ]
+    ],
+    "notableTrailingLink": false
   },
   // Xojo
   {
@@ -508,8 +521,10 @@
         "url": "https://www.xojo.com/resources/examples.php",
         "description": "Curated list of products made with Xojo"
       }
-    ]
+    ],
+    "notableTrailingLink": true
   },
+
   // Carlo
   {
     "title": "Carlo",
@@ -541,7 +556,8 @@
     "frameworks": [],
     "tools": [],
     "tutorials": [],
-    "notableProjects": []
+    "notableProjects": [],
+    "notableTrailingLink": true
   },
   // Lorca
   {
@@ -576,8 +592,10 @@
     "frameworks": [],
     "tools": [],
     "tutorials": [],
-    "notableProjects": []
+    "notableProjects": [],
+    "notableTrailingLink": true
   },
+
   // Chromely
   {
     "title": "Chromely",
@@ -617,7 +635,8 @@
         "title": "GitHub Issue listing user submitted projects",
         "url": "https://github.com/mattkol/Chromely/issues/63"
       }
-  ]
+    ],
+    "notableTrailingLink": true
   },
   // Chromium Embedded Framework (CEF)
   {
@@ -700,8 +719,10 @@
         "url": "https://www.spotify.com",
         "description": "Spotify is a streaming music platform. It's built with C++, JS, Handlebars, and Less and uses CEF under the hood."
       }
-    ]
+    ],
+    "notableTrailingLink": true
   },
+
   // Kivy
   {
     "title": "Kivy",
@@ -735,7 +756,8 @@
         "url": "https://kivy.org/#gallery",
         "description": ""
       }
-    ]
+    ],
+    "notableTrailingLink": true
   },
   // PyQt
   {
@@ -768,8 +790,83 @@
       }
     ],
     "tutorials": [],
-    "notableProjects": []
+    "notableProjects": [],
+    "notableTrailingLink": true
   },
+
+  // Qt
+  {
+    "title": "Qt",
+    "url": "https://www.qt.io",
+    "logo": "qt.png",
+    "deprecated": false,
+    "languages": [
+      "C++"
+    ],
+    "platforms": [
+      "Windows",
+      "OSX",
+      "Linux",
+      "iOS",
+      "Android",
+      "Windows Phone"
+    ],
+    "pros": [
+      "Also supports other platforms: Embedded Linux, Integrity, QNX, VxWorks, Wayland, Windows Embedded (CE), Windows UWP (WinRT), and X11. Has been ported to additional platforms: Open Solaris, Haiku, OS/2, webOS, Kindle DX, AmigaOS, Tizen, and Sailfish OS"
+    ],
+    "cons": [
+      "Though it has an extremely wide support for platforms, it lacks support for legacy OS's, starting support from OSX 10.12+, Win 7+, and Ubuntu 16/18.",
+      "If your project is not licensed under GPLV2, GPLV3, or LGPL3 then Qt costs $459/developer/month",
+      "Many features in the commercial version are not available in the free version for open source projects"
+    ],
+    "frameworks": [],
+    "tools": [],
+    "tutorials": [],
+    "notableProjects": [
+      {
+        "title": "Adobe Photoshop Elements",
+        "url": "",
+        "description": "Lower cost version of the professional Photoshop software for consumers."
+      },
+      {
+        "title": "Auodesk Maya",
+        "url": "",
+        "description": "Industry standard 3D modeling/rendering software"
+      },
+      {
+        "title": "Dolphin",
+        "url": "https://dolphin-emu.org",
+        "description": "Emulator for the Nintendo Wii and Nintendo GameCube systems."
+      },
+      {
+        "title": "Google Earth",
+        "url": "",
+        "description": "Projects a 3D representation of Earth using satellite and GIS data."
+      },
+      {
+        "title": "Krita",
+        "url": "",
+        "description": "Open source graphics editing and digital painting software."
+      },
+      {
+        "title": "VirtualBox",
+        "url": "",
+        "description": "Open source virtualization software for virtual machines"
+      },
+      {
+        "title": "VLC Media Player",
+        "url": "",
+        "description": ""
+      },
+      {
+        "title": "List of additional applications using Qt on Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Qt_(software)#Applications_using_Qt",
+        "description": ""
+      }
+    ],
+    "notableTrailingLink": false
+  },
+
   // NeutralinoJs
   {
     "title": "NeutralinoJs",
@@ -800,7 +897,8 @@
     "frameworks": [],
     "tools": [],
     "tutorials": [],
-    "notableProjects": []
+    "notableProjects": [],
+    "notableTrailingLink": true
   },
   // Muon
   {
@@ -835,8 +933,10 @@
         "url": "https://brave.com",
         "description": "A desktop browser. They literally took Electron and used it to make a browser, very possibly the laziest thing that could be done with the technology."
       }
-    ]
+    ],
+    "notableTrailingLink": true
   },
+
   // Brackets-Shell
   {
     "title": "Brackets-Shell",
@@ -870,7 +970,8 @@
         "url": "https://brackets.io",
         "description": "Brackets is a user friendly, open-source, text editor from Adobe aimed at Web designers."
       }
-    ]
+    ],
+    "notableTrailingLink": true
   },
   // 8th
   {
@@ -911,8 +1012,10 @@
         "site": "YouTube"
       }
     ],
-    "notableProjects": []
+    "notableProjects": [],
+    "notableTrailingLink": true
   },
+
   // Tint2
   {
     "title": "Tint2",
@@ -939,7 +1042,8 @@
     "frameworks": [],
     "tools": [],
     "tutorials": [],
-    "notableProjects": []
+    "notableProjects": [],
+    "notableTrailingLink": true
   },
   // AppJS
   {
@@ -976,6 +1080,7 @@
         "url": "https://www.youtube.com/watch?v=Vc1hFIGAw28",
         "description": "Simple IRC Chat client for OSX"
       }
-    ]
+    ],
+    "notableTrailingLink": true
   }
 ]

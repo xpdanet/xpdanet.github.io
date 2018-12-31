@@ -69,7 +69,7 @@
               - {{ notableProject.description }}
             </template>
           </li>
-          <li>
+          <li v-if="tool.notableTrailingLink">
             <a
               :href="'https://github.com/xpdanet/xpdanet.github.io/issues/new?title=Notable+project+made+with+' + encodeURI(tool.title) + '&body=*+**Name:**+%0A*+**URL:**+%0A*+**Description:**+'"
               target="_blank"

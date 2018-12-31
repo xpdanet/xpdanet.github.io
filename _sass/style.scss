@@ -44,6 +44,6 @@
 
 
 // ITCSS: TRUMPS
-// @import "_mediaqueries.sass";      // Adjusts the CSS of elements depending on browser or device resolution. Adaptive Web Design.
+@import "_mediaqueries.sass";         // Adjusts the CSS of elements depending on browser or device resolution. Adaptive Web Design.
 // @import "_trumps.sass";            // Use sparingly. These are meant to override above styles by using more specific selectors
 // @import "_shame.sass";             // This is code you wrote to meet a deadline and need to come back and fix later
