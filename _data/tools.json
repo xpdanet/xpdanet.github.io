@@ -770,6 +770,80 @@
     "tutorials": [],
     "notableProjects": []
   },
+
+  // Qt
+  {
+    "title": "Qt",
+    "url": "https://www.qt.io",
+    "logo": "qt.png",
+    "deprecated": false,
+    "languages": [
+      "C++"
+    ],
+    "platforms": [
+      "Windows",
+      "OSX",
+      "Linux",
+      "iOS",
+      "Android",
+      "Windows Phone"
+    ],
+    "pros": [
+      "Also supports other platforms: Embedded Linux, Integrity, QNX, VxWorks, Wayland, Windows Embedded (CE), Windows UWP (WinRT), and X11. Has been ported to additional platforms: Open Solaris, Haiku, OS/2, webOS, Kindle DX, AmigaOS, Tizen, and Sailfish OS"
+    ],
+    "cons": [
+      "Though it has an extremely wide support for platforms, it lacks support for legacy OS's, starting support from OSX 10.12+, Win 7+, and Ubuntu 16/18.",
+      "If your project is not licensed under GPLV2, GPLV3, or LGPL3 then Qt costs $459/developer/month",
+      "Many features in the commercial version are not available in the free version for open source projects"
+    ],
+    "frameworks": [],
+    "tools": [],
+    "tutorials": [],
+    "notableProjects": [
+      {
+        "title": "Adobe Photoshop Elements",
+        "url": "",
+        "description": "Lower cost version of the professional Photoshop software for consumers."
+      },
+      {
+        "title": "Auodesk Maya",
+        "url": "",
+        "description": "Industry standard 3D modeling/rendering software"
+      },
+      {
+        "title": "Dolphin",
+        "url": "https://dolphin-emu.org",
+        "description": "Emulator for the Nintendo Wii and Nintendo GameCube systems."
+      },
+      {
+        "title": "Google Earth",
+        "url": "",
+        "description": "Projects a 3D representation of Earth using satellite and GIS data."
+      },
+      {
+        "title": "Krita",
+        "url": "",
+        "description": "Open source graphics editing and digital painting software."
+      },
+      {
+        "title": "VirtualBox",
+        "url": "",
+        "description": "Open source virtualization software for virtual machines"
+      },
+      {
+        "title": "VLC Media Player",
+        "url": "",
+        "description": ""
+      },
+      {
+        "title": "List of additional applications using Qt on Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Qt_(software)#Applications_using_Qt",
+        "description": ""
+      }
+    ],
+    "notableTrailingLink": false
+  },
+
   // NeutralinoJs
   {
     "title": "NeutralinoJs",
