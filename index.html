@@ -57,11 +57,13 @@
         <div v-if="!tools || tools.length === 0" class="spinner"></div>
 
         <h3 v-if="tools && tools.length">Matching Tools ({{ filteredTools.length }}/{{ tools.length }})</h3>
-        <base-card
-          v-for="(tool, toolIndex) in filteredTools"
-          :key="'tool' + toolIndex"
-          :tool="tool"
-        ></base-card>
+        <div class="center">
+          <base-card
+            v-for="(tool, toolIndex) in filteredTools"
+            :key="'tool' + toolIndex"
+            :tool="tool"
+          ></base-card>
+        </div>
       </div> <!-- end #app -->
 
     </div> <!-- end .container -->
