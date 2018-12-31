@@ -872,6 +872,47 @@
       }
     ]
   },
+  // 8th
+  {
+    "title": "8th",
+    "url": "https://8th-dev.com",
+    "logo": "8th.png",
+    "deprecated": false,
+    "languages": [
+      "8th"
+    ],
+    "platforms": [
+      "Windows",
+      "OSX",
+      "Linux",
+      "iOS",
+      "Android"
+    ],
+    "pros": [
+      "Runs on all platforms without the use of a browser or vm",
+      "May be appealing to more old-school devs that like Perl or Fourth"
+    ],
+    "cons": [
+      "Uses proprietary \"8th\" language (based on \"fourth\") that they describe as \"If you’re coming from a “mainstream” language, you may find 8th a bit puzzling.\"",
+      "I'm putting two more bullet points here for the language to emphasize how bad it is. It looks closer to regex than it does a modern programming language. The following is one of the first examples they give for you to learn the language (from page 27 of the 300 page manual)",
+      "\nlocals:\n: foobar\n  1000 \"baz\" w:! ;\n\n: bar 120 \"baz\" w:! foobar ;\n\nlocals:\n: foo 100 \"baz\" w:! ...\n\nbar...\n\"baz\" w:@ ;",
+      "The tool ranges from free to \"enterprise\" ($3000) with additional features and support added to higher tiers. Source code for 8th is only available to Enterprise customers willing to sign an NDA",
+      "Due to the tool being named \"8th\" it is basically impossible to search for anything related to it on StackOverflow or Google",
+      "In an attempt to find any usage/support for 8th outside of their fairly tiny forum, I came across a single post on Reddit where the community there... well, lets just say it wasn't well received",
+      "From the examples I've seen, the UI's are all fairly simplistic and it doesn't seem very easy to customize the UI across different platforms. This may be ideal for some niche cases to keep the layout and look identical, but I imagine most projects would need greater control than this"
+    ],
+    "frameworks": [],
+    "tools": [],
+    "tutorials": [
+      {
+        "title": "8th: One Effort, Multiple Platforms",
+        "author": "",
+        "url": "https://www.youtube.com/watch?v=yrI97yrtb5Y",
+        "site": "YouTube"
+      }
+    ],
+    "notableProjects": []
+  },
   // Tint2
   {
     "title": "Tint2",
