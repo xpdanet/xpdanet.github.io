@@ -2,6 +2,7 @@
 let app = new Vue({
   el: '#app',
   components: {
+    'site-logo': httpVueLoader('_components/site-logo.vue'),
     'base-card': httpVueLoader('_components/base-card.vue'),
     'minus': httpVueLoader('_components/minus.vue')
   },

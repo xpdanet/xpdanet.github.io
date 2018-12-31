@@ -1,13 +1,13 @@
-@charset "utf-8";                    // Character type for the stylesheet
+@charset "utf-8";                     // Character type for the stylesheet
 
 // ITCSS: SETTINGS
 @import '../node_modules/sass-material-colors/sass/_sass-material-colors.scss'; // Material Colors as Sass variables
-@import "_var.sass";                 // Sass Variables - Does not effect page, but other Sass files reference this file.
+@import "_var.sass";                  // Sass Variables - Does not effect page, but other Sass files reference this file.
 
 
 // ITCSS: TOOLS
-@import "_mixins.sass";              // Sass Mixins - Does not effect page, but other Sass files reference this file.
-// @import "_functions.sass";           // Sass Functions - Does not effect page, but other Sass files reference this file.
+@import "_mixins.sass";               // Sass Mixins - Does not effect page, but other Sass files reference this file.
+// @import "_functions.sass";         // Sass Functions - Does not effect page, but other Sass files reference this file.
 
 
 // ITCSS: RESETS - Remove inconsistencies in the way different browsers render elements by default
@@ -22,27 +22,28 @@
 
 
 // ITCSS: GENERIC (ELEMENTS/BASE)
-@import "_base.sass";                // h1, h2, h3, p, etc.
-@import "_layout.sass";              // General layout classes, like .col-xs-4
-@import "_utility.sass";             // Utility classes, like .wrapper or .text-center
+@import "_base.sass";                 // h1, h2, h3, p, etc.
+@import "_layout.sass";               // General layout classes, like .col-xs-4
+@import "_utility.sass";              // Utility classes, like .wrapper or .text-center
 
 
 // ITCSS: OBJECTS - Grouped reusable chunks
-@import "objects/_spinner.sass";     // Loading spinner
-@import "objects/_card.sass";        // Card, header, body
+@import "objects/_spinner.sass";      // Loading spinner
+@import "objects/_card.sass";         // Card, header, body
 
 
 // ITCSS: COMPONENTS - Component-specific styles
-@import "components/_tool.sass";     // Tool specifc styles inside a card
-@import "components/_admin.sass";    // Admin Panel
+@import "components/_site-logo.sass"; // Logo for site
+@import "components/_tool.sass";      // Tool specifc styles inside a card
+@import "components/_admin.sass";     // Admin Panel
 
 
 // ITCSS: CONTAINERS
-// @import "_topnav.sass";              // Nav styles unique to when it is in the header
-// @import "_sidenav.sass";             // Nav styles unique to when it is in the sidebar
+// @import "_topnav.sass";            // Nav styles unique to when it is in the header
+// @import "_sidenav.sass";           // Nav styles unique to when it is in the sidebar
 
 
 // ITCSS: TRUMPS
-// @import "_mediaqueries.sass";        // Adjusts the CSS of elements depending on browser or device resolution. Adaptive Web Design.
-// @import "_trumps.sass";              // Use sparingly. These are meant to override above styles by using more specific selectors
-// @import "_shame.sass";               // This is code you wrote to meet a deadline and need to come back and fix later
+// @import "_mediaqueries.sass";      // Adjusts the CSS of elements depending on browser or device resolution. Adaptive Web Design.
+// @import "_trumps.sass";            // Use sparingly. These are meant to override above styles by using more specific selectors
+// @import "_shame.sass";             // This is code you wrote to meet a deadline and need to come back and fix later
