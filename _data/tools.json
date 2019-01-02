@@ -900,6 +900,42 @@
     "notableTrailingLink": true
   },
 
+  // LambdaNative
+  {
+    "title": "LambdaNative",
+    "url": "http://www.lambdanative.org",
+    "logo": "lambdanative.png",
+    "deprecated": false,
+    "languages": [
+      "Scheme"
+    ],
+    "platforms": [
+      "Windows",
+      "Linux",
+      "OSX",
+      "Android",
+      "iOS"
+    ],
+    "pros": [
+      "Also supports these platforms: OpenBSD, NetBSD, Free BSD, OpenWrt, and BlackBerry 10",
+      "Uses the Gambit-C version of Scheme"
+    ],
+    "cons": [
+      "Documentation is limited to a 900 page GitHub Wiki",
+      "The documentation itself lists the learning curve for Scheme as a negative"
+    ],
+    "frameworks": [],
+    "tools": [],
+    "tutorials": [],
+    "notableProjects": [
+      {
+        "title": "Slideshow of apps made with LambdaNative",
+        "url": "http://www.lambdanative.org/#apps",
+        "description": ""
+      }
+    ],
+    "notableTrailingLink": true
+  },
 
   // Brackets-Shell
   {

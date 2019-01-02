@@ -76,7 +76,8 @@ let app = new Vue({
         frameworks: [],
         tools: [],
         tutorials: [],
-        notableProjects: []
+        notableProjects: [],
+        notableTrailingLink: true
       };
     },
     addNew: function (section) {
