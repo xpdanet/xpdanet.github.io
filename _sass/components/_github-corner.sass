@@ -1,0 +1,44 @@
+.github-corner
+    p
+        display: none
+    svg
+        position: absolute
+        top: 0px
+        right: 0px
+        width: 80px
+        height: 80px
+        border: 0px
+        filter: drop-shadow(-7px 7px 0px $defaultColor)
+        fill: $white
+    .octo-body
+        fill: $defaultColor
+    .octo-arm
+        transform-origin: 130px 106px
+        fill: $defaultColor
+    &:hover .octo-arm
+        animation: octocat-wave 560ms ease-in-out
+
+@keyframes octocat-wave
+    0%,
+    100%
+        transform: rotate(0deg)
+    20%,
+    60%
+        transform: rotate(-25deg)
+    40%,
+    80%
+        transform: rotate(10deg)
+
+@media (max-width: 500px)
+    .github-corner
+        .octo-arm
+            animation: octocat-wave 560ms ease-in-out
+        &:hover .octo-arm
+            animation: none
+
+@media (max-width: 320px)
+    .github-corner
+        svg
+            display: none
+        p
+            display: block
