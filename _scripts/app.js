@@ -2,6 +2,7 @@
 const app = new Vue({
   el: '#app',
   components: {
+    'github-corner': httpVueLoader('/_components/github-corner.vue'),
     'site-logo': httpVueLoader('/_components/site-logo.vue'),
     'base-card': httpVueLoader('/_components/base-card.vue')
   },

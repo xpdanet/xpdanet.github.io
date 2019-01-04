@@ -33,9 +33,10 @@
 
 
 // ITCSS: COMPONENTS - Component-specific styles
-@import "components/_site-logo.sass"; // Logo for site
-@import "components/_tool.sass";      // Tool specifc styles inside a card
-@import "components/_admin.sass";     // Admin Panel
+@import "components/_github-corner.sass"; // Animated octocat triangle in corner
+@import "components/_site-logo.sass";     // Logo for site
+@import "components/_tool.sass";          // Tool specifc styles inside a card
+@import "components/_admin.sass";         // Admin Panel
 
 
 // ITCSS: CONTAINERS
