@@ -1,6 +1,6 @@
 // eslint-disable-next-line no-unused-vars
-let app = new Vue({
-  el: '#app',
+let admin = new Vue({
+  el: '#admin',
   components: {
     'site-logo': httpVueLoader('_components/site-logo.vue'),
     'base-card': httpVueLoader('_components/base-card.vue'),
