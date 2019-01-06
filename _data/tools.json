@@ -866,6 +866,54 @@
     ],
     "notableTrailingLink": false
   },
+  // wxWidgets
+  {
+    "title": "wxWidgets",
+    "url": "https://wxwidgets.org",
+    "logo": "wxwidgets.png",
+    "deprecated": false,
+    "languages": [
+      "C++",
+      "Python",
+      "Perl",
+      "Ruby"
+    ],
+    "platforms": [
+      "Windows",
+      "OSX",
+      "Linux"
+    ],
+    "pros": [
+      "Uses the native UI elements of the OS",
+      "Has been ported to Python, Perl, and Ruby"
+    ],
+    "cons": [
+      "From what I can see, wxWidgets hasn't kept up-to-date with modern (2010 and on) OS's. There are mentions of older (pre-iphone) smart phones, Windows 95-Vista, and OSX 10.5. Though modern OS's offer good backwards compatibility and can still open applications designed for older OS's (YMMV)",
+      "Requires a deeper knowledge of the target platform than other tools on this list"
+    ],
+    "frameworks": [],
+    "tools": [],
+    "tutorials": [],
+    "notableProjects": [
+      {
+        "title": "Audacity",
+        "url": "http://audacity.sourceforge.net",
+        "description": "Open source audio editing tool."
+      },
+      {
+        "title": "KiCad",
+        "url": "http://iut-tice.ujf-grenoble.fr/kicad/index.html",
+        "description": "Electronic schematic diagrams and printed circuit board design application."
+      },
+      {
+        "title": "wxWidgets' list of notable projects",
+        "url": "https://wxwidgets.org/about/screenshots/",
+        "description": "List with screenshots curated by wxWidgets"
+      }
+    ],
+    "notableTrailingLink": false
+  },
+
   // NeutralinoJs
   {
     "title": "NeutralinoJs",
@@ -899,7 +947,6 @@
     "notableProjects": [],
     "notableTrailingLink": true
   },
-
   // LambdaNative
   {
     "title": "LambdaNative",
@@ -1016,7 +1063,9 @@
     "notableTrailingLink": true
   },
 
+  // //////////////////////////
   // DEPRECATED
+  // //////////////////////////
 
   // Muon
   {
