@@ -790,7 +790,13 @@
       }
     ],
     "tutorials": [],
-    "notableProjects": [],
+    "notableProjects": [
+      {
+        "title": "OpenShot",
+        "url": "http://www.openshot.org",
+        "description": "Open source video editing software."
+      }
+    ],
     "notableTrailingLink": true
   },
 
