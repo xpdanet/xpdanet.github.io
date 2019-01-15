@@ -53,6 +53,18 @@
         "author": "The Jared Wilcurt",
         "url": "https://gitlab.com/TheJaredWilcurt/battery-app-workshop",
         "site": "GitLab"
+      },
+      {
+        "title": "Reducing app distribution size in NW.js",
+        "author": "The Jared Wilcurt",
+        "url": "https://dev.to/thejaredwilcurt/reducing-app-distribution-size-in-nwjs-3d5f",
+        "site": "dev.to"
+      },
+      {
+        "title": "Building a Desktop App with Vue: NW.js",
+        "author": "Natalia Tepluhina",
+        "url": "https://dev.to/vuevixens/building-a-desktop-app-with-vue-nwjs-1f9e",
+        "site": "dev.to"
       }
     ],
     "notableProjects": [
