@@ -83,7 +83,7 @@ const app = new Vue({
 
         query = query.split('#').join('%23');
 
-        let newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?' + query;
+        let newUrl = window.location.protocol + '//' + window.location.host + window.location.pathname + '?' + query;
         window.history.pushState({ path: newUrl }, '', newUrl);
       }
     },
