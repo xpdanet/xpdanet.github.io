@@ -78,7 +78,7 @@
       <div class="text-left">
         <h3>Filter Controls:</h3>
         <div>
-          <select v-model="filterType">
+          <select v-model="filterType" @change="filterTypeChanged">
             <option value="subtractive">Supports at least one of these:</option>
             <option value="additive">Must support each selected:</option>
           </select>
