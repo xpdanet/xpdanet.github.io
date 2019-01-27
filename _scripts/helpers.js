@@ -118,5 +118,57 @@ let helpers = {
     }
 
     return frameworksArray;
+  },
+  /**
+   * Gets the URL params from window.location. Converts to an object.
+   * @return {object} filters  Returns an object in this shape:
+   *   {
+   *     filter: 'subtractive',
+   *     lang: ['JS', 'HTML'],
+   *     platforms: ['Windows', 'Linux']
+   *   }
+   */
+  parseURLFilters: function () {
+    let search = window.location.search.replace('?', '');
+    search = search.split('%23').join('#');
+    search = search.split('&');
+
+    let params = {};
+    search.forEach(function (param) {
+      let name = param.split('=')[0];
+      let val = param.split('=')[1];
+      params[name] = val;
+    });
+
+    if (params.filter) {
+      params.filter = params.filter.toLowerCase();
+      if (params.filter !== 'subtractive' && params.filter !== 'additive') {
+        delete params.filter;
+      }
+    }
+
+    if (params.languages) {
+      try {
+        params.languages = JSON.parse(decodeURI(params.languages));
+      } catch (err) {
+        console.log('Could not parse language filters: ' + params.languages);
+      }
+      if (!Array.isArray(params.languages)) {
+        delete params.languages;
+      }
+    }
+
+    if (params.platforms) {
+      try {
+        params.platforms = JSON.parse(decodeURI(params.platforms));
+      } catch (err) {
+        console.log('Could not parse platfrom filters: ' + params.platforms);
+      }
+      if (!Array.isArray(params.platforms)) {
+        delete params.platforms;
+      }
+    }
+
+    return params;
   }
 };

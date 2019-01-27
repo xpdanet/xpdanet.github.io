@@ -1,3 +1,4 @@
+const defaultFilterType = 'subtractive';
 // eslint-disable-next-line no-unused-vars
 const app = new Vue({
   el: '#app',
@@ -7,7 +8,7 @@ const app = new Vue({
     'base-card': httpVueLoader('/_components/base-card.vue')
   },
   data: {
-    filterType: 'subtractive',
+    filterType: defaultFilterType,
     networkError: false,
     languages: [],
     platforms: [],
@@ -33,10 +34,97 @@ const app = new Vue({
           this.platforms = helpers.setFilterValues(response.tools, 'platforms');
           this.languages = helpers.setFilterValues(response.tools, 'languages');
           this.networkError = response.networkError;
+          this.applyUrlFilters();
         });
+    },
+    setUrlFilters: function () {
+      if (history.pushState) {
+        let filter = '';
+        let languages = '';
+        let platforms = '';
+        let trackedLanguages = '';
+        let trackedPlatforms = '';
+
+        if (this.filterType !== defaultFilterType) {
+          filter = 'filter=' + this.filterType;
+          trackedLanguages = this.enabledLanguages.map(function (language) {
+            return language.title;
+          });
+          trackedPlatforms = this.enabledPlatforms.map(function (platform) {
+            return platform.title;
+          });
+        } else {
+          trackedLanguages = this.languages.filter(function (language) {
+            return !language.enabled;
+          }).map(function (language) {
+            return language.title;
+          });
+          trackedPlatforms = this.platforms.filter(function (platform) {
+            return !platform.enabled;
+          }).map(function (platform) {
+            return platform.title;
+          });
+        }
+
+        if (trackedLanguages.length) {
+          languages = 'languages=' + encodeURI(JSON.stringify(trackedLanguages));
+        }
+        if (trackedPlatforms.length) {
+          platforms = 'platforms=' + encodeURI(JSON.stringify(trackedPlatforms));
+        }
+
+        let query = [
+          filter,
+          languages,
+          platforms
+        ].filter(function (item) {
+          return item;
+        }).join('&').trim();
+
+        query = query.split('#').join('%23');
+
+        let newUrl = window.location.protocol + '//' + window.location.host + window.location.pathname + '?' + query;
+        window.history.pushState({ path: newUrl }, '', newUrl);
+      }
+    },
+    applyUrlFilters: function () {
+      let params = helpers.parseURLFilters();
+      this.filterType = params.filter || this.filterType;
+      let activate;
+      if (this.filterType === 'additive') {
+        this.setAllFiltersOnOff(false);
+        activate = true;
+      } else {
+        this.setAllFiltersOnOff(true);
+        activate = false;
+      }
+      if (params.languages) {
+        params.languages.forEach((filterLanguage) => {
+          this.activateByName(this.languages, filterLanguage, activate);
+        });
+      }
+      if (params.platforms) {
+        params.platforms.forEach((filterLanguage) => {
+          this.activateByName(this.platforms, filterLanguage, activate);
+        });
+      }
     },
     toggleActive: function (item) {
       item.enabled = !item.enabled;
+      this.setUrlFilters();
+    },
+    /**
+     * Activates or Deactivates a filter based on name passed in
+     * @param  {array}   items  Languages or Platforms list
+     * @param  {string}  name   Name of a filter (Windows, HTML, Linux, JS)
+     * @param  {boolean} bool   true = activate, false = deactivate
+     */
+    activateByName: function (items, name, bool) {
+      items.forEach(function (item) {
+        if (item.title === name) {
+          item.enabled = bool;
+        }
+      });
     },
     setAllFiltersOnOff: function (bool) {
       this.languages.forEach(function (language) {
@@ -93,6 +181,14 @@ const app = new Vue({
         return hasAllSelectedFilterTypes;
       });
       return filteredTools;
+    },
+    filterTypeChanged: function () {
+      if (this.filterType === 'additive') {
+        this.setAllFiltersOnOff(false);
+      } else if (this.filterType === 'subtractive') {
+        this.setAllFiltersOnOff(true);
+      }
+      this.setUrlFilters();
     }
   },
   computed: {
@@ -115,15 +211,6 @@ const app = new Vue({
         return this.subtractiveFilteredByPlatformAndLanguage;
       }
       return this.additiveFilteredByPlatformAndLanguage;
-    }
-  },
-  watch: {
-    filterType: function (type) {
-      if (type === 'additive') {
-        this.setAllFiltersOnOff(false);
-      } else if (type === 'subtractive') {
-        this.setAllFiltersOnOff(true);
-      }
     }
   },
   created: function () {
