@@ -42,28 +42,47 @@ const app = new Vue({
         let filter = '';
         let languages = '';
         let platforms = '';
-        let enabledLanguages = this.enabledLanguages.map(function (language) {
-          return language.title;
-        });
-        let enabledPlatforms = this.enabledPlatforms.map(function (platform) {
-          return platform.title;
-        });
-        if (enabledLanguages.length) {
-          languages = 'languages=' + encodeURI(JSON.stringify(enabledLanguages));
-        }
-        if (enabledPlatforms.length) {
-          platforms = 'platforms=' + encodeURI(JSON.stringify(enabledPlatforms));
-        }
+        let trackedLanguages = '';
+        let trackedPlatforms = '';
+
         if (this.filterType !== defaultFilterType) {
           filter = 'filter=' + this.filterType;
+          trackedLanguages = this.enabledLanguages.map(function (language) {
+            return language.title;
+          });
+          trackedPlatforms = this.enabledPlatforms.map(function (platform) {
+            return platform.title;
+          });
+        } else {
+          trackedLanguages = this.languages.filter(function (language) {
+            return !language.enabled;
+          }).map(function (language) {
+            return language.title;
+          });
+          trackedPlatforms = this.platforms.filter(function (platform) {
+            return !platform.enabled;
+          }).map(function (platform) {
+            return platform.title;
+          });
         }
+
+        if (trackedLanguages.length) {
+          languages = 'languages=' + encodeURI(JSON.stringify(trackedLanguages));
+        }
+        if (trackedPlatforms.length) {
+          platforms = 'platforms=' + encodeURI(JSON.stringify(trackedPlatforms));
+        }
+
         let query = [
           filter,
           languages,
           platforms
         ].filter(function (item) {
-            return item;
-          }).join('&').trim();
+          return item;
+        }).join('&').trim();
+
+        query = query.split('#').join('%23');
+
         let newUrl = window.location.protocol + "//" + window.location.host + window.location.pathname + '?' + query;
         window.history.pushState({ path: newUrl }, '', newUrl);
       }
@@ -71,15 +90,22 @@ const app = new Vue({
     applyUrlFilters: function () {
       let params = helpers.parseURLFilters();
       this.filterType = params.filter || this.filterType;
-      this.setAllFiltersOnOff(false);
+      let activate;
+      if (this.filterType === 'additive') {
+        this.setAllFiltersOnOff(false);
+        activate = true;
+      } else {
+        this.setAllFiltersOnOff(true);
+        activate = false;
+      }
       if (params.languages) {
         params.languages.forEach((filterLanguage) => {
-          this.activateByName(this.languages, filterLanguage);
+          this.activateByName(this.languages, filterLanguage, activate);
         });
       }
       if (params.platforms) {
         params.platforms.forEach((filterLanguage) => {
-          this.activateByName(this.platforms, filterLanguage);
+          this.activateByName(this.platforms, filterLanguage, activate);
         });
       }
     },
@@ -87,10 +113,16 @@ const app = new Vue({
       item.enabled = !item.enabled;
       this.setUrlFilters();
     },
-    activateByName: function (items, name) {
+    /**
+     * Activates or Deactivates a filter based on name passed in
+     * @param  {array}   items  Languages or Platforms list
+     * @param  {string}  name   Name of a filter (Windows, HTML, Linux, JS)
+     * @param  {boolean} bool   true = activate, false = deactivate
+     */
+    activateByName: function (items, name, bool) {
       items.forEach(function (item) {
         if (item.title === name) {
-          item.enabled = true;
+          item.enabled = bool;
         }
       });
     },

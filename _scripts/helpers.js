@@ -129,7 +129,9 @@ let helpers = {
    *   }
    */
   parseURLFilters: function () {
-    let search = window.location.search.replace('?','').split('&');
+    let search = window.location.search.replace('?', '');
+    search = search.split('%23').join('#');
+    search = search.split('&');
 
     let params = {};
     search.forEach(function (param) {
