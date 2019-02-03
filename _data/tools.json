@@ -24,7 +24,7 @@
       "Backed by Intel",
       "Updated within 24 hours of a Chromium or Node release",
       "Still a resource hog, but uses less RAM and disk space than Electron",
-      "Distribution sizes can be as small as 25MB (Windows Installer)",
+      "Distribution sizes can be as small as 20MB (Windows Installer)",
       "Been around 5 years longer than Electron/used by thousands of projects",
       "Assumes you want to create a desktop app, and not a node script with an optional UI.",
       "Super easy to get started with and a no-nonsense API",
