@@ -40,3 +40,27 @@
             color: $gray61
     .card-body
         background: $grayEA
+    .expand,
+    .shrink
+        svg
+            fill: $gray61
+
+.expand,
+.shrink
+    cursor: pointer
+    float: right
+    svg
+        fill: $white
+
+.shrink
+    display: none
+
+.big-card
+    .card
+        max-width: 100%
+    .card-body
+        height: $cardBodyHeight * 2.1
+    .shrink
+        display: block
+    .expand
+        display: none

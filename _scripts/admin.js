@@ -7,6 +7,7 @@ let admin = new Vue({
     'minus': httpVueLoader('_components/minus.vue')
   },
   data: {
+    codeMode: true,
     networkError: false,
     selectedTool: 'new',
     tools: [],
