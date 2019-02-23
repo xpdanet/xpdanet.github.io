@@ -129,7 +129,11 @@ let helpers = {
    *   }
    */
   parseURLFilters: function () {
+    let hash = location.hash.replace('#', '');
     let search = window.location.search.replace('?', '');
+
+    hash = hash.split('%23').join('#');
+
     search = search.split('%23').join('#');
     search = search.split('&');
 
@@ -167,6 +171,10 @@ let helpers = {
       if (!Array.isArray(params.platforms)) {
         delete params.platforms;
       }
+    }
+
+    if (hash) {
+      params.tool = decodeURI(hash);
     }
 
     return params;
