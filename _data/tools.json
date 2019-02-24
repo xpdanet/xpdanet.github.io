@@ -65,6 +65,12 @@
         "author": "Natalia Tepluhina",
         "url": "https://dev.to/vuevixens/building-a-desktop-app-with-vue-nwjs-1f9e",
         "site": "dev.to"
+      },
+      {
+        "title": "Angular-CLI and NW.js for development",
+        "author": "The Jared Wilcurt",
+        "url": "https://dev.to/thejaredwilcurt/angular-cli-and-nwjs-for-development-49gl",
+        "site": "dev.to"
       }
     ],
     "notableProjects": [
