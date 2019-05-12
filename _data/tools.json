@@ -55,6 +55,12 @@
         "site": "GitLab"
       },
       {
+        "title": "Packaging and distributing NW.js apps",
+        "author": "Wouter Hisschemöller",
+        "url": "https://github.com/hisschemoller/nwjs-tutorial",
+        "site": "GitHub"
+      },
+      {
         "title": "Reducing app distribution size in NW.js",
         "author": "The Jared Wilcurt",
         "url": "https://dev.to/thejaredwilcurt/reducing-app-distribution-size-in-nwjs-3d5f",
