@@ -41,13 +41,13 @@ const app = new Vue({
     },
     getToolsData: function () {
       helpers.getToolsData()
-        .then((response) => {
+        .then(function (response) {
           this.tools = response.tools;
           this.platforms = helpers.setFilterValues(response.tools, 'platforms');
           this.languages = helpers.setFilterValues(response.tools, 'languages');
           this.networkError = response.networkError;
           this.applyUrlFilters();
-        });
+        }.bind(this));
     },
     setUrlFilters: function () {
       if (history.pushState) {
@@ -120,14 +120,14 @@ const app = new Vue({
         activate = false;
       }
       if (params.languages) {
-        params.languages.forEach((filterLanguage) => {
+        params.languages.forEach(function (filterLanguage) {
           this.activateByName(this.languages, filterLanguage, activate);
-        });
+        }.bind(this));
       }
       if (params.platforms) {
-        params.platforms.forEach((filterLanguage) => {
+        params.platforms.forEach(function (filterLanguage) {
           this.activateByName(this.platforms, filterLanguage, activate);
-        });
+        }.bind(this));
       }
 
       let selectedTool = null;
@@ -170,9 +170,9 @@ const app = new Vue({
       });
     },
     enabledFilters: function (filterType) {
-      let enabledItems = filterType.filter((language) => {
+      let enabledItems = filterType.filter(function (language) {
         return language.enabled;
-      });
+      }.bind(this));
       return enabledItems;
     },
     /**
@@ -183,9 +183,9 @@ const app = new Vue({
      * @return {array}                      The filtered array of tools
      */
     subtractiveFilter: function (tools, enabledFilterTypes, filterTypes) {
-      let filteredTools = tools.filter((tool) => {
-        let toolContainsEnabledFilterType = tool[filterTypes].some((toolFilterType) => {
-          let hasMatchingFilterTypeTitle = enabledFilterTypes.some((enabledFilterType) => {
+      let filteredTools = tools.filter(function (tool) {
+        let toolContainsEnabledFilterType = tool[filterTypes].some(function (toolFilterType) {
+          let hasMatchingFilterTypeTitle = enabledFilterTypes.some(function (enabledFilterType) {
             return enabledFilterType.title === toolFilterType;
           });
 
@@ -205,9 +205,9 @@ const app = new Vue({
      * @return {array}                      The filtered array of tools
      */
     additiveFilter: function (tools, enabledFilterTypes, filterTypes) {
-      let filteredTools = tools.filter((tool) => {
+      let filteredTools = tools.filter(function (tool) {
         let hasAllSelectedFilterTypes = true;
-        enabledFilterTypes.forEach((filterType) => {
+        enabledFilterTypes.forEach(function (filterType) {
           if (!tool[filterTypes].includes(filterType.title)) {
             hasAllSelectedFilterTypes = false;
           }
