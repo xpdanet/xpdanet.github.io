@@ -23,7 +23,7 @@
     "sass-lint": "^1.12.1",
     "sass-lint-auto-fix": "^0.15.0",
     "sass-material-colors": "0.0.5",
-    "tjw-sasslint-rules": "^1.1.0"
+    "tjw-sasslint-rules": "^2.0.0"
   },
   "repository": {
     "type": "git",
