@@ -39,7 +39,18 @@
       "Basically one person behind most of the code",
       "Everything you need from the documentation is available, but the site is clunky"
     ],
-    "frameworks": [],
+    "frameworks": [
+      {
+        "framework": "Vue",
+        "title": "Vue-CLI + NW.js",
+        "url": "https://github.com/nwutils/nw-vue-cli-example"
+      },
+      {
+        "framework": "Angular 8+",
+        "title": "Angular CLI + NW.js",
+        "url": "https://github.com/nwutils/nw-angular-cli-example"
+      }
+    ],
     "tools": [],
     "tutorials": [
       {
