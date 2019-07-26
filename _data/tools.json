@@ -170,7 +170,13 @@
       "No way to protect your source code",
       "Perpetually out of date, releases typically ship with versions of Node/Chromium from 3-6 months ago"
     ],
-    "frameworks": [],
+    "frameworks": [
+      {
+        "framework": "Vue",
+        "title": "Electron-Vue",
+        "url": "https://github.com/SimulatedGREG/electron-vue"
+      }
+    ],
     "tools": [],
     "tutorials": [
       {
