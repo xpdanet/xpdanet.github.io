@@ -172,9 +172,14 @@
     ],
     "frameworks": [
       {
-        "framework": "Vue",
+        "framework": "Vue (Vue-CLI 2)",
         "title": "Electron-Vue",
         "url": "https://github.com/SimulatedGREG/electron-vue"
+      },
+      {
+        "framework": "Vue (Vue-CLI 3)",
+        "title": "Vue-CLI Plugin Electron Builder",
+        "url": "https://github.com/nklayman/vue-cli-plugin-electron-builder"
       }
     ],
     "tools": [],
