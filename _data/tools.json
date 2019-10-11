@@ -1050,6 +1050,55 @@
     "notableTrailingLink": true
   },
 
+  // Revery
+  {
+    "title": "Revery",
+    "url": "https://www.outrunlabs.com/revery",
+    "logo": "revery.png",
+    "deprecated": false,
+    "languages": [
+      "ReasonML",
+      "OCaml"
+    ],
+    "platforms": [
+      "Windows",
+      "OSX",
+      "Linux"
+    ],
+    "pros": [
+      "Designed with Functional Programming (FP) in mind for those that prefer it",
+      "A \"React-Like\" coding experience for building native UI's without a browser",
+      "Actively being developed, and has a Discord group to ask for guidance",
+      "There is intent to potentially support mobile platforms in the future"
+    ],
+    "cons": [
+      "The project is described as \"an experiment\", and it feels like more of a proof-of-concept than a valid alternative for serious XPDA development.",
+      "Their documentation is very weak and assumes a familiarity with the Reason/OCaml ecosystems",
+      "No examples of hooking into the file system, hardware, or OS level",
+      "No examples of window management, frameless windows, taskbar apps, etc.",
+      "No instructions around how to build for each OS, or automated builds, only a small mention on the GitHub README about using the default ",
+      "Basically one person behind most of the code"
+    ],
+    "frameworks": [],
+    "tools": [],
+    "tutorials": [
+      {
+        "title": "Official Revery Quick-Start",
+        "author": "Outrun Labs",
+        "url": "https://github.com/revery-ui/revery-quick-start",
+        "site": "GitHub"
+      }
+    ],
+    "notableProjects": [
+      {
+        "title": "Onivim",
+        "url": "https://onivim.io",
+        "description": "A \"futuristic\" text editor focused around Vim. Vim was a technology used in the 1980's, kinda like VCR's, remember those?"
+      }
+    ],
+    "notableTrailingLink": true
+  },
+
   // Brackets-Shell
   {
     "title": "Brackets-Shell",
