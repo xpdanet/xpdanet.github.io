@@ -5,7 +5,7 @@ let helpers = {
     let networkError = false;
     try {
       data = responseData.split('\n');
-      data = data.filter((line) => {
+      data = data.filter(function (line) {
         return !line.trim().startsWith('//');
       }).join('\n');
       data = JSON.parse(data);
@@ -21,10 +21,10 @@ let helpers = {
   },
   getToolsData: function () {
     return axios.get('/_data/tools.json')
-      .then((response) => {
+      .then(function (response) {
         return this.parseToolsData(response.data);
-      })
-      .catch((err) => {
+      }.bind(this))
+      .catch(function (err) {
         if (err) {
           return {
             tools: [],
@@ -42,8 +42,8 @@ let helpers = {
   setFilterValues: function (tools, filterType) {
     let items = {};
     // Eliminate duplicates, get a count of usage
-    tools.forEach((tool) => {
-      tool[filterType].forEach((item) => {
+    tools.forEach(function (tool) {
+      tool[filterType].forEach(function (item) {
         if (items[item]) {
           items[item].amount++;
         } else {
@@ -73,9 +73,9 @@ let helpers = {
   listAllSites: function (tools) {
     let sites = {};
     if (tools && tools.length) {
-      tools.forEach((tool) => {
+      tools.forEach(function (tool) {
         if (tool.tutorials && tool.tutorials.length) {
-          tool.tutorials.forEach((tutorial) => {
+          tool.tutorials.forEach(function (tutorial) {
             if (!sites[tutorial.site]) {
               sites[tutorial.site] = 1;
             } else {
@@ -99,9 +99,9 @@ let helpers = {
   listAllFrameworks: function (tools) {
     let frameworks = {};
     if (tools && tools.length) {
-      tools.forEach((tool) => {
+      tools.forEach(function (tool) {
         if (tool.frameworks && tool.frameworks.length) {
-          tool.frameworks.forEach((framework) => {
+          tool.frameworks.forEach(function (framework) {
             if (!frameworks[framework.framework]) {
               frameworks[framework.framework] = 1;
             } else {
