@@ -1,25 +1,28 @@
 // eslint-disable-next-line no-unused-vars
 let helpers = {
+  parseToolsData: function (responseData) {
+    let data = [];
+    let networkError = false;
+    try {
+      data = responseData.split('\n');
+      data = data.filter((line) => {
+        return !line.trim().startsWith('//');
+      }).join('\n');
+      data = JSON.parse(data);
+    } catch (err) {
+      if (err) {
+        networkError = true;
+      }
+    }
+    return {
+      tools: data,
+      networkError: networkError
+    };
+  },
   getToolsData: function () {
     return axios.get('/_data/tools.json')
       .then((response) => {
-        let data = [];
-        let networkError = false;
-        try {
-          data = response.data.split('\n');
-          data = data.filter((line) => {
-            return !line.trim().startsWith('//');
-          }).join('\n');
-          data = JSON.parse(data);
-        } catch (err) {
-          if (err) {
-            networkError = true;
-          }
-        }
-        return {
-          tools: data,
-          networkError: networkError
-        };
+        return this.parseToolsData(response.data);
       })
       .catch((err) => {
         if (err) {
@@ -129,7 +132,11 @@ let helpers = {
    *   }
    */
   parseURLFilters: function () {
+    let hash = location.hash.replace('#', '');
     let search = window.location.search.replace('?', '');
+
+    hash = hash.split('%23').join('#');
+
     search = search.split('%23').join('#');
     search = search.split('&');
 
@@ -169,6 +176,14 @@ let helpers = {
       }
     }
 
+    if (hash) {
+      params.tool = decodeURI(hash);
+    }
+
     return params;
   }
 };
+
+if (typeof(module) !== 'undefined') {
+  module.exports = helpers;
+}

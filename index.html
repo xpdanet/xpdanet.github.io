@@ -75,7 +75,14 @@
 
       <hr />
 
-      <div class="text-left">
+      <div v-if="!listMode" class="big-card">
+        <base-card
+          :tool="selectedTool"
+          @shrinkCard="shrinkCard"
+        ></base-card>
+      </div>
+
+      <div v-show="listMode" class="text-left">
         <h3>Filter Controls:</h3>
         <div>
           <select v-model="filterType" @change="filterTypeChanged">
@@ -120,6 +127,7 @@
             v-for="(tool, toolIndex) in filteredTools"
             :key="'tool' + toolIndex"
             :tool="tool"
+            @expandCard="expandCard"
           ></base-card>
           <div v-if="filteredTools.length % 2 !== 0" class="card-spacer"></div>
         </div>

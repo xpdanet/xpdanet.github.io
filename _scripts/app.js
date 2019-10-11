@@ -8,6 +8,8 @@ const app = new Vue({
     'base-card': httpVueLoader('/_components/base-card.vue')
   },
   data: {
+    listMode: true,
+    selectedTool: null,
     filterType: defaultFilterType,
     networkError: false,
     languages: [],
@@ -27,6 +29,16 @@ const app = new Vue({
     ]
   },
   methods: {
+    expandCard: function (tool) {
+      this.selectedTool = tool;
+      this.listMode = false;
+      this.setUrlFilters();
+    },
+    shrinkCard: function () {
+      this.selectedTool = null;
+      this.listMode = true;
+      this.setUrlFilters();
+    },
     getToolsData: function () {
       helpers.getToolsData()
         .then((response) => {
@@ -81,9 +93,18 @@ const app = new Vue({
           return item;
         }).join('&').trim();
 
-        query = query.split('#').join('%23');
+        query = '?' + query.split('#').join('%23');
 
-        let newUrl = window.location.protocol + '//' + window.location.host + window.location.pathname + '?' + query;
+        if (query === '?') {
+          query = '';
+        }
+
+        let hash = '';
+        if (this.selectedTool) {
+          hash = '#' + this.selectedTool.title.split('#').join('%23');
+        }
+
+        let newUrl = window.location.protocol + '//' + window.location.host + window.location.pathname + query + hash;
         window.history.pushState({ path: newUrl }, '', newUrl);
       }
     },
@@ -107,6 +128,20 @@ const app = new Vue({
         params.platforms.forEach((filterLanguage) => {
           this.activateByName(this.platforms, filterLanguage, activate);
         });
+      }
+
+      let selectedTool = null;
+      if (params.tool) {
+        selectedTool = this.tools.find(function (tool) {
+          return tool.title === params.tool;
+        });
+      }
+
+      if (selectedTool) {
+        this.selectedTool = selectedTool;
+        this.listMode = false;
+      } else {
+        this.listMode = true;
       }
     },
     toggleActive: function (item) {

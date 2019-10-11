@@ -255,11 +255,25 @@
 
         <hr />
 
-        <div class="half">
-          <textarea class="admin-preview">{{ JSON.stringify(tool, null, 2) }}</textarea>
+        <div v-if="!codeMode" class="big-card">
+          <base-card
+            v-if="tool"
+            :tool="tool"
+            @shrinkCard="codeMode = true"
+          ></base-card>
         </div>
-        <div class="half center">
-          <base-card v-if="tool" :tool="tool"></base-card>
+
+        <div v-else>
+          <div class="half">
+            <textarea class="admin-preview">{{ JSON.stringify(tool, null, 2) }}</textarea>
+          </div>
+          <div class="half center">
+            <base-card
+              v-if="tool"
+              :tool="tool"
+              @expandCard="codeMode = false"
+            ></base-card>
+          </div>
         </div>
 
       </div> <!-- #app -->
