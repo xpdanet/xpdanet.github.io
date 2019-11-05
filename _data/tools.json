@@ -119,7 +119,7 @@
       {
         "title": "Scout-App",
         "url": "http://scout-app.io",
-        "description": "Open source, beginner-friendly, desktop app for web developers and designers to process Sass/Scss files to CSS."
+        "description": "Open source, beginner-friendly, desktop app for web developers and designers to process Sass/SCSS files to CSS."
       },
       {
         "title": "AlternativeTo: List of apps made with NW.js",
@@ -1076,7 +1076,7 @@
       "Their documentation is very weak and assumes a familiarity with the Reason/OCaml ecosystems",
       "No examples of hooking into the file system, hardware, or OS level",
       "No examples of window management, frameless windows, taskbar apps, etc.",
-      "No instructions around how to build for each OS, or automated builds, only a small mention on the GitHub README about using the default ",
+      "No instructions or tooling around automated builds",
       "Basically one person behind most of the code"
     ],
     "frameworks": [],
