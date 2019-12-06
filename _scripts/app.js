@@ -5,6 +5,7 @@ const app = new Vue({
   components: {
     'github-corner': httpVueLoader('/_components/github-corner.vue'),
     'site-logo': httpVueLoader('/_components/site-logo.vue'),
+    'news-alerts': httpVueLoader('/_components/news-alerts.vue'),
     'base-card': httpVueLoader('/_components/base-card.vue')
   },
   data: {

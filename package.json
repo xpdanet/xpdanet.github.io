@@ -15,7 +15,8 @@
   "dependencies": {},
   "devDependencies": {
     "eslint": "^5.9.0",
-    "eslint-plugin-vue": "^4.7.1",
+    "eslint-config-tjw-base": "latest",
+    "eslint-config-tjw-vue": "latest",
     "meyer-sass": "^2.0.1",
     "node-sass": "^4.10.0",
     "normalize.css": "^8.0.1",
