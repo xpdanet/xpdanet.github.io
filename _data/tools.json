@@ -160,15 +160,15 @@
       "Can use node_modules",
       "Has Vue, React, Etc. boilerplates available",
       "Plays nicely with Gulp, Webpack, etc.",
-      "Ability to share code across Mobile/Web/Desktop if project setup correctly"
+      "Ability to share code across Mobile/Web/Desktop if project setup correctly",
+      "Offers a stable and nightly to give access to the latest Chromium/Node versions"
     ],
     "cons": [
       "Basically one person behind most of the code",
       "Doesn't take Linux support seriously",
       "Does not support any legacy OS's",
       "Resource Hog",
-      "No way to protect your source code",
-      "Perpetually out of date, releases typically ship with versions of Node/Chromium from 3-6 months ago"
+      "No way to protect your source code"
     ],
     "frameworks": [
       {
@@ -636,7 +636,7 @@
     ],
     "pros": [
       "Inspired by Carlo, but for Go instead of Node.js",
-      "Unlike Carlo, Lorca can build executable for most any platform via the go build command",
+      "Unlike Carlo, Lorca can build an executable for most any platform via the go build command",
       "Uses the user's installed copy of Chrome so you don't need to package and ship the browser in your distribution making dist sizes very small",
       "Distribution sizes of 5-10MB"
     ],
