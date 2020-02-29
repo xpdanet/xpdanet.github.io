@@ -587,7 +587,7 @@
   {
     "title": "Carlo",
     "url": "https://github.com/GoogleChromeLabs/carlo",
-    "deprecated": false,
+    "deprecated": true,
     "languages": [
       "HTML",
       "CSS",
