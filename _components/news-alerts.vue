@@ -23,7 +23,7 @@ module.exports = {
         {
           date: '2020-02-28T00:01:38.000Z',
           headline: 'Carlo no longer maintained',
-          summary: 'The Google labs experimental project, Carlo, will no longer be maintained. A similar project, inspired by Carlo, called Lorca is still maintained.',
+          summary: 'The Google Chrome Lab experimental project, Carlo, will no longer be maintained. A similar project, inspired by Carlo, called Lorca is still maintained.',
           url: 'https://github.com/GoogleChromeLabs/carlo'
         },
         {
