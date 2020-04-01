@@ -605,7 +605,8 @@
       "Uses the Puppeteer API for communicating between Node and browser"
     ],
     "cons": [
-      "Though made by Google, it is part of their Chrome Lab experiments, which often become abandoned",
+      "Is no longer maintained, as of Feb 2020",
+      "Though made by Google, it is part of their Chrome Lab experiments, which often become abandoned. (called it)",
       "Requires the end user has Chrome 70+ installed on their system (released 2018-10-16)",
       "You do not control the browser version, meaning usage of some new browser features in your app will require fallbacks to what Chrome 70 supported",
       "The packaging for general distribution pipeline does not exist. You are told to use pkg and to manually handle customizing your app icon, etc.",
