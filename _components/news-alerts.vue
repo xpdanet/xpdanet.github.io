@@ -21,6 +21,12 @@ module.exports = {
       currentStory: 0,
       stories: [
         {
+          date: '2020-02-28T00:01:38.000Z',
+          headline: 'Carlo no longer maintained',
+          summary: 'The Google Chrome Lab experimental project, Carlo, will no longer be maintained. A similar project, inspired by Carlo, called Lorca is still maintained.',
+          url: 'https://github.com/GoogleChromeLabs/carlo'
+        },
+        {
           date: '2019-11-13T14:00:00.000Z',
           headline: 'Big news for NW.js',
           summary: 'The NW NewWin (NW2) refactor is no longer behind a flag, it is now the default in v0.42.4! This will allow for many new features and access to aspects of the Chromium browser in your own apps that was previously not possible. More details at the blog post.',
