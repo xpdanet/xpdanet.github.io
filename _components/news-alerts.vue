@@ -34,9 +34,9 @@ module.exports = {
         },
         {
           date: '2019-11-09T00:02:00.000Z',
-          headline: 'Apple has begun blocking Electron',
-          summary: 'Apple is strategically banning apps made in tools that allow for cross-platform development again (they have done this in the past). Apps made with Electron will no longer be permitted in the Apple App Store. NW.js is seemingly unaffected for the time being. Electron apps can still be distributed to OSX users from your own website (not the App Store), however Apple is likely to block this approach as well in the near future.',
-          url: 'https://onezero.medium.com/apple-is-trying-to-kill-web-technology-a274237c174d'
+          headline: 'Apple blocking Electron',
+          summary: '(UPDATED) Electron 8.0.2 and 9.0.0-beta3 was released on 2020-02-25, and apps report being let through again. Previously, dozens of Electron apps reported being blocked by Apple's App Store due to the Electron framework using private APIs, with mixed reports of Apple letting some apps through anyway.',
+          url: 'https://github.com/electron/electron/issues/20027#issuecomment-591458648'
         }
       ]
     };
