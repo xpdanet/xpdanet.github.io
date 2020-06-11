@@ -992,7 +992,8 @@
     ],
     "platforms": [
       "Windows",
-      "Linux"
+      "Linux",
+      "OSX"
     ],
     "pros": [
       "Neutralino is a small executable that runs a static local http server to serve your application in the user's browser",
@@ -1000,7 +1001,6 @@
       "Has Vue, React, and Angular boilerplates"
     ],
     "cons": [
-      "No support for OSX",
       "Lacks many OS level features like being able to make a tray icon, or custom window chrome",
       "Very limited access to file system, hardware, and OS level features through a tiny API ",
       "Your UI could run any browser the end user has, meaning that your app must be designed in a cross-browser friendly manner",
