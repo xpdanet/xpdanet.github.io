@@ -1,5 +1,5 @@
 <template>
-  <div class="card-unreviewed">
+  <div class="card unreviewed">
     <div class="card-header">
       Tools that have not yet been reviewed:
     </div>
