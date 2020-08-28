@@ -133,7 +133,10 @@
             :tool="tool"
             @expandCard="expandCard"
           ></base-card>
-          <div v-if="filteredTools.length % 2 !== 0" class="card-spacer"></div>
+
+          <unreviewed-card></unreviewed-card>
+
+          <div v-if="filteredTools.length % 2 === 0" class="card-spacer"></div>
         </div>
       </div> <!-- end #app -->
 
