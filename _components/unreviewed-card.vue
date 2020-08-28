@@ -86,7 +86,7 @@ module.exports = {
           description: 'Won\'t be released until Nov 2021. Waiting for a "getting started" guide to be published.'
         },
         {
-          title: 'Did we miss any?'
+          title: 'Did we miss any?',
           url: 'https://github.com/xpdanet/xpdanet.github.io/issues',
           description: 'If there are any XPDA tools not included on this site, let us know on the GitHub issues.'
         }
