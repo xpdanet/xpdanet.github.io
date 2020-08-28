@@ -78,7 +78,7 @@ module.exports = {
         {
           title: 'Haxe',
           url: 'https://haxe.org/use-cases/desktop',
-          description: 'Doesn\'t really fit in with the rest of the tools on this site. Needs to be partnered with wxWidgets, NW.js, or Electron. More of just a UI library I think, similar to .'
+          description: 'Doesn\'t really fit in with the rest of the tools on this site. Needs to be partnered with wxWidgets, NW.js, or Electron. More of just a UI library I think, similar to Quasar.'
         },
         {
           title: '.NET MAUI',
