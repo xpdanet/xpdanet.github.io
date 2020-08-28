@@ -1,5 +1,5 @@
 <template>
-  <div class="card" id="unreviewed">
+  <div id="unreviewed" class="card unreviewed">
     <div class="card-header">
       Tools that have not yet been reviewed:
     </div>
@@ -78,12 +78,17 @@ module.exports = {
         {
           title: 'Haxe',
           url: 'https://haxe.org/use-cases/desktop',
-          description: 'Doesn\'t really fit in with the rest of the tools on this site. Needs to be partnered with wxWidgets, NW.js, or Electron. More of just a UI library I think, similar to .'
+          description: 'Doesn\'t really fit in with the rest of the tools on this site. Needs to be partnered with wxWidgets, NW.js, or Electron. More of just a UI library I think, similar to Quasar.'
         },
         {
           title: '.NET MAUI',
           url: 'https://github.com/dotnet/maui',
           description: 'Won\'t be released until Nov 2021. Waiting for a "getting started" guide to be published.'
+        },
+        {
+          title: 'Did we miss any?'
+          url: 'https://github.com/xpdanet/xpdanet.github.io/issues',
+          description: 'If there are any XPDA tools not included on this site, let us know on the GitHub issues.'
         }
       ]
     };
