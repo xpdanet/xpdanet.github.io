@@ -21,7 +21,7 @@ module.exports = {
       currentStory: 0,
       stories: [
         {
-          date: '2020-02-28T00:01:38.000Z',
+          data: '2020-08-26T19:39:17.000Z',
           headline: 'Electron drops ESM support',
           summary: 'Electron has stated that it will be dropping support JavaScript\'s modern native import/export. The popular <code>import module from \'./module.js\'</code> pattern will be removed from Electron.',
           url: 'https://github.com/electron/electron/issues/21457#issuecomment-647728163'
