@@ -6,7 +6,8 @@ const app = new Vue({
     'github-corner': httpVueLoader('/_components/github-corner.vue'),
     'site-logo': httpVueLoader('/_components/site-logo.vue'),
     'news-alerts': httpVueLoader('/_components/news-alerts.vue'),
-    'base-card': httpVueLoader('/_components/base-card.vue')
+    'base-card': httpVueLoader('/_components/base-card.vue'),
+    'unreviewed-card': httpVueLoader('/_components/unreviewed-card.vue')
   },
   data: {
     listMode: true,
