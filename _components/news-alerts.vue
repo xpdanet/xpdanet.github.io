@@ -2,7 +2,7 @@
   <div class="news">
     <h2>XPDA News: ({{ story.date | formatDate }})</h2>
     <h3><a :href="story.url" target="_blank" rel="nofollow">{{ story.headline }}</a></h3>
-    <p><strong>Summary</strong> {{ story.summary }} (<a :href="story.url" target="_blank" rel="nofollow">Read more</a>)</p>
+    <p><strong>Summary</strong> <span v-html="story.summary"></span> (<a :href="story.url" target="_blank" rel="nofollow">Read more</a>)</p>
     <div class="news-controls">
       «
       <span :class="{ 'news-link': !latestStory }" @click="nextStory">Next Story</span>
@@ -20,6 +20,12 @@ module.exports = {
     return {
       currentStory: 0,
       stories: [
+        {
+          date: '2020-02-28T00:01:38.000Z',
+          headline: 'Electron drops ESM support',
+          summary: 'Electron has stated that it will be dropping support JavaScript\'s modern native import/export. The popular <code>import module from \'./module.js\'</code> pattern will be removed from Electron.',
+          url: 'https://github.com/electron/electron/issues/21457#issuecomment-647728163'
+        },
         {
           date: '2020-02-28T00:01:38.000Z',
           headline: 'Carlo no longer maintained',
