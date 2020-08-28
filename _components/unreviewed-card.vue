@@ -1,11 +1,10 @@
 <template>
-  <div class="card unreviewed">
+  <div class="card" id="unreviewed">
     <div class="card-header">
       Tools that have not yet been reviewed:
     </div>
 
     <div class="card-body">
-      <!-- Notable Projects -->
       <div>
         <strong>Here are additional tools that have not been reviewed yet, but may still be of use to those visiting XPDA.net</strong>
         <ul>
