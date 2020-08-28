@@ -2,7 +2,7 @@
   <div class="news">
     <h2>XPDA News: ({{ story.date | formatDate }})</h2>
     <h3><a :href="story.url" target="_blank" rel="nofollow">{{ story.headline }}</a></h3>
-    <p><strong>Summary</strong> <span v-html="story.summary"></span> (<a :href="story.url" target="_blank" rel="nofollow">Read more</a>)</p>
+    <p><strong>Summary:</strong> <span v-html="story.summary"></span> (<a :href="story.url" target="_blank" rel="nofollow">Read more</a>)</p>
     <div class="news-controls">
       «
       <span :class="{ 'news-link': !latestStory }" @click="nextStory">Next Story</span>
