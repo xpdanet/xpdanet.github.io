@@ -21,7 +21,7 @@
       </div>
 
     </div> <!-- end .card-body -->
-  </div> <!-- end .card-unreviewed -->
+  </div> <!-- end .card -->
 </template>
 
 <script>
