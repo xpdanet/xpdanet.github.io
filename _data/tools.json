@@ -164,6 +164,7 @@
       "Offers a stable and nightly to give access to the latest Chromium/Node versions"
     ],
     "cons": [
+      "Doesn't support native ESM imports",
       "Basically one person behind most of the code",
       "Doesn't take Linux support seriously",
       "Does not support any legacy OS's",
