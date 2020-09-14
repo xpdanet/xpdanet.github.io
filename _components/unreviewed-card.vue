@@ -86,6 +86,11 @@ module.exports = {
           description: 'Won\'t be released until Nov 2021. Waiting for a "getting started" guide to be published.'
         },
         {
+          title: 'UNO Platform',
+          url: 'https://platform.uno',
+          description: 'C#/.NET. Bring UWP and WinUI to other platforms. Windows, OSX, iOS, Android, "Web" (via big chonky WASM). New. Linux support is experimental.'
+        },
+        {
           title: 'Did we miss any?',
           url: 'https://github.com/xpdanet/xpdanet.github.io/issues',
           description: 'If there are any XPDA tools not included on this site, let us know on the GitHub issues.'
