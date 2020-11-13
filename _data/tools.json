@@ -54,6 +54,12 @@
     "tools": [],
     "tutorials": [
       {
+        "title": "Holy shit NW.js is so easy",
+        "author": "The Jared Wilcurt",
+        "url": "https://dev.to/thejaredwilcurt/holy-shit-nw-js-is-so-easy-1h6",
+        "site": "dev.to"
+      },
+      {
         "title": "NW.js, Vue, Vuetify",
         "author": "Ackzell",
         "url": "https://www.youtube.com/playlist?list=PLmJs3lfUmCdT9MyG60Oo6HM7xAn79vwZ0",
