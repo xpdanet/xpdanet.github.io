@@ -108,6 +108,11 @@
         "description": "WeChat Mini Program SDK is built with NW.js. Over 1 million mini programs have been created. These are basically Chinese focused mobile apps and there are about half as many of them as apps in Apple's AppStore. WeChat itself has over 1 Billion monthly active users."
       },
       {
+        "title": "pgAdmin 4",
+        "url": "https://www.pgadmin.org",
+        "description": "A very popular database tool, pgAdmin switched to NW.js in 2021 saying \"By implementing the Desktop Runtime using NW.js we get rid of the separate server application and the independent browser. We also get rid of QT and C++ runtime logic\"."
+      },
+      {
         "title": "Gitter",
         "url": "https://gitter.im",
         "description": "Gitter is a chat platform for open source projects that directly integrates with GitHub. The native Windows desktop app for it uses NW.js."
