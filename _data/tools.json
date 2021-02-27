@@ -870,6 +870,11 @@
         "title": "OpenShot",
         "url": "http://www.openshot.org",
         "description": "Open source video editing software."
+      },
+      {
+        "title": "Manuskript",
+        "url": "http://www.theologeek.ch/manuskript",
+        "description": "Open source tool for writers to create their first draft"
       }
     ],
     "notableTrailingLink": true
