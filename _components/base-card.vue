@@ -74,7 +74,7 @@
       </div>
 
       <!-- Notable Projects -->
-      <div>
+      <div v-if="tool.notableTrailingLink || tool.notableProjects && tool.notableProjects.length">
         <strong>Notable Projects made with {{ tool.title }}:</strong>
         <ul>
           <li
