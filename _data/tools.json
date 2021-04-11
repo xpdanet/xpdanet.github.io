@@ -321,7 +321,7 @@
     "title": "Adobe AIR",
     "url": "http://www.adobe.com/products/air.html",
     "logo": "air.png",
-    "deprecated": false,
+    "deprecated": true,
     "languages": [
       "HTML",
       "JS",
@@ -334,17 +334,25 @@
       "OSX"
     ],
     "pros": [
-      "Backed by Adobe",
       "Simple development environment"
     ],
     "cons": [
       "Poor Linux support",
       "Requires end users to install Adobe Air runtime separately",
-      "Limited documentation around desktop app development"
+      "Limited documentation around desktop app development",
+      "Adobe dropped all support AIR in 2020 and transferred rights to Samsung owned HARMAN",
+      "Use for XPDA's is considered abandoned"
     ],
     "frameworks": [],
     "tools": [],
-    "tutorials": [],
+    "tutorials": [
+      {
+        "title": "AIR Community Forums",
+        "author": "Adobe",
+        "url": "https://forums.adobe.com/community/air",
+        "site": "forums.adobe.com"
+      }
+    ],
     "notableProjects": [],
     "notableTrailingLink": true
   },
