@@ -1,3 +1,4 @@
+global.window = {};
 const fs = require('fs');
 const helpers = require('./_scripts/helpers.js');
 

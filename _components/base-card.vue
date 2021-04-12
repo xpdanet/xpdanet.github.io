@@ -154,8 +154,7 @@
 </template>
 
 <script>
-
-module.exports = {
+export default {
   name: 'base-card',
   props: {
     tool: {

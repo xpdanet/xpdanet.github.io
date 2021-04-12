@@ -1,23 +1,24 @@
 // eslint-disable-next-line no-unused-vars
-let admin = new Vue({
-  el: '#admin',
+const admin = Vue.createApp({
   components: {
     'site-logo': httpVueLoader('_components/site-logo.vue'),
     'base-card': httpVueLoader('_components/base-card.vue'),
     'minus': httpVueLoader('_components/minus.vue')
   },
-  data: {
-    codeMode: true,
-    networkError: false,
-    selectedTool: 'new',
-    tools: [],
-    tool: null,
-    platforms: [],
-    languages: [],
-    sites: [],
-    frameworks: [],
-    newLanguageChoice: null,
-    newPlatformChoice: null
+  data: function () {
+    return {
+      codeMode: true,
+      networkError: false,
+      selectedTool: 'new',
+      tools: [],
+      tool: null,
+      platforms: [],
+      languages: [],
+      sites: [],
+      frameworks: [],
+      newLanguageChoice: null,
+      newPlatformChoice: null
+    };
   },
   methods: {
     getToolsData: function () {
@@ -160,3 +161,5 @@ let admin = new Vue({
     this.getToolsData();
   }
 });
+
+admin.mount('#admin');
