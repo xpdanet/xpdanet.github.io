@@ -1,7 +1,29 @@
 const defaultFilterType = 'subtractive';
-// eslint-disable-next-line no-unused-vars
-const app = new Vue({
-  el: '#app',
+
+function httpVueLoader (componentPath) {
+  const sfcLoaderOptions = {
+    moduleCache: {
+      vue: Vue
+    },
+    getFile: async function (url) {
+      const response = await fetch(url);
+      if (!response.ok) {
+        throw Object.assign(new Error(response.statusText + ' ' + url), { response });
+      }
+      return await response.text();
+    },
+    addStyle: function (textContent) {
+      const style = Object.assign(document.createElement('style'), { textContent });
+      const reference = document.head.getElementsByTagName('style')[0] || null;
+      document.head.insertBefore(style, reference);
+    }
+  };
+  return Vue.defineAsyncComponent(function () {
+    return window['vue3-sfc-loader'].loadModule(componentPath, sfcLoaderOptions);
+  });
+}
+
+const app = Vue.createApp({
   components: {
     'github-corner': httpVueLoader('/_components/github-corner.vue'),
     'site-logo': httpVueLoader('/_components/site-logo.vue'),
@@ -254,3 +276,5 @@ const app = new Vue({
     this.getToolsData();
   }
 });
+
+app.mount('#app');

@@ -64,7 +64,7 @@
     <link rel="apple-touch-startup-image"    href="/_imgs/meta/apl-str.png" type="image/png"                 />
     <!-- Styles/Scripts                                                                                     -->
     <link rel="stylesheet"                   href="/_styles/style.css"      type="text/css"                  />
-    <script type="text/javascript"           src="//cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+    <script type="text/javascript"           src="//cdn.jsdelivr.net/npm/vue@3.0.11/dist/vue.global.js"></script>
   </head>
   <body>
     <div v-cloak id="app" class="container text-center">
@@ -142,15 +142,10 @@
 
     </div> <!-- end .container -->
     <script type="text/javascript" src="//polyfill.io/v3/polyfill.min.js?features=String.prototype.startsWith,Promise,Array.prototype.includes,Array.prototype.find"></script>
-    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/axios/0.16.2/axios.min.js"></script>
-    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/http-vue-loader@1.4.1/src/httpVueLoader.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/axios@0.21.1/dist/axios.min.js"></script>
+    <script type="text/javascript" src="//cdn.jsdelivr.net/npm/vue3-sfc-loader@0.7.3/dist/vue3-sfc-loader.js"></script>
     <script type="text/javascript" src="_scripts/helpers.js"></script>
     <script type="text/javascript" src="_scripts/app.js"></script>
     <link rel="stylesheet" href="_styles/fonts.css" />
-
-    <!--
-      GitHub doesn't like to do a deploy to GHPages unless an html file is modified in the commit
-    -->
-
   </body>
 </html>
