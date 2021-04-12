@@ -54,6 +54,12 @@
     "tools": [],
     "tutorials": [
       {
+        "title": "Holy shit NW.js is so easy",
+        "author": "The Jared Wilcurt",
+        "url": "https://dev.to/thejaredwilcurt/holy-shit-nw-js-is-so-easy-1h6",
+        "site": "dev.to"
+      },
+      {
         "title": "NW.js, Vue, Vuetify",
         "author": "Ackzell",
         "url": "https://www.youtube.com/playlist?list=PLmJs3lfUmCdT9MyG60Oo6HM7xAn79vwZ0",
@@ -100,6 +106,11 @@
         "title": "WeChat Mini Program SDK",
         "url": "https://open.wechat.com",
         "description": "WeChat Mini Program SDK is built with NW.js. Over 1 million mini programs have been created. These are basically Chinese focused mobile apps and there are about half as many of them as apps in Apple's AppStore. WeChat itself has over 1 Billion monthly active users."
+      },
+      {
+        "title": "pgAdmin 4",
+        "url": "https://www.pgadmin.org",
+        "description": "A very popular database tool, pgAdmin switched to NW.js in 2021 saying \"By implementing the Desktop Runtime using NW.js we get rid of the separate server application and the independent browser. We also get rid of QT and C++ runtime logic\"."
       },
       {
         "title": "Gitter",
@@ -311,7 +322,7 @@
     "title": "Adobe AIR",
     "url": "http://www.adobe.com/products/air.html",
     "logo": "air.png",
-    "deprecated": false,
+    "deprecated": true,
     "languages": [
       "HTML",
       "JS",
@@ -324,17 +335,25 @@
       "OSX"
     ],
     "pros": [
-      "Backed by Adobe",
       "Simple development environment"
     ],
     "cons": [
       "Poor Linux support",
       "Requires end users to install Adobe Air runtime separately",
-      "Limited documentation around desktop app development"
+      "Limited documentation around desktop app development",
+      "Adobe dropped all support AIR in 2020 and transferred rights to Samsung owned HARMAN",
+      "Use for XPDA's is considered abandoned"
     ],
     "frameworks": [],
     "tools": [],
-    "tutorials": [],
+    "tutorials": [
+      {
+        "title": "AIR Community Forums",
+        "author": "Adobe",
+        "url": "https://forums.adobe.com/community/air",
+        "site": "forums.adobe.com"
+      }
+    ],
     "notableProjects": [],
     "notableTrailingLink": true
   },
@@ -860,6 +879,11 @@
         "title": "OpenShot",
         "url": "http://www.openshot.org",
         "description": "Open source video editing software."
+      },
+      {
+        "title": "Manuskript",
+        "url": "http://www.theologeek.ch/manuskript",
+        "description": "Open source tool for writers to create their first draft"
       }
     ],
     "notableTrailingLink": true

@@ -1,7 +1,6 @@
 const defaultFilterType = 'subtractive';
-// eslint-disable-next-line no-unused-vars
-const app = new Vue({
-  el: '#app',
+
+const app = Vue.createApp({
   components: {
     'github-corner': httpVueLoader('/_components/github-corner.vue'),
     'site-logo': httpVueLoader('/_components/site-logo.vue'),
@@ -9,26 +8,28 @@ const app = new Vue({
     'base-card': httpVueLoader('/_components/base-card.vue'),
     'unreviewed-card': httpVueLoader('/_components/unreviewed-card.vue')
   },
-  data: {
-    listMode: true,
-    selectedTool: null,
-    filterType: defaultFilterType,
-    networkError: false,
-    languages: [],
-    platforms: [],
-    tools: [],
-    articles: [
-      {
-        title: 'Why I prefer NW.js over Electron? (2018 comparison)',
-        author: 'Osama Abbas',
-        url: 'https://medium.com/@pw.osama/e60b7289752',
-        site: 'Medium',
-        tags: [
-          'NW.js',
-          'Electron'
-        ]
-      }
-    ]
+  data: function () {
+    return {
+      listMode: true,
+      selectedTool: null,
+      filterType: defaultFilterType,
+      networkError: false,
+      languages: [],
+      platforms: [],
+      tools: [],
+      articles: [
+        {
+          title: 'Why I prefer NW.js over Electron? (2018 comparison)',
+          author: 'Osama Abbas',
+          url: 'https://medium.com/@pw.osama/e60b7289752',
+          site: 'Medium',
+          tags: [
+            'NW.js',
+            'Electron'
+          ]
+        }
+      ]
+    };
   },
   methods: {
     expandCard: function (tool) {
@@ -254,3 +255,5 @@ const app = new Vue({
     this.getToolsData();
   }
 });
+
+app.mount('#app');

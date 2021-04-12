@@ -25,7 +25,7 @@
 </template>
 
 <script>
-module.exports = {
+export default {
   name: 'unreviewed-card',
   data: function () {
     return {
