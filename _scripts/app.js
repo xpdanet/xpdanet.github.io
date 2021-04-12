@@ -1,28 +1,5 @@
 const defaultFilterType = 'subtractive';
 
-function httpVueLoader (componentPath) {
-  const sfcLoaderOptions = {
-    moduleCache: {
-      vue: Vue
-    },
-    getFile: async function (url) {
-      const response = await fetch(url);
-      if (!response.ok) {
-        throw Object.assign(new Error(response.statusText + ' ' + url), { response });
-      }
-      return await response.text();
-    },
-    addStyle: function (textContent) {
-      const style = Object.assign(document.createElement('style'), { textContent });
-      const reference = document.head.getElementsByTagName('style')[0] || null;
-      document.head.insertBefore(style, reference);
-    }
-  };
-  return Vue.defineAsyncComponent(function () {
-    return window['vue3-sfc-loader'].loadModule(componentPath, sfcLoaderOptions);
-  });
-}
-
 const app = Vue.createApp({
   components: {
     'github-corner': httpVueLoader('/_components/github-corner.vue'),
@@ -31,26 +8,28 @@ const app = Vue.createApp({
     'base-card': httpVueLoader('/_components/base-card.vue'),
     'unreviewed-card': httpVueLoader('/_components/unreviewed-card.vue')
   },
-  data: {
-    listMode: true,
-    selectedTool: null,
-    filterType: defaultFilterType,
-    networkError: false,
-    languages: [],
-    platforms: [],
-    tools: [],
-    articles: [
-      {
-        title: 'Why I prefer NW.js over Electron? (2018 comparison)',
-        author: 'Osama Abbas',
-        url: 'https://medium.com/@pw.osama/e60b7289752',
-        site: 'Medium',
-        tags: [
-          'NW.js',
-          'Electron'
-        ]
-      }
-    ]
+  data: function () {
+    return {
+      listMode: true,
+      selectedTool: null,
+      filterType: defaultFilterType,
+      networkError: false,
+      languages: [],
+      platforms: [],
+      tools: [],
+      articles: [
+        {
+          title: 'Why I prefer NW.js over Electron? (2018 comparison)',
+          author: 'Osama Abbas',
+          url: 'https://medium.com/@pw.osama/e60b7289752',
+          site: 'Medium',
+          tags: [
+            'NW.js',
+            'Electron'
+          ]
+        }
+      ]
+    };
   },
   methods: {
     expandCard: function (tool) {
