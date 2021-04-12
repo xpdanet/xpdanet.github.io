@@ -2,7 +2,7 @@
 
 Website for XPDA.net (Cross-Platform Desktop Apps)
 
-[![Build Status](https://travis-ci.org/xpdanet/xpdanet.github.io.svg?branch=master)](https://travis-ci.org/xpdanet/xpdanet.github.io)
+[![Build Passing](https://github.com/xpdanet/xpdanet.github.io/actions/workflows/node.js.yml/badge.svg)](https://github.com/xpdanet/xpdanet.github.io/actions/workflows/node.js.yml)
 
 * * *
 
