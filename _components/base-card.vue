@@ -144,6 +144,7 @@
             <strong>{{ tutorial.site }}</strong> -
             <a v-if="tutorial.url" :href="tutorial.url" target="_blank" rel="noopener noreferrer">{{ tutorial.title }}</a>
             <span v-else>{{ tutorial.title }}</span>
+            {{ ' ' }}
             <em v-if="tutorial.author">by {{ tutorial.author }}</em>
           </li>
         </ul>
