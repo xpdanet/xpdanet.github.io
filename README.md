@@ -2,7 +2,7 @@
 
 Website for XPDA.net (Cross-Platform Desktop Apps)
 
-[![Build Status](https://travis-ci.org/xpdanet/xpdanet.github.io.svg?branch=master)](https://travis-ci.org/xpdanet/xpdanet.github.io)
+[![Build Passing](https://github.com/xpdanet/xpdanet.github.io/actions/workflows/node.js.yml/badge.svg)](https://github.com/xpdanet/xpdanet.github.io/actions/workflows/node.js.yml)
 
 * * *
 
@@ -18,7 +18,7 @@ Website for XPDA.net (Cross-Platform Desktop Apps)
 
 * [ ] Improve design of page
 * [x] Obtain, optimize, and place logo's for projects
-* [ ] Create logo and favicon
+* [x] Create logo and favicon
 
 ### Phase 3
 
@@ -36,8 +36,9 @@ Website for XPDA.net (Cross-Platform Desktop Apps)
 
 * git :grimacing:
 * GitHub Pages :notebook:
-* Vue.js :heart_eyes:
-* Sass :sunglasses:
+* Vue.js 3 :heart_eyes:
+* Vue3-SFC-Loader :sunglasses:
+* Sass :100:
 * ESLint :relieved:
 * Sasslint :seedling:
-* Travis-CI :rainbow:
+* GitHub Actions :woman_shrugging:

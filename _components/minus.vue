@@ -7,7 +7,7 @@
 </template>
 
 <script>
-module.exports = {
+export default {
   name: 'minus',
   props: {
     name: {
@@ -28,5 +28,5 @@ module.exports = {
       this.tool[section].pop();
     }
   }
-}
+};
 </script>

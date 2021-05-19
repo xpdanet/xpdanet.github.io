@@ -1,6 +1,6 @@
 <template>
   <div class="news">
-    <h2>XPDA News: ({{ story.date | formatDate }})</h2>
+    <h2>XPDA News: ({{ formatDate(story.date) }})</h2>
     <h3><a :href="story.url" target="_blank" rel="nofollow">{{ story.headline }}</a></h3>
     <p><strong>Summary:</strong> <span v-html="story.summary"></span> (<a :href="story.url" target="_blank" rel="nofollow">Read more</a>)</p>
     <div class="news-controls">
@@ -14,7 +14,7 @@
 </template>
 
 <script>
-module.exports = {
+export default {
   name: 'news-alerts',
   data: function () {
     return {
@@ -57,6 +57,9 @@ module.exports = {
       if (!this.oldestStory) {
         this.currentStory = this.currentStory + 1;
       }
+    },
+    formatDate: function (value) {
+      return (new Date(value)).toLocaleDateString();
     }
   },
   computed: {
@@ -68,11 +71,6 @@ module.exports = {
     },
     oldestStory: function () {
       return this.currentStory === (this.stories.length - 1);
-    }
-  },
-  filters: {
-    formatDate: function (value) {
-      return (new Date(value)).toLocaleDateString();
     }
   }
 };
