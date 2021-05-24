@@ -1337,6 +1337,7 @@
     "notableProjects": [],
     "notableTrailingLink": true
   },
+
   // AppJS
   {
     "title": "AppJS",
@@ -1374,5 +1375,39 @@
       }
     ],
     "notableTrailingLink": true
+  },
+  // JSDB
+  {
+    "title": "JSDB",
+    "url": "http://www.jsdb.org",
+    "logo": "jsdb.png",
+    "deprecated": true,
+    "languages": [
+      "JS",
+      "XML"
+    ],
+    "platforms": [
+      "Windows",
+      "Linux",
+      "OSX"
+    ],
+    "pros": [
+      "Designed as a means to use JavaScript to interact with databases. For data-driven, network-centric programming.",
+      "Can make exes and they compress to less than 1MB",
+      "Though old, an no longer recieving updates, the author still answers questions in a Google Group",
+      "Based on Mozilla SpiderMonkey",
+      "Free/Open source"
+    ],
+    "cons": [
+      "Dated, last release was 2012. Code updates are effectively deprecated",
+      "Primarily focused on database related solutions, may be limited",
+      "Uses class libraries from Raosoft, Inc. making the open-source version free, however additional functionality or less restrictive license must be purchased (starting at $50)",
+      "Sort of like a poor-man's version of Node, but much smaller in size, for the trade off of using older JS, and having no access to modern JS frameworks or tooling"
+    ],
+    "frameworks": [],
+    "tools": [],
+    "tutorials": [],
+    "notableProjects": [],
+    "notableTrailingLink": false
   }
 ]
