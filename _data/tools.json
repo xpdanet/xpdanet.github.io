@@ -277,43 +277,63 @@
     "notableProjects": [],
     "notableTrailingLink": true
   },
-  // Ultralight
+  // Wails
   {
-    "title": "Ultralight",
-    "url": "https://ultralig.ht",
-    "logo": "ultralight.png",
+    "title": "Wails",
+    "url": "https://wails.app",
+    "logo": "wails.png",
     "deprecated": false,
     "languages": [
-      "C++",
       "HTML",
-      "CSS"
+      "CSS",
+      "JS",
+      "Go"
     ],
     "platforms": [
-      "Windows",
+      "Linux",
       "OSX",
-      "Linux"
+      "Windows"
     ],
     "pros": [
-      "Distribution sizes are as low as ~8MB",
-      "Low memory usage",
-      "GPU-Accelerated, drivers for Direct3D, Metal, and OpenGL (optimized for games)",
-      "Ultralight is designed for C++ developers, however it plans to add bindings for C, C#, .NET, Node.js, and Python",
-      "Free for non-commercial use, educational use, and commercial use by indie devs making less than US$100,000 a year"
+      "Does not ship a browser, uses what is installed",
+      "Builds to a single binary, packaging all frontend/backend code together (if all environment requirements are met)",
+      "Has decent Linux OS support, though requires extra effort for each to be set up",
+      "Has a decent CLI to generate projects that also has templates for many JS frameworks built in (Vue, Angular, Svelte, VanillaJS, Vuetify, React)",
+      "Version 1 released in 2020. Still getting regular releases",
+      "Browser access to the \"backend\" is easily available through window.backend.yourGoFunction(input).then((output) => {})"
     ],
     "cons": [
-      "Currently in beta and missing many features",
-      "Not free for all commercial use",
-      "Mostly closed source",
-      "Basically one person behind most of the code",
-      "Currently requires the end user have a GPU",
-      "Lacking full support for CSS3, especially around SVG, filters, and dropshadows",
-      "Limited JavaScript interaction through C++",
-      "Internal WebKit is based off of Safari with many features disabled, notably WebWorkers, WebAudio and Video"
+      "Windows version relies on Internet Explorer 11's engine. IE11 was released in 2013 and many modern JS frameworks (like Vue 3) have dropped support for IE11 in order to use newer browser APIs like proxies for performance improvements and better developer ergonomics.",
+      "Saving changes on the frontend are not dynamically shown in the running app. You must kill the app and rebuild it to see changes. Each build takes several seconds, performing npm install and webpack builds",
+      "Does not support making frameless apps, but does support fullscreen",
+      "Does not support making tray apps",
+      "The weakest part of the documentation is the JavaScript portions. Most JS documentation is written assuming you'll be using Vue 2",
+      "Seems to have general issues with npm/npx and some command prompts/terminals",
+      "Requires installing Go, npm/Node, and various OS specific GCC compilers, and Docker to support different Linux flavors. Each Linux version requires special setup"
     ],
-    "frameworks": [],
+    "frameworks": [
+      {
+        "framework": "Vue, Angular, React, Svelte",
+        "title": "Built into Wails-CLI",
+        "url": "https://wails.app/reference/cli/"
+      }
+    ],
     "tools": [],
-    "tutorials": [],
-    "notableProjects": [],
+    "tutorials": [
+      {
+        "title": "Building Desktop App in Go using Wails",
+        "author": "Alex Pliutau",
+        "url": "https://www.youtube.com/watch?v=Dg9rUXxNV-c",
+        "site": "YouTube"
+      }
+    ],
+    "notableProjects": [
+      {
+        "title": "Wails Official showcase",
+        "url": "https://wails.app/showcase",
+        "description": "Curated list of apps made with Wails"
+      }
+    ],
     "notableTrailingLink": true
   },
 
@@ -600,78 +620,6 @@
         "description": "Curated list of products made with Xojo"
       }
     ],
-    "notableTrailingLink": true
-  },
-
-  // Carlo
-  {
-    "title": "Carlo",
-    "url": "https://github.com/GoogleChromeLabs/carlo",
-    "deprecated": true,
-    "languages": [
-      "HTML",
-      "CSS",
-      "JS",
-      "Node.js"
-    ],
-    "platforms": [
-      "Windows",
-      "Linux",
-      "OSX"
-    ],
-    "pros": [
-      "Made by Google",
-      "Uses the user's installed copy of Chrome so you don't need to package and ship the browser in your distribution making dist sizes very small",
-      "Uses the Puppeteer API for communicating between Node and browser"
-    ],
-    "cons": [
-      "Is no longer maintained, as of Feb 2020",
-      "Though made by Google, it is part of their Chrome Lab experiments, which often become abandoned. (called it)",
-      "Requires the end user has Chrome 70+ installed on their system (released 2018-10-16)",
-      "You do not control the browser version, meaning usage of some new browser features in your app will require fallbacks to what Chrome 70 supported",
-      "The packaging for general distribution pipeline does not exist. You are told to use pkg and to manually handle customizing your app icon, etc.",
-      "No established paths for setting up auto updates"
-    ],
-    "frameworks": [],
-    "tools": [],
-    "tutorials": [],
-    "notableProjects": [],
-    "notableTrailingLink": true
-  },
-  // Lorca
-  {
-    "title": "Lorca",
-    "url": "https://github.com/zserge/lorca",
-    "logo": "lorca.png",
-    "deprecated": false,
-    "languages": [
-      "HTML",
-      "CSS",
-      "JS",
-      "Go"
-    ],
-    "platforms": [
-      "Windows",
-      "Linux",
-      "OSX"
-    ],
-    "pros": [
-      "Inspired by Carlo, but for Go instead of Node.js",
-      "Unlike Carlo, Lorca can build an executable for most any platform via the go build command",
-      "Uses the user's installed copy of Chrome so you don't need to package and ship the browser in your distribution making dist sizes very small",
-      "Distribution sizes of 5-10MB"
-    ],
-    "cons": [
-      "Very new project, basically one person behind it",
-      "Requires the end user has Chrome 70+ installed on their system (released 2018-10-16)",
-      "You do not control the browser version, meaning usage of some new browser features in your app will require fallbacks to what Chrome 70 supported",
-      "Though building a native executable is available, you will still need to manually edit it to embed app icon, etc. and use tools for creating installers",
-      "No established paths for setting up auto updates"
-    ],
-    "frameworks": [],
-    "tools": [],
-    "tutorials": [],
-    "notableProjects": [],
     "notableTrailingLink": true
   },
 
@@ -1009,6 +957,117 @@
     "notableTrailingLink": false
   },
 
+  // Carlo
+  {
+    "title": "Carlo",
+    "url": "https://github.com/GoogleChromeLabs/carlo",
+    "deprecated": true,
+    "languages": [
+      "HTML",
+      "CSS",
+      "JS",
+      "Node.js"
+    ],
+    "platforms": [
+      "Windows",
+      "Linux",
+      "OSX"
+    ],
+    "pros": [
+      "Made by Google",
+      "Uses the user's installed copy of Chrome so you don't need to package and ship the browser in your distribution making dist sizes very small",
+      "Uses the Puppeteer API for communicating between Node and browser"
+    ],
+    "cons": [
+      "Is no longer maintained, as of Feb 2020",
+      "Though made by Google, it is part of their Chrome Lab experiments, which often become abandoned. (called it)",
+      "Requires the end user has Chrome 70+ installed on their system (released 2018-10-16)",
+      "You do not control the browser version, meaning usage of some new browser features in your app will require fallbacks to what Chrome 70 supported",
+      "The packaging for general distribution pipeline does not exist. You are told to use pkg and to manually handle customizing your app icon, etc.",
+      "No established paths for setting up auto updates"
+    ],
+    "frameworks": [],
+    "tools": [],
+    "tutorials": [],
+    "notableProjects": [],
+    "notableTrailingLink": true
+  },
+  // Lorca
+  {
+    "title": "Lorca",
+    "url": "https://github.com/zserge/lorca",
+    "logo": "lorca.png",
+    "deprecated": false,
+    "languages": [
+      "HTML",
+      "CSS",
+      "JS",
+      "Go"
+    ],
+    "platforms": [
+      "Windows",
+      "Linux",
+      "OSX"
+    ],
+    "pros": [
+      "Inspired by Carlo, but for Go instead of Node.js",
+      "Unlike Carlo, Lorca can build an executable for most any platform via the go build command",
+      "Uses the user's installed copy of Chrome so you don't need to package and ship the browser in your distribution making dist sizes very small",
+      "Distribution sizes of 5-10MB"
+    ],
+    "cons": [
+      "Very new project, basically one person behind it",
+      "Requires the end user has Chrome 70+ installed on their system (released 2018-10-16)",
+      "You do not control the browser version, meaning usage of some new browser features in your app will require fallbacks to what Chrome 70 supported",
+      "Though building a native executable is available, you will still need to manually edit it to embed app icon, etc. and use tools for creating installers",
+      "No established paths for setting up auto updates"
+    ],
+    "frameworks": [],
+    "tools": [],
+    "tutorials": [],
+    "notableProjects": [],
+    "notableTrailingLink": true
+  },
+
+  // Ultralight
+  {
+    "title": "Ultralight",
+    "url": "https://ultralig.ht",
+    "logo": "ultralight.png",
+    "deprecated": false,
+    "languages": [
+      "C++",
+      "HTML",
+      "CSS"
+    ],
+    "platforms": [
+      "Windows",
+      "OSX",
+      "Linux"
+    ],
+    "pros": [
+      "Distribution sizes are as low as ~8MB",
+      "Low memory usage",
+      "GPU-Accelerated, drivers for Direct3D, Metal, and OpenGL (optimized for games)",
+      "Ultralight is designed for C++ developers, however it plans to add bindings for C, C#, .NET, Node.js, and Python",
+      "Free for non-commercial use, educational use, and commercial use by indie devs making less than US$100,000 a year"
+    ],
+    "cons": [
+      "Currently in beta and missing many features",
+      "Not free for all commercial use",
+      "Mostly closed source",
+      "Basically one person behind most of the code",
+      "Currently requires the end user have a GPU",
+      "Lacking full support for CSS3, especially around SVG, filters, and dropshadows",
+      "Limited JavaScript interaction through C++",
+      "Internal WebKit is based off of Safari with many features disabled, notably WebWorkers, WebAudio and Video"
+    ],
+    "frameworks": [],
+    "tools": [],
+    "tutorials": [],
+    "notableProjects": [],
+    "notableTrailingLink": true
+  },
   // NeutralinoJs
   {
     "title": "NeutralinoJs",
@@ -1044,6 +1103,7 @@
     "notableProjects": [],
     "notableTrailingLink": true
   },
+
   // LambdaNative
   {
     "title": "LambdaNative",
@@ -1080,7 +1140,6 @@
     ],
     "notableTrailingLink": true
   },
-
   // Revery
   {
     "title": "Revery",
