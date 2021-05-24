@@ -36,11 +36,6 @@ export default {
           description: ''
         },
         {
-          title: 'JSDB',
-          url: 'http://www.jsdb.org',
-          description: 'Very old. Author still answers questions in the google group. Can make executables that compress to under 1MB.'
-        },
-        {
           title: 'Avalonia UI',
           url: 'http://avaloniaui.net',
           description: ''
