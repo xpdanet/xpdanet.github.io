@@ -49,6 +49,11 @@
         "framework": "Angular 8+",
         "title": "Angular CLI + NW.js",
         "url": "https://github.com/nwutils/nw-angular-cli-example"
+      },
+      {
+        "framework": "More available at",
+        "title": "NW Utils",
+        "url": "https://nwutils.io"
       }
     ],
     "tools": [],
@@ -94,6 +99,12 @@
         "author": "The Jared Wilcurt",
         "url": "https://dev.to/thejaredwilcurt/angular-cli-and-nwjs-for-development-49gl",
         "site": "dev.to"
+      },
+      {
+        "title": "NW Utils",
+        "author": "The Jared Wilcurt",
+        "url": "https://nwutils.io",
+        "site": "More available at"
       }
     ],
     "notableProjects": [
