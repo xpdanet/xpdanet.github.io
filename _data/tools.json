@@ -277,7 +277,7 @@
     "cons": [
       "Very little abstraction is handled for you between the different OS's, versus something like NW.js where you write code to its API and it converts it for each OS",
       "No Linux support",
-      "Windows support is limited to UWP (Microsoft Store) format, meaning it only support Windows 8+",
+      "Windows support is limited to UWP (Microsoft Store) format, meaning it can only support Windows 8+",
       "Developing for OSX apps requires a lot of knowledge of developing traditional native OSX desktop apps that talk directly to the OS API",
       "You are mostly limited to using Visual Studio for development"
     ],
