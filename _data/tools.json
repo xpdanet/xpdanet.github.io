@@ -234,7 +234,7 @@
       {
         "title": "VSCode",
         "url": "https://code.visualstudio.com",
-        "description": "Open source text editor from Microsoft aimed at web developers"
+        "description": "Open source text editor from Microsoft aimed at web developers. Though notably, Microsoft has heavily customized/modified Electron in an attempt to improve performance. VSCode is now 5 times faster than Atom (made using an unmodified version of Electron), however, still twice as slow as SublimeText (built natively)."
       },
       {
         "title": "Slack",
