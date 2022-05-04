@@ -95,7 +95,7 @@ function beautifyJSON (val) {
       return ret;
     }
 
-    val = String(val).replace(/[\r\n]/g, x => x === '\n' ? '\\n' : '\\r');
+    val = String(val).replace(/[\r\n]/g, (x) => x === '\n' ? '\\n' : '\\r');
 
     val = val.replace(/\\?'/g, '\\\'');
     return '\'' + val + '\'';
