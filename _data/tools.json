@@ -564,15 +564,20 @@
     ],
     "pros": [
       "Supports Windows XP+ and OSX 10.7+",
-      "Distribution can be as small as 4MB for an installer",
+      "Distribution can be as small as 4MB for an installer (very impressive for what you get)",
       "Uses very little resources to give similar UI experience as that of a browser",
-      "Source code is customizable for those wanting to tweak the build (at a cost)"
+      "Source code is customizable for those wanting to tweak the build (at a cost)",
+      "Has a tool called \"Quark\" which is a simple UI for managing and building your Sciter projects (I really like this, and would like to see it improved)",
+      "In the years between when I first reviewed Sciter and now, they have made many major improvements"
     ],
     "cons": [
       "Has a limited free version, can become expensive in some scenarios",
-      "Does not support all of CSS3 features",
-      "Uses a proprietary scripting language that is based off of the 1996-2011 version of JavaScript (v1.x)",
-      "Documentation is very lacking"
+      "Does not support all CSS features (No CSS Grid support, for example)",
+      "Uses a proprietary scripting language that is based off of JavaScript (ES6), with a subset of features and missing many aspects of the Browser API. This gives you most of what you'd want, but for example, running vue.min.js will throw errors from Vue attempting to use JS features that are missing",
+      "Documentation is very lacking",
+      "While attempting to use \"Quark\", I got a cryptic error message, which after Googling required me to globally install a 3rd party tool, then restart Quark for builds to work",
+      "Does not use Chrome or Firefox Dev tools. The inspector it comes with is EXTREMELY limited, giving you the very bare minimum",
+      "The system access API (fs, network, etc) is \"inspired\" by Node, but definitely not Node. From my experience it's a bit flaky, and WAY under-documented"
     ],
     "frameworks": [],
     "tools": [],

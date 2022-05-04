@@ -3,7 +3,7 @@ const admin = Vue.createApp({
   components: {
     'site-logo': httpVueLoader('_components/site-logo.vue'),
     'base-card': httpVueLoader('_components/base-card.vue'),
-    'minus': httpVueLoader('_components/minus.vue')
+    minus: httpVueLoader('_components/minus.vue')
   },
   data: function () {
     return {
