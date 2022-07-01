@@ -250,6 +250,51 @@
     "notableTrailingLink": false
   },
 
+  // Tauri
+  {
+    "title": "Tauri",
+    "url": "https://tauri.app",
+    "logo": "tauri.svg",
+    "deprecated": false,
+    "languages": [
+      "HTML",
+      "CSS",
+      "JS",
+      "Rust"
+    ],
+    "platforms": [
+      "Windows",
+      "Linux",
+      "OSX"
+    ],
+    "pros": [
+      "Once you have all the prerequisites installed, the initial project creation is extremely polished",
+      "A single command starts up a new project, which integrates with all popular WebDev CLI's (Vite, Vue-CLI, CRA, etc)",
+      "Has a build tool built right in",
+      "Produced a self-contained, portable, Windows executable that was under 7MB",
+      "Tauri relies on Rust for it's backend, but plans to extend out backend language support to many other lanugages",
+      "The documentation is probably the best I've seen for any project listed on XPDA.net",
+      "Supports Ubuntu 18+, OSX 10.15+, and Windows 10+"
+    ],
+    "cons": [
+      "Takes around 2 hours for initial machine and project setup (Visual Studio, OS Specific WebView, Rust, Node/npm, Crate installs/compiles, etc)",
+      "Builds must be done on target OS and can take 30-60 minutes per OS.",
+      "Relies on the OS's built in webview, which means you need to build your UI in a cross-browser friendly manner",
+      "On Linux, you must build using the oldest Linux version you want to support, and may need to do multiple builds if the linux versions differ greatly enough"
+    ],
+    "frameworks": [
+      {
+        "framework": "",
+        "title": "",
+        "url": ""
+      }
+    ],
+    "tools": [],
+    "tutorials": [],
+    "notableProjects": [],
+    "notableTrailingLink": true
+  },
+
   // Xamarin
   {
     "title": "Xamarin",
