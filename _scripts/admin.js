@@ -135,6 +135,18 @@ const admin = Vue.createApp({
       return beautifyJSON(val);
     }
   },
+  computed: {
+    jsonOutput: function () {
+      let data = JSON.stringify(this.tool, null, 2);
+      data = data
+        .split('\n')
+        .map(function (line) {
+          return '  ' + line;
+        })
+        .join('\n');
+      return data + ',';
+    }
+  },
   watch: {
     selectedTool: function (title) {
       if (title === 'new') {
