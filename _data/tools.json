@@ -397,46 +397,6 @@
     "notableTrailingLink": true
   },
 
-  // Adobe AIR
-  {
-    "title": "Adobe AIR",
-    "url": "http://www.adobe.com/products/air.html",
-    "logo": "air.png",
-    "deprecated": true,
-    "languages": [
-      "HTML",
-      "JS",
-      "ActionScript"
-    ],
-    "platforms": [
-      "iOS",
-      "Android",
-      "Windows",
-      "OSX"
-    ],
-    "pros": [
-      "Simple development environment"
-    ],
-    "cons": [
-      "Poor Linux support",
-      "Requires end users to install Adobe Air runtime separately",
-      "Limited documentation around desktop app development",
-      "Adobe dropped all support AIR in 2020 and transferred rights to Samsung owned HARMAN",
-      "Use for XPDA's is considered abandoned"
-    ],
-    "frameworks": [],
-    "tools": [],
-    "tutorials": [
-      {
-        "title": "AIR Community Forums",
-        "author": "Adobe",
-        "url": "https://forums.adobe.com/community/air",
-        "site": "forums.adobe.com"
-      }
-    ],
-    "notableProjects": [],
-    "notableTrailingLink": true
-  },
   // Adobe Animate CC
   {
     "title": "Adobe Animate CC",
@@ -1336,6 +1296,53 @@
   // //////////////////////////
   // DEPRECATED
   // //////////////////////////
+
+  // Adobe AIR
+  {
+    "title": "Adobe AIR",
+    "url": "http://www.adobe.com/products/air.html",
+    "logo": "air.png",
+    "deprecated": true,
+    "languages": [
+      "HTML",
+      "JS",
+      "ActionScript"
+    ],
+    "platforms": [
+      "iOS",
+      "Android",
+      "Windows",
+      "OSX"
+    ],
+    "pros": [
+      "Simple development environment"
+    ],
+    "cons": [
+      "Poor Linux support",
+      "Requires end users to install Adobe Air runtime separately",
+      "Limited documentation around desktop app development",
+      "Adobe dropped all support AIR in 2020 and transferred rights to Samsung owned HARMAN",
+      "Use for XPDA's is considered abandoned"
+    ],
+    "frameworks": [],
+    "tools": [],
+    "tutorials": [
+      {
+        "title": "AIR Community Forums",
+        "author": "Adobe",
+        "url": "https://forums.adobe.com/community/air",
+        "site": "forums.adobe.com"
+      }
+    ],
+    "notableProjects": [
+      {
+        "title": "Pownce",
+        "url": "https://en.wikipedia.org/wiki/Pownce",
+        "description": "Now defunct instant messaging/file sharing app"
+      }
+    ],
+    "notableTrailingLink": true
+  },
 
   // Muon
   {
