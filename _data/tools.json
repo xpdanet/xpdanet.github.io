@@ -268,8 +268,7 @@
       "OSX"
     ],
     "pros": [
-      "Once you have all the prerequisites installed, the initial project creation is extremely polished",
-      "A single command starts up a new project, which integrates with all popular WebDev CLI's (Vite, Vue-CLI, CRA, etc)",
+      "Once you have all the prerequisites installed, the initial project creation is extremely polished. A single command starts up a new project, which integrates with all popular WebDev CLI's (Vite, Vue-CLI, CRA, etc)",
       "Has a build tool built right in. It's slow, but a phenomenal feature to have officially maintained",
       "The documentation is probably the best I've seen for any project listed on XPDA.net. Though I found a few of my questions unanswered as I used it, especially basic things like what OS's are supported. Because you can build your own binary, the limits on OS are really about what 3rd party build tools are compatible with your OS and Tauri's tools, and those 3rd party tools may change and drop support over time, making documenting how to do machine set up much more difficult outside of just the very latest OS's",
       "Produced a self-contained, portable, Windows executable that was under 7MB",
