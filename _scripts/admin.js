@@ -3,7 +3,7 @@ const admin = Vue.createApp({
   components: {
     'site-logo': httpVueLoader('_components/site-logo.vue'),
     'base-card': httpVueLoader('_components/base-card.vue'),
-    'minus': httpVueLoader('_components/minus.vue')
+    minus: httpVueLoader('_components/minus.vue')
   },
   data: function () {
     return {
@@ -133,6 +133,18 @@ const admin = Vue.createApp({
   filters: {
     JSONstringify: function (val) {
       return beautifyJSON(val);
+    }
+  },
+  computed: {
+    jsonOutput: function () {
+      let data = JSON.stringify(this.tool, null, 2);
+      data = data
+        .split('\n')
+        .map(function (line) {
+          return '  ' + line;
+        })
+        .join('\n');
+      return data + ',';
     }
   },
   watch: {
