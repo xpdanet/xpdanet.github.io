@@ -265,7 +265,7 @@
 
         <div v-else>
           <div class="half">
-            <textarea class="admin-preview">{{ JSON.stringify(tool, null, 2) }}</textarea>
+            <textarea v-text="jsonOutput" class="admin-preview"></textarea>
           </div>
           <div class="half center">
             <base-card

@@ -250,6 +250,56 @@
     "notableTrailingLink": false
   },
 
+  // Tauri
+  {
+    "title": "Tauri",
+    "url": "https://tauri.app",
+    "logo": "tauri.svg",
+    "deprecated": false,
+    "languages": [
+      "HTML",
+      "CSS",
+      "JS",
+      "Rust"
+    ],
+    "platforms": [
+      "Windows",
+      "Linux",
+      "OSX"
+    ],
+    "pros": [
+      "Once you have all the prerequisites installed, the initial project creation is extremely polished. A single command starts up a new project, which integrates with all popular WebDev CLI's (Vite, Vue-CLI, CRA, etc)",
+      "Has a build tool built right in. It's slow, but a phenomenal feature to have officially maintained",
+      "The documentation is probably the best I've seen for any project listed on XPDA.net. Though I found a few of my questions unanswered as I used it, especially basic things like what OS's are supported. Because you can build your own binary, the limits on OS are really about what 3rd party build tools are compatible with your OS and Tauri's tools, and those 3rd party tools may change and drop support over time, making documenting how to do machine set up much more difficult outside of just the very latest OS's",
+      "Produced a self-contained, portable, Windows executable that was under 7MB",
+      "Currently Tauri relies on Rust for it's backend to interact with the OS, but plans to extend out backend language support to many other lanugages, and this seems like a very achievable goal",
+      "Supports Ubuntu 18+, OSX 10.15+, and Windows 10+ (though I was able to get a Windows 7 build to work, however, I doubt that will be possible for much longer as related tooling changes, Visual Studio already warns that it doesn't support 7 any longer and may not work correctly)",
+      "The Rust community is legendary in how vocal and excited they are about Rust and projects built with it. I've been monitoring Tauri's progress for years as they worked their way up to alpha, beta, and v1, and at no point did the Rust community's excitement dimenish",
+      "Intent to eventually support building for desktop platforms other than the one you are currently on, but due to reliance on 3rd party tooling for builds, I don't foresee this happening anytime soon, or maybe even ever, unless they mean using a VM, which, isn't really the same thing. But would be happy to be proven wrong"
+    ],
+    "cons": [
+      "Takes around ~2 hours for initial machine and project setup (Visual Studio, OS Specific WebView, Rust, Node/npm, crate installs/compiling, etc). And this is NOT a \"click a button and walk away\" setup. This process requires pretty much constant attention for almost the entire time, if you look away, something will be waiting on you pretty soon",
+      "Builds must be done on target OS and can take 30-60 minutes per OS. Compared to NW.js or Electron where you can build for all OS's with a single command, which may take 15-30 minutes, but all will be done at the end; versus Tauri which takes twice as long for just one to finish. Using CI for this will solve the problem in either case, but CI tools that charge by CPU usage will be more expensive for Tauri, and require much more complex environment setups",
+      "Relies on the OS's built in webview, which means you need to build your UI in a cross-browser friendly manner, and use special tooling that those not deeply familiar with frontend development would be new to. Also you must use features based on the lowest common denomenator, meaning newer language or browser features will not be accessible",
+      "On Linux, you must build using the oldest Linux version you want to support, and may need to do multiple builds if the Linux versions differ greatly enough",
+      "Similarly, on Windows, I did a build on Win 10 which would not run on Win 7. But a Win 7 build ran on both 7 and 10, and was actually slightly smaller in file size, which is curious",
+      "Though the initial project setup seemed really polished at first (integrating all the official frontend CLI tools), this really isn't a replacement for the better boilerplates that exist in other tools, and in fact may even deter people from making those. For example, none of the frontend code produced has any examples of hooking into the features of Tauri, showing how to detect if your frontend is being ran in a desktop app or in a normal browser, etc. These are really useful features to have built in to a starter boilerplate, but are missing. The Tauri community could make them, but currently I could find no examples of this anywhere",
+      "In the past I've given 2-hour workshops on \"Building your first Desktop App\", and I could get a group of 20-30 students, very beginner level (HTML, CSS, maybe some JS knowledge) to have built and packaged a functioning desktop app by hand, on their own personal laptops, using whatever OS they have. And every single student did so by the end of the 2 hours. But with Tauri, by the end, we wouldn't even be finished installing all the prerequisites. \"Congratulations students, we've accomplished nothing except clicking next and watching progress bars go by, thanks for coming out\". This feels like a massive UX failure",
+      "Tauri does a lot of things really well, and those things are what I wish NW.js would improve. But other than the smaller filesize, these are all features the NW.js community could (or already do) provide as libraries. The things Tauri doesn't do well are the things NW.js really excels at, and are likely to never be fixed, as they are core to how the technology is designed, and it's goals. I wish I could just combine the best parts of each"
+    ],
+    "frameworks": [],
+    "tools": [],
+    "tutorials": [],
+    "notableProjects": [
+      {
+        "title": "\"Awesome-Tauri\" app list",
+        "url": "https://github.com/tauri-apps/awesome-tauri#apps",
+        "description": "Bulleted list of apps made with Tauri, in seemingly no particular order or with any screenshots"
+      }
+    ],
+    "notableTrailingLink": true
+  },
+
   // Xamarin
   {
     "title": "Xamarin",
@@ -347,46 +397,6 @@
     "notableTrailingLink": true
   },
 
-  // Adobe AIR
-  {
-    "title": "Adobe AIR",
-    "url": "http://www.adobe.com/products/air.html",
-    "logo": "air.png",
-    "deprecated": true,
-    "languages": [
-      "HTML",
-      "JS",
-      "ActionScript"
-    ],
-    "platforms": [
-      "iOS",
-      "Android",
-      "Windows",
-      "OSX"
-    ],
-    "pros": [
-      "Simple development environment"
-    ],
-    "cons": [
-      "Poor Linux support",
-      "Requires end users to install Adobe Air runtime separately",
-      "Limited documentation around desktop app development",
-      "Adobe dropped all support AIR in 2020 and transferred rights to Samsung owned HARMAN",
-      "Use for XPDA's is considered abandoned"
-    ],
-    "frameworks": [],
-    "tools": [],
-    "tutorials": [
-      {
-        "title": "AIR Community Forums",
-        "author": "Adobe",
-        "url": "https://forums.adobe.com/community/air",
-        "site": "forums.adobe.com"
-      }
-    ],
-    "notableProjects": [],
-    "notableTrailingLink": true
-  },
   // Adobe Animate CC
   {
     "title": "Adobe Animate CC",
@@ -1286,6 +1296,53 @@
   // //////////////////////////
   // DEPRECATED
   // //////////////////////////
+
+  // Adobe AIR
+  {
+    "title": "Adobe AIR",
+    "url": "http://www.adobe.com/products/air.html",
+    "logo": "air.png",
+    "deprecated": true,
+    "languages": [
+      "HTML",
+      "JS",
+      "ActionScript"
+    ],
+    "platforms": [
+      "iOS",
+      "Android",
+      "Windows",
+      "OSX"
+    ],
+    "pros": [
+      "Simple development environment"
+    ],
+    "cons": [
+      "Poor Linux support",
+      "Requires end users to install Adobe Air runtime separately",
+      "Limited documentation around desktop app development",
+      "Adobe dropped all support AIR in 2020 and transferred rights to Samsung owned HARMAN",
+      "Use for XPDA's is considered abandoned"
+    ],
+    "frameworks": [],
+    "tools": [],
+    "tutorials": [
+      {
+        "title": "AIR Community Forums",
+        "author": "Adobe",
+        "url": "https://forums.adobe.com/community/air",
+        "site": "forums.adobe.com"
+      }
+    ],
+    "notableProjects": [
+      {
+        "title": "Pownce",
+        "url": "https://en.wikipedia.org/wiki/Pownce",
+        "description": "Now defunct instant messaging/file sharing app"
+      }
+    ],
+    "notableTrailingLink": true
+  },
 
   // Muon
   {

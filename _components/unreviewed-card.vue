@@ -56,11 +56,6 @@ export default {
           description: 'Not ready yet'
         },
         {
-          title: 'Tauri',
-          url: 'https://tauri.studio',
-          description: 'In alpha. Shows promise. Rust. Community around it is very excited.'
-        },
-        {
           title: 'Electrino',
           url: 'https://github.com/pojala/electrino',
           description: 'Similar to NeutralinoJS. Unfinished experimental project, possibly abandoned?'
