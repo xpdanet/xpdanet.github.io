@@ -81,6 +81,11 @@ export default {
           description: 'C#/.NET. Bring UWP and WinUI to other platforms. Windows, OSX, iOS, Android, "Web" (via big chonky WASM). New. Linux support is experimental.'
         },
         {
+          title: 'Fyne',
+          url: 'https://fyne.io',
+          description: 'Uses the Go programming language to produce cross-platform Mobile and Desktop apps (iOS, Android, Windows, OSX, Linux) without the use of an embedded browser.'
+        },
+        {
           title: 'Did we miss any?',
           url: 'https://github.com/xpdanet/xpdanet.github.io/issues',
           description: 'If there are any XPDA tools not included on this site, let us know on the GitHub issues.'
