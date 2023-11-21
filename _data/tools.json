@@ -144,6 +144,11 @@
         "description": "Open source, beginner-friendly, desktop app for web developers and designers to process Sass/SCSS files to CSS."
       },
       {
+        "title": "Conductor Companion App",
+        "url": "https://www.conductortech.com/companion",
+        "description": "A tool to help VFX artists render shots in the cloud."
+      },
+      {
         "title": "AlternativeTo: List of apps made with NW.js",
         "url": "https://alternativeto.net/list/3300/apps-made-with-nw-js",
         "description": "List of apps on the AlternativeTo.net website that are made with NW.js"
