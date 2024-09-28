@@ -86,6 +86,11 @@ export default {
           description: 'Uses the Go programming language to produce cross-platform Mobile and Desktop apps (iOS, Android, Windows, OSX, Linux) without the use of an embedded browser.'
         },
         {
+          title: 'Socket',
+          url: 'https://socketsupply.co/guides',
+          description: 'Looks very promising. Too early to review at time of writing.'
+        },
+        {
           title: 'Did we miss any?',
           url: 'https://github.com/xpdanet/xpdanet.github.io/issues',
           description: 'If there are any XPDA tools not included on this site, let us know on the GitHub issues.'
