@@ -8,6 +8,6 @@
 
 <script>
 export default {
-  name: 'site-logo'
+  name: 'SiteLogo'
 };
 </script>

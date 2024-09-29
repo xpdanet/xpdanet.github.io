@@ -59,7 +59,7 @@
                   :key="'language' + languageIndex"
                 >
                   <input v-model="tool.languages[languageIndex]" type="text">
-                  <minus :tool="tool" :index="languageIndex" name="languages"></minus>
+                  <minus :tool="tool" :index="languageIndex" name="languages" @remove="minusByToolName"></minus>
                 </li>
                 <li>
                   <select v-model="newLanguageChoice">
@@ -88,7 +88,7 @@
                   :key="'platform' + platformIndex"
                 >
                   <input v-model="tool.platforms[platformIndex]" type="text">
-                  <minus :tool="tool" :index="platformIndex" name="platforms"></minus>
+                  <minus :tool="tool" :index="platformIndex" name="platforms" @remove="minusByToolName"></minus>
                 </li>
                 <li>
                   <select v-model="newPlatformChoice">
@@ -117,7 +117,7 @@
                   :key="'pro' + proIndex"
                 >
                   <input v-model="tool.pros[proIndex]" type="text">
-                  <minus :tool="tool" :index="proIndex" name="pros"></minus>
+                  <minus :tool="tool" :index="proIndex" name="pros" @remove="minusByToolName"></minus>
                 </li>
               </ul>
             </div>
@@ -133,7 +133,7 @@
                   :key="'con' + conIndex"
                 >
                   <input v-model="tool.cons[conIndex]" type="text">
-                  <minus :tool="tool" :index="conIndex" name="cons"></minus>
+                  <minus :tool="tool" :index="conIndex" name="cons" @remove="minusByToolName"></minus>
                 </li>
               </ul>
             </div>
@@ -159,7 +159,7 @@
                   <div>
                     <label>URL</label>
                     <input v-model="tool.frameworks[frameworkIndex].url" type="text">
-                    <minus :tool="tool" :index="frameworkIndex" name="frameworks"></minus>
+                    <minus :tool="tool" :index="frameworkIndex" name="frameworks" @remove="minusByToolName"></minus>
                   </div>
                 </li>
             </div>
@@ -185,7 +185,7 @@
                   <div>
                     <label>URL</label>
                     <input v-model="tool.tools[toolToolIndex].url" type="text">
-                    <minus :tool="tool" :index="toolToolIndex" name="tools"></minus>
+                    <minus :tool="tool" :index="toolToolIndex" name="tools" @remove="minusByToolName"></minus>
                   </div>
                 </li>
             </div>
@@ -215,7 +215,7 @@
                   <div>
                     <label>Site</label>
                     <input v-model="tool.tutorials[tutorialIndex].site" :placeholder="joinedItems('sites')" type="text">
-                    <minus :tool="tool" :index="tutorialIndex" name="tutorials"></minus>
+                    <minus :tool="tool" :index="tutorialIndex" name="tutorials" @remove="minusByToolName"></minus>
                   </div>
                 </li>
             </div>
@@ -240,7 +240,7 @@
                 <div>
                   <label>Description:</lable><br />
                   <textarea v-model="tool.notableProjects[projectIndex].description"></textarea>
-                  <minus :tool="tool" :index="projectIndex" name="notableProjects"></minus>
+                  <minus :tool="tool" :index="projectIndex" name="notableProjects" @remove="minusByToolName"></minus>
                 </div>
               </li>
             </ul>

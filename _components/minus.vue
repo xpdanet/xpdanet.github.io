@@ -1,14 +1,17 @@
 <template>
   <span
     v-if="index === tool[name].length - 1"
-    @click="remove(name)"
     class="minus"
+    @click="$emit('remove', name)"
   >-</span>
 </template>
 
 <script>
 export default {
-  name: 'minus',
+  name: 'MinusButton',
+  emits: [
+    'remove'
+  ],
   props: {
     name: {
       type: String,
@@ -21,11 +24,6 @@ export default {
     tool: {
       type: Object,
       required: true
-    }
-  },
-  methods: {
-    remove: function (section) {
-      this.tool[section].pop();
     }
   }
 };

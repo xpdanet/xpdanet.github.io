@@ -11,6 +11,6 @@
 
 <script>
 export default {
-  name: 'github-corner'
+  name: 'GithubCorner'
 };
 </script>

@@ -15,7 +15,7 @@
 
 <script>
 export default {
-  name: 'news-alerts',
+  name: 'NewsAlerts',
   data: function () {
     return {
       currentStory: 0,
