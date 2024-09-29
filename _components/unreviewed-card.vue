@@ -26,7 +26,7 @@
 
 <script>
 export default {
-  name: 'unreviewed-card',
+  name: 'UnreviewedCard',
   data: function () {
     return {
       tools: [
@@ -79,6 +79,16 @@ export default {
           title: 'UNO Platform',
           url: 'https://platform.uno',
           description: 'C#/.NET. Bring UWP and WinUI to other platforms. Windows, OSX, iOS, Android, "Web" (via big chonky WASM). New. Linux support is experimental.'
+        },
+        {
+          title: 'Fyne',
+          url: 'https://fyne.io',
+          description: 'Uses the Go programming language to produce cross-platform Mobile and Desktop apps (iOS, Android, Windows, OSX, Linux) without the use of an embedded browser.'
+        },
+        {
+          title: 'Socket',
+          url: 'https://socketsupply.co/guides',
+          description: 'Looks very promising. Too early to review at time of writing.'
         },
         {
           title: 'Did we miss any?',
