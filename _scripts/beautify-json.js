@@ -14,7 +14,7 @@ function beautifyJSON (val) {
 
   function getOwnEnumPropSymbols (object) {
     return Object.getOwnPropertySymbols(object).filter(function (keySymbol) {
-      return object.propertyIsEnumerable(keySymbol);
+      return Object.prototype.propertyIsEnumerable.call(object, keySymbol);
     });
   }
 
@@ -34,13 +34,15 @@ function beautifyJSON (val) {
       return '"[Circular]"';
     }
 
-    if (val === null ||
+    if (
+      val === null ||
       val === undefined ||
       typeof val === 'number' ||
       typeof val === 'boolean' ||
       typeof val === 'function' ||
       typeof val === 'symbol' ||
-      isRegexp(val)) {
+      isRegexp(val)
+    ) {
       return String(val);
     }
 

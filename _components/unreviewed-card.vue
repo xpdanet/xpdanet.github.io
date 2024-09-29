@@ -26,7 +26,7 @@
 
 <script>
 export default {
-  name: 'unreviewed-card',
+  name: 'UnreviewedCard',
   data: function () {
     return {
       tools: [

@@ -1,5 +1,4 @@
-// eslint-disable-next-line no-unused-vars
-let helpers = {
+window.helpers = {
   parseToolsData: function (responseData) {
     let data = [];
     let networkError = false;
@@ -157,7 +156,7 @@ let helpers = {
     if (params.languages) {
       try {
         params.languages = JSON.parse(decodeURI(params.languages));
-      } catch (err) {
+      } catch {
         console.log('Could not parse language filters: ' + params.languages);
       }
       if (!Array.isArray(params.languages)) {
@@ -168,7 +167,7 @@ let helpers = {
     if (params.platforms) {
       try {
         params.platforms = JSON.parse(decodeURI(params.platforms));
-      } catch (err) {
+      } catch {
         console.log('Could not parse platfrom filters: ' + params.platforms);
       }
       if (!Array.isArray(params.platforms)) {
@@ -183,10 +182,6 @@ let helpers = {
     return params;
   }
 };
-
-if (typeof(module) !== 'undefined') {
-  module.exports = helpers;
-}
 
 window.httpVueLoader = function (componentPath) {
   const sfcLoaderOptions = {

@@ -1,4 +1,3 @@
-// eslint-disable-next-line no-unused-vars
 const admin = Vue.createApp({
   components: {
     'site-logo': httpVueLoader('_components/site-logo.vue'),
@@ -128,6 +127,9 @@ const admin = Vue.createApp({
       });
 
       return itemsArray.join(', ');
+    },
+    minusByToolName: function (name) {
+      this.tool[name].pop();
     }
   },
   filters: {
