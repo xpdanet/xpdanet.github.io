@@ -21,6 +21,12 @@ export default {
       currentStory: 0,
       stories: [
         {
+          date: '2026-01-22T19:06:47.484Z',
+          headline: 'Microsoft releases WinApp',
+          summary: 'The Windows App Development CLI (winapp), is a single command-line interface to help with cross-platform app development on Windows.',
+          url: 'https://blogs.windows.com/windowsdeveloper/2026/01/22/announcing-winapp-the-windows-app-development-cli/'
+        },
+        {
           date: '2020-08-26T19:39:17.000Z',
           headline: 'Electron drops ESM support',
           summary: 'Electron has stated that it will be dropping support for JavaScript\'s modern, native, import/export. The popular <code>import module from \'./module.js\'</code> pattern will be removed from Electron.',
