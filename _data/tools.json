@@ -30,7 +30,7 @@
       "Super easy to get started with and a no-nonsense API",
       "Can use node_modules",
       "Has Vue, React, Etc. boilerplates available",
-      "Plays nicely with Gulp, Webpack, etc.",
+      "Plays nicely with Vite, Gulp, Webpack, etc.",
       "Ability to share code across Mobile/Web/Desktop if project is setup correctly"
     ],
     "cons": [
@@ -186,7 +186,7 @@
       "Backed by GitHub",
       "Can use node_modules",
       "Has Vue, React, Etc. boilerplates available",
-      "Plays nicely with Gulp, Webpack, etc.",
+      "Plays nicely with Vite, Gulp, Webpack, etc.",
       "Ability to share code across Mobile/Web/Desktop if project setup correctly",
       "Offers a stable and nightly to give access to the latest Chromium/Node versions"
     ],
